@@ -11,6 +11,11 @@
     <!-- Chart.js para gráficos -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <!-- Nuestros estilos -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -18,8 +23,16 @@
     <!-- CABECERA -->
     <header class="header">
         <div class="container-header">
-            <h1>🏠 Mapa de Calor: Alquileres en Madrid</h1>
-            <p class="subtitulo">Encuentra la zona perfecta para vivir o invertir</p>
+            <div class="header-content">
+                <div class="header-icon">🏠</div>
+                <div class="header-text">
+                    <h1>Mapa de Calor: Alquileres en Madrid</h1>
+                    <p class="subtitulo">Encuentra la zona perfecta para vivir o invertir</p>
+                </div>
+            </div>
+            <div class="header-badge">
+                <span class="badge-text">📊 Datos 2025</span>
+            </div>
         </div>
     </header>
 
@@ -28,47 +41,92 @@
         
         <!-- PANEL DE CONTROL -->
         <aside class="panel-control">
-            <div class="card">
-                <h2>📊 Panel de Control</h2>
+            <div class="card panel-card">
+                <div class="card-header">
+                    <h2>📊 Panel de Control</h2>
+                </div>
                 
                 <!-- Filtros -->
                 <div class="filtros">
-                    <h3>Filtrar por precio</h3>
-                    <label>
-                        Precio máximo: <span id="precio-valor">1500</span>€
-                        <input type="range" id="precio-max" min="500" max="2000" value="1500" step="50">
-                    </label>
+                    <div class="filtro-group">
+                        <h3>🔍 Filtrar por precio</h3>
+                        <div class="precio-display">
+                            <span class="precio-label">Precio máximo:</span>
+                            <span class="precio-value" id="precio-valor">1500</span>
+                            <span class="precio-euro">€</span>
+                        </div>
+                        <input 
+                            type="range" 
+                            id="precio-max" 
+                            class="slider-custom"
+                            min="500" 
+                            max="2000" 
+                            value="1500" 
+                            step="50"
+                        >
+                        <div class="slider-labels">
+                            <span>500€</span>
+                            <span>2000€</span>
+                        </div>
+                    </div>
                     
-                    <h3>Ordenar por</h3>
-                    <select id="ordenar">
-                        <option value="precio-asc">Precio: Menor a Mayor</option>
-                        <option value="precio-desc">Precio: Mayor a Menor</option>
-                        <option value="nombre">Nombre (A-Z)</option>
-                    </select>
+                    <div class="filtro-group">
+                        <h3>📑 Ordenar por</h3>
+                        <div class="select-wrapper">
+                            <select id="ordenar" class="select-custom">
+                                <option value="precio-asc">💰 Precio: Menor a Mayor</option>
+                                <option value="precio-desc">💰 Precio: Mayor a Menor</option>
+                                <option value="nombre">🔤 Nombre (A-Z)</option>
+                            </select>
+                            <div class="select-arrow">▼</div>
+                        </div>
+                    </div>
                     
                     <button class="btn-aplicar" onclick="aplicarFiltros()">
-                        Aplicar Filtros
+                        <span class="btn-icon">✨</span>
+                        <span class="btn-text">Aplicar Filtros</span>
                     </button>
                 </div>
 
                 <!-- Estadísticas Generales -->
                 <div class="estadisticas">
-                    <h3>📈 Estadísticas</h3>
-                    <div class="stat-item">
-                        <span class="stat-label">Total barrios:</span>
-                        <span class="stat-value" id="total-barrios">0</span>
+                    <div class="stats-header">
+                        <h3>📈 Estadísticas en Vivo</h3>
+                        <span class="pulse-dot"></span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-label">Precio medio:</span>
-                        <span class="stat-value" id="precio-medio">0€</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-label">Más barato:</span>
-                        <span class="stat-value" id="mas-barato">-</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-label">Más caro:</span>
-                        <span class="stat-value" id="mas-caro">-</span>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">🏘️</div>
+                            <div class="stat-content">
+                                <span class="stat-label">Total barrios</span>
+                                <span class="stat-value" id="total-barrios">0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">💵</div>
+                            <div class="stat-content">
+                                <span class="stat-label">Precio medio</span>
+                                <span class="stat-value" id="precio-medio">0€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card success">
+                            <div class="stat-icon">⬇️</div>
+                            <div class="stat-content">
+                                <span class="stat-label">Más barato</span>
+                                <span class="stat-value" id="mas-barato">-</span>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card danger">
+                            <div class="stat-icon">⬆️</div>
+                            <div class="stat-content">
+                                <span class="stat-label">Más caro</span>
+                                <span class="stat-value" id="mas-caro">-</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,64 +137,95 @@
             
             <!-- PESTAÑAS -->
             <div class="pestanas">
-                <button class="pestana activa" onclick="cambiarVista('mapa')">
-                    🗺️ Mapa
+                <button class="pestana activa" onclick="cambiarVista('mapa')" data-tab="mapa">
+                    <span class="tab-icon">🗺️</span>
+                    <span class="tab-text">Mapa</span>
+                    <span class="tab-indicator"></span>
                 </button>
-                <button class="pestana" onclick="cambiarVista('lista')">
-                    📋 Lista
+                <button class="pestana" onclick="cambiarVista('lista')" data-tab="lista">
+                    <span class="tab-icon">📋</span>
+                    <span class="tab-text">Lista</span>
+                    <span class="tab-indicator"></span>
                 </button>
-                <button class="pestana" onclick="cambiarVista('graficos')">
-                    📊 Gráficos
+                <button class="pestana" onclick="cambiarVista('graficos')" data-tab="graficos">
+                    <span class="tab-icon">📊</span>
+                    <span class="tab-text">Gráficos</span>
+                    <span class="tab-indicator"></span>
                 </button>
             </div>
 
             <!-- VISTA MAPA -->
             <div id="vista-mapa" class="vista activa">
-                <div class="card">
-                    <div id="mapa" style="height: 500px; width: 100%;"></div>
+                <div class="card vista-card">
+                    <div class="mapa-container">
+                        <div id="mapa" style="height: 500px; width: 100%; border-radius: 12px; overflow: hidden;"></div>
+                    </div>
                     <div class="leyenda">
-                        <h4>Leyenda de precios</h4>
-                        <div class="leyenda-item">
-                            <span class="circulo" style="background: #22c55e"></span>
-                            Menos de 900€
+                        <div class="leyenda-header">
+                            <h4>🎨 Leyenda de precios</h4>
                         </div>
-                        <div class="leyenda-item">
-                            <span class="circulo" style="background: #84cc16"></span>
-                            900€ - 1100€
+                        <div class="leyenda-grid">
+                            <div class="leyenda-item">
+                                <span class="circulo" style="background: linear-gradient(135deg, #22c55e, #16a34a);"></span>
+                                <span class="leyenda-text">Menos de 900€</span>
+                            </div>
+                            <div class="leyenda-item">
+                                <span class="circulo" style="background: linear-gradient(135deg, #84cc16, #65a30d);"></span>
+                                <span class="leyenda-text">900€ - 1100€</span>
+                            </div>
+                            <div class="leyenda-item">
+                                <span class="circulo" style="background: linear-gradient(135deg, #eab308, #ca8a04);"></span>
+                                <span class="leyenda-text">1100€ - 1300€</span>
+                            </div>
+                            <div class="leyenda-item">
+                                <span class="circulo" style="background: linear-gradient(135deg, #f97316, #ea580c);"></span>
+                                <span class="leyenda-text">1300€ - 1500€</span>
+                            </div>
+                            <div class="leyenda-item">
+                                <span class="circulo" style="background: linear-gradient(135deg, #ef4444, #dc2626);"></span>
+                                <span class="leyenda-text">Más de 1500€</span>
+                            </div>
                         </div>
-                        <div class="leyenda-item">
-                            <span class="circulo" style="background: #eab308"></span>
-                            1100€ - 1300€
-                        </div>
-                        <div class="leyenda-item">
-                            <span class="circulo" style="background: #f97316"></span>
-                            1300€ - 1500€
-                        </div>
-                        <div class="leyenda-item">
-                            <span class="circulo" style="background: #ef4444"></span>
-                            Más de 1500€
-                        </div>
+                    </div>
+                </div>
+                <div class="info-tip">
+                    <div class="tip-icon">💡</div>
+                    <div class="tip-text">
+                        <strong>Tip:</strong> Haz clic en los marcadores del mapa para ver información detallada de cada zona
                     </div>
                 </div>
             </div>
 
             <!-- VISTA LISTA -->
             <div id="vista-lista" class="vista">
-                <div class="card">
-                    <h2>Lista de Barrios</h2>
-                    <div id="lista-barrios"></div>
+                <div class="card vista-card">
+                    <div class="card-header">
+                        <h2>📋 Lista de Barrios</h2>
+                        <span class="resultado-count" id="resultado-count">Cargando...</span>
+                    </div>
+                    <div id="lista-barrios" class="barrios-container"></div>
                 </div>
             </div>
 
             <!-- VISTA GRÁFICOS -->
             <div id="vista-graficos" class="vista">
-                <div class="card">
-                    <h2>Gráficos Comparativos</h2>
-                    <canvas id="grafico-precios"></canvas>
+                <div class="card vista-card">
+                    <div class="card-header">
+                        <h2>📊 Gráficos Comparativos</h2>
+                        <span class="chart-badge">Precios medios por barrio</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="grafico-precios"></canvas>
+                    </div>
                 </div>
-                <div class="card" style="margin-top: 20px;">
-                    <h2>Precio por Metro Cuadrado</h2>
-                    <canvas id="grafico-m2"></canvas>
+                <div class="card vista-card" style="margin-top: 20px;">
+                    <div class="card-header">
+                        <h2>📐 Precio por Metro Cuadrado</h2>
+                        <span class="chart-badge">Análisis de rentabilidad</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="grafico-m2"></canvas>
+                    </div>
                 </div>
             </div>
 
@@ -145,8 +234,32 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>💡 Proyecto educativo - Datos simulados con fines de aprendizaje</p>
-        <p>Última actualización: <span id="fecha-actualizacion"></span></p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-icon">ℹ️</div>
+                <div class="footer-text">
+                    <p class="footer-title">💡 Proyecto educativo</p>
+                    <p class="footer-desc">Datos reales verificados del mercado inmobiliario de Madrid 2025</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="footer-icon">📅</div>
+                <div class="footer-text">
+                    <p class="footer-title">Última actualización</p>
+                    <p class="footer-desc" id="fecha-actualizacion">Cargando...</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="footer-icon">📊</div>
+                <div class="footer-text">
+                    <p class="footer-title">Fuentes oficiales</p>
+                    <p class="footer-desc">Idealista, Fotocasa, OCU, Bankinter y más</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Desarrollado con ❤️ para el análisis del mercado inmobiliario</p>
+        </div>
     </footer>
 
     <!-- SCRIPTS -->
@@ -156,5 +269,18 @@
     <!-- Nuestros scripts -->
     <script src="js/datos.js"></script>
     <script src="js/app.js"></script>
+
+    <!-- Script de inicialización de fecha -->
+    <script>
+        // Mostrar fecha actual
+        document.addEventListener('DOMContentLoaded', function() {
+            const fechaElement = document.getElementById('fecha-actualizacion');
+            if (fechaElement) {
+                const fecha = new Date();
+                const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+                fechaElement.textContent = fecha.toLocaleDateString('es-ES', opciones);
+            }
+        });
+    </script>
 </body>
 </html>
