@@ -7,7 +7,7 @@
 
 > **Proyecto de Ciencia de Datos**: Herramienta interactiva de visualización y análisis estadístico del mercado inmobiliario de Madrid.
 
-![Captura del proyecto](https://via.placeholder.com/800x400/667eea/ffffff?text=Mapa+de+Alquileres+Madrid)
+![Captura del proyecto](img/screenshot.png)
 
 ## 📋 Descripción
 
