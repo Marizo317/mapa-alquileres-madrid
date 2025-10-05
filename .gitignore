@@ -1,0 +1,36 @@
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos de VS Code
+.vscode/
+*.code-workspace
+
+# Node modules (si usas Node.js en el futuro)
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.cache
+
+# Archivos de backup
+*.bak
+*~
+
+# Archivos de entorno (si tienes API keys)
+.env
+.env.local
+
+# Carpetas de build (si usas builders)
+dist/
+build/
+
+# Archivos de IDE
+.idea/
+*.swp
+*.swo

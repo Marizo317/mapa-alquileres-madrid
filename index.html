@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Calor - Alquileres en Madrid</title>
+    
+    <!-- Leaflet CSS para el mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Nuestros estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- CABECERA -->
+    <header class="header">
+        <div class="container-header">
+            <h1>🏠 Mapa de Calor: Alquileres en Madrid</h1>
+            <p class="subtitulo">Encuentra la zona perfecta para vivir o invertir</p>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="main-container">
+        
+        <!-- PANEL DE CONTROL -->
+        <aside class="panel-control">
+            <div class="card">
+                <h2>📊 Panel de Control</h2>
+                
+                <!-- Filtros -->
+                <div class="filtros">
+                    <h3>Filtrar por precio</h3>
+                    <label>
+                        Precio máximo: <span id="precio-valor">1500</span>€
+                        <input type="range" id="precio-max" min="500" max="2000" value="1500" step="50">
+                    </label>
+                    
+                    <h3>Ordenar por</h3>
+                    <select id="ordenar">
+                        <option value="precio-asc">Precio: Menor a Mayor</option>
+                        <option value="precio-desc">Precio: Mayor a Menor</option>
+                        <option value="nombre">Nombre (A-Z)</option>
+                    </select>
+                    
+                    <button class="btn-aplicar" onclick="aplicarFiltros()">
+                        Aplicar Filtros
+                    </button>
+                </div>
+
+                <!-- Estadísticas Generales -->
+                <div class="estadisticas">
+                    <h3>📈 Estadísticas</h3>
+                    <div class="stat-item">
+                        <span class="stat-label">Total barrios:</span>
+                        <span class="stat-value" id="total-barrios">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Precio medio:</span>
+                        <span class="stat-value" id="precio-medio">0€</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Más barato:</span>
+                        <span class="stat-value" id="mas-barato">-</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Más caro:</span>
+                        <span class="stat-value" id="mas-caro">-</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ÁREA PRINCIPAL -->
+        <section class="area-principal">
+            
+            <!-- PESTAÑAS -->
+            <div class="pestanas">
+                <button class="pestana activa" onclick="cambiarVista('mapa')">
+                    🗺️ Mapa
+                </button>
+                <button class="pestana" onclick="cambiarVista('lista')">
+                    📋 Lista
+                </button>
+                <button class="pestana" onclick="cambiarVista('graficos')">
+                    📊 Gráficos
+                </button>
+            </div>
+
+            <!-- VISTA MAPA -->
+            <div id="vista-mapa" class="vista activa">
+                <div class="card">
+                    <div id="mapa" style="height: 500px; width: 100%;"></div>
+                    <div class="leyenda">
+                        <h4>Leyenda de precios</h4>
+                        <div class="leyenda-item">
+                            <span class="circulo" style="background: #22c55e"></span>
+                            Menos de 900€
+                        </div>
+                        <div class="leyenda-item">
+                            <span class="circulo" style="background: #84cc16"></span>
+                            900€ - 1100€
+                        </div>
+                        <div class="leyenda-item">
+                            <span class="circulo" style="background: #eab308"></span>
+                            1100€ - 1300€
+                        </div>
+                        <div class="leyenda-item">
+                            <span class="circulo" style="background: #f97316"></span>
+                            1300€ - 1500€
+                        </div>
+                        <div class="leyenda-item">
+                            <span class="circulo" style="background: #ef4444"></span>
+                            Más de 1500€
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISTA LISTA -->
+            <div id="vista-lista" class="vista">
+                <div class="card">
+                    <h2>Lista de Barrios</h2>
+                    <div id="lista-barrios"></div>
+                </div>
+            </div>
+
+            <!-- VISTA GRÁFICOS -->
+            <div id="vista-graficos" class="vista">
+                <div class="card">
+                    <h2>Gráficos Comparativos</h2>
+                    <canvas id="grafico-precios"></canvas>
+                </div>
+                <div class="card" style="margin-top: 20px;">
+                    <h2>Precio por Metro Cuadrado</h2>
+                    <canvas id="grafico-m2"></canvas>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>💡 Proyecto educativo - Datos simulados con fines de aprendizaje</p>
+        <p>Última actualización: <span id="fecha-actualizacion"></span></p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <!-- Leaflet JS para el mapa -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Nuestros scripts -->
+    <script src="js/datos.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
