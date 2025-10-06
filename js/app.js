@@ -1,75 +1,67 @@
 // ============================================================================
-// APLICACIÓN PRINCIPAL: MAPA DE ALQUILERES MADRID 2025
+// APP.JS - LÓGICA PRINCIPAL DE LA APLICACIÓN
+// ============================================================================
+// Mapa de Alquileres Madrid 2025 - Fase 1
+// 47 ubicaciones: 30 barrios + 17 municipios
 // ============================================================================
 
 // Variables globales
 let mapaLeaflet = null;
 let marcadores = [];
 let datosFiltrados = [...barriosMadrid];
-let graficos = {};
+let graficoPreciosChart = null;
+let graficoM2Chart = null;
 
 // ============================================================================
-// INICIALIZACIÓN
+// INICIALIZACIÓN AL CARGAR LA PÁGINA
 // ============================================================================
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 Iniciando aplicación...');
+    console.log(`📊 Datos cargados: ${barriosMadrid.length} ubicaciones`);
     
     // Inicializar componentes
     inicializarMapa();
-    inicializarEventos();
-    inicializarEstadisticasRapidas();
+    inicializarFiltros();
+    actualizarEstadisticas();
     renderizarLista();
-    inicializarGraficos();
-    mostrarAnalisisEstadistico();
     
     console.log('✅ Aplicación iniciada correctamente');
 });
 
 // ============================================================================
-// SISTEMA DE PESTAÑAS
+// SISTEMA DE PESTAÑAS (VISTAS)
 // ============================================================================
 
-function inicializarEventos() {
-    // Pestañas
-    const botonesTabs = document.querySelectorAll('.tab-button');
-    botonesTabs.forEach(boton => {
-        boton.addEventListener('click', () => cambiarTab(boton.dataset.tab));
+function cambiarVista(vistaId) {
+    console.log(`📂 Cambiando a vista: ${vistaId}`);
+    
+    // Desactivar todas las pestañas y vistas
+    document.querySelectorAll('.pestana').forEach(btn => {
+        btn.classList.remove('activa');
+    });
+    document.querySelectorAll('.vista').forEach(vista => {
+        vista.classList.remove('activa');
     });
     
-    // Filtros
-    document.getElementById('filtro-precio').addEventListener('input', aplicarFiltros);
-    document.getElementById('filtro-zona').addEventListener('change', aplicarFiltros);
-    document.getElementById('orden').addEventListener('change', aplicarFiltros);
-    document.getElementById('resetear-filtros').addEventListener('click', resetearFiltros);
-    
-    // Actualizar valor del slider
-    document.getElementById('filtro-precio').addEventListener('input', (e) => {
-        document.getElementById('precio-valor').textContent = e.target.value + '€';
-    });
-}
-
-function cambiarTab(tabId) {
-    // Desactivar todas las pestañas
-    document.querySelectorAll('.tab-button').forEach(btn => {
-        btn.classList.remove('active');
-    });
-    document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('active');
-    });
-    
-    // Activar pestaña seleccionada
-    document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
-    document.getElementById(`tab-${tabId}`).classList.add('active');
-    
-    // Actualizar mapa si es necesario
-    if (tabId === 'mapa' && mapaLeaflet) {
-        setTimeout(() => mapaLeaflet.invalidateSize(), 100);
+    // Activar la pestaña y vista seleccionada
+    const botonActivo = document.querySelector(`[data-tab="${vistaId}"]`);
+    if (botonActivo) {
+        botonActivo.classList.add('activa');
     }
     
-    // Actualizar gráficos si es necesario
-    if (tabId === 'graficos') {
-        actualizarGraficos();
+    const vistaActiva = document.getElementById(`vista-${vistaId}`);
+    if (vistaActiva) {
+        vistaActiva.classList.add('activa');
+    }
+    
+    // Actualizar contenido según la vista
+    if (vistaId === 'mapa' && mapaLeaflet) {
+        setTimeout(() => mapaLeaflet.invalidateSize(), 100);
+    } else if (vistaId === 'lista') {
+        renderizarLista();
+    } else if (vistaId === 'graficos') {
+        inicializarGraficos();
     }
 }
 
@@ -78,6 +70,8 @@ function cambiarTab(tabId) {
 // ============================================================================
 
 function inicializarMapa() {
+    console.log('🗺️ Inicializando mapa de Leaflet...');
+    
     // Crear mapa centrado en Madrid
     mapaLeaflet = L.map('mapa').setView(
         [configuracionMapa.centroMadrid.lat, configuracionMapa.centroMadrid.lng],
@@ -93,9 +87,13 @@ function inicializarMapa() {
     
     // Añadir marcadores
     actualizarMarcadores(datosFiltrados);
+    
+    console.log('✅ Mapa inicializado');
 }
 
 function actualizarMarcadores(datos) {
+    console.log(`📍 Actualizando marcadores: ${datos.length} ubicaciones`);
+    
     // Limpiar marcadores existentes
     marcadores.forEach(marcador => mapaLeaflet.removeLayer(marcador));
     marcadores = [];
@@ -105,7 +103,7 @@ function actualizarMarcadores(datos) {
         const color = obtenerColorPorPrecio(barrio.precioMedio);
         
         const marcador = L.circleMarker([barrio.lat, barrio.lng], {
-            radius: 10,
+            radius: 8,
             fillColor: color,
             color: '#fff',
             weight: 2,
@@ -114,19 +112,21 @@ function actualizarMarcadores(datos) {
         });
         
         // Popup con información
+        const distrito = barrio.distrito ? `<strong>Distrito:</strong> ${barrio.distrito}<br>` : '';
         const popupContent = `
-            <div style="min-width: 250px;">
+            <div style="min-width: 250px; font-family: Inter, sans-serif;">
                 <h3 style="margin: 0 0 10px 0; color: #1e293b; font-size: 1.1rem;">
                     ${barrio.nombre}
                 </h3>
-                <div style="background: ${color}; color: white; padding: 8px; border-radius: 6px; margin-bottom: 10px;">
-                    <strong style="font-size: 1.3rem;">${formatearPrecio(barrio.precioMedio)}/mes</strong>
+                ${distrito}
+                <div style="background: ${color}; color: white; padding: 10px; border-radius: 8px; margin-bottom: 10px; text-align: center;">
+                    <strong style="font-size: 1.4rem;">${barrio.precioMedio}€/mes</strong>
                 </div>
                 <table style="width: 100%; font-size: 0.9rem;">
                     <tr>
                         <td style="padding: 4px 0; color: #64748b;">Precio/m²:</td>
                         <td style="padding: 4px 0; text-align: right; font-weight: 600;">
-                            ${barrio.precioM2.toFixed(2)} €/m²
+                            ${barrio.precioM2.toFixed(1)} €/m²
                         </td>
                     </tr>
                     <tr>
@@ -138,12 +138,12 @@ function actualizarMarcadores(datos) {
                     <tr>
                         <td style="padding: 4px 0; color: #64748b;">Zona:</td>
                         <td style="padding: 4px 0; text-align: right; font-weight: 600;">
-                            ${barrio.subzona || barrio.zona}
+                            ${barrio.zona}
                         </td>
                     </tr>
                     <tr>
                         <td style="padding: 4px 0; color: #64748b;">Fuente:</td>
-                        <td style="padding: 4px 0; text-align: right; font-style: italic;">
+                        <td style="padding: 4px 0; text-align: right; font-style: italic; color: #3b82f6;">
                             ${barrio.fuente}
                         </td>
                     </tr>
@@ -155,12 +155,12 @@ function actualizarMarcadores(datos) {
         marcador.addTo(mapaLeaflet);
         marcadores.push(marcador);
         
-        // Efecto hover
+        // Efectos hover
         marcador.on('mouseover', function() {
-            this.setStyle({ radius: 14, fillOpacity: 1 });
+            this.setStyle({ radius: 12, fillOpacity: 1 });
         });
         marcador.on('mouseout', function() {
-            this.setStyle({ radius: 10, fillOpacity: 0.8 });
+            this.setStyle({ radius: 8, fillOpacity: 0.8 });
         });
     });
 }
@@ -169,24 +169,34 @@ function actualizarMarcadores(datos) {
 // SISTEMA DE FILTROS
 // ============================================================================
 
+function inicializarFiltros() {
+    console.log('🔧 Inicializando filtros...');
+    
+    // Listener para el slider de precio
+    const sliderPrecio = document.getElementById('precio-max');
+    if (sliderPrecio) {
+        sliderPrecio.addEventListener('input', function() {
+            document.getElementById('precio-valor').textContent = this.value;
+        });
+    }
+    
+    // Listener para el select de ordenamiento
+    const selectOrden = document.getElementById('ordenar');
+    if (selectOrden) {
+        selectOrden.addEventListener('change', aplicarFiltros);
+    }
+}
+
 function aplicarFiltros() {
-    const precioMax = parseInt(document.getElementById('filtro-precio').value);
-    const zonaSeleccionada = document.getElementById('filtro-zona').value;
-    const ordenSeleccionado = document.getElementById('orden').value;
+    console.log('🔍 Aplicando filtros...');
+    
+    const precioMax = parseInt(document.getElementById('precio-max').value);
+    const ordenSeleccionado = document.getElementById('ordenar').value;
     
     // Filtrar por precio
     datosFiltrados = barriosMadrid.filter(barrio => barrio.precioMedio <= precioMax);
     
-    // Filtrar por zona
-    if (zonaSeleccionada !== 'todas') {
-        datosFiltrados = datosFiltrados.filter(barrio => {
-            if (zonaSeleccionada === 'Capital' || zonaSeleccionada === 'Periferia') {
-                return barrio.zona === zonaSeleccionada;
-            } else {
-                return barrio.subzona === zonaSeleccionada;
-            }
-        });
-    }
+    console.log(`📊 Filtrados: ${datosFiltrados.length} de ${barriosMadrid.length}`);
     
     // Ordenar
     switch (ordenSeleccionado) {
@@ -196,47 +206,52 @@ function aplicarFiltros() {
         case 'precio-desc':
             datosFiltrados.sort((a, b) => b.precioMedio - a.precioMedio);
             break;
-        case 'alfabetico':
+        case 'nombre':
             datosFiltrados.sort((a, b) => a.nombre.localeCompare(b.nombre));
-            break;
-        case 'm2-asc':
-            datosFiltrados.sort((a, b) => a.precioM2 - b.precioM2);
-            break;
-        case 'm2-desc':
-            datosFiltrados.sort((a, b) => b.precioM2 - a.precioM2);
             break;
     }
     
-    // Actualizar vista
+    // Actualizar todas las vistas
     actualizarMarcadores(datosFiltrados);
-    inicializarEstadisticasRapidas();
+    actualizarEstadisticas();
     renderizarLista();
-    actualizarGraficos();
-}
-
-function resetearFiltros() {
-    document.getElementById('filtro-precio').value = 2600;
-    document.getElementById('precio-valor').textContent = '2600€';
-    document.getElementById('filtro-zona').value = 'todas';
-    document.getElementById('orden').value = 'precio-asc';
     
-    aplicarFiltros();
+    // Si estamos en la vista de gráficos, actualizarlos
+    if (document.getElementById('vista-graficos').classList.contains('activa')) {
+        inicializarGraficos();
+    }
 }
 
 // ============================================================================
 // ESTADÍSTICAS RÁPIDAS
 // ============================================================================
 
-function inicializarEstadisticasRapidas() {
-    const stats = calcularEstadisticasBasicas(datosFiltrados);
-    const preciosM2 = datosFiltrados.map(d => d.precioM2);
-    const mediaM2 = preciosM2.reduce((s, p) => s + p, 0) / preciosM2.length;
+function actualizarEstadisticas() {
+    if (datosFiltrados.length === 0) {
+        document.getElementById('total-barrios').textContent = '0';
+        document.getElementById('precio-medio').textContent = '0€';
+        document.getElementById('mas-barato').textContent = '-';
+        document.getElementById('mas-caro').textContent = '-';
+        return;
+    }
     
-    document.getElementById('total-ubicaciones').textContent = datosFiltrados.length;
-    document.getElementById('precio-medio').textContent = formatearPrecio(stats.media);
-    document.getElementById('precio-minimo').textContent = formatearPrecio(stats.minimo);
-    document.getElementById('precio-maximo').textContent = formatearPrecio(stats.maximo);
-    document.getElementById('preciom2-medio').textContent = mediaM2.toFixed(2) + ' €/m²';
+    const precios = datosFiltrados.map(d => d.precioMedio);
+    const precioMedio = precios.reduce((sum, p) => sum + p, 0) / precios.length;
+    
+    const masBarato = datosFiltrados.reduce((min, b) => 
+        b.precioMedio < min.precioMedio ? b : min
+    );
+    
+    const masCaro = datosFiltrados.reduce((max, b) => 
+        b.precioMedio > max.precioMedio ? b : max
+    );
+    
+    document.getElementById('total-barrios').textContent = datosFiltrados.length;
+    document.getElementById('precio-medio').textContent = Math.round(precioMedio) + '€';
+    document.getElementById('mas-barato').textContent = `${masBarato.nombre} (${masBarato.precioMedio}€)`;
+    document.getElementById('mas-caro').textContent = `${masCaro.nombre} (${masCaro.precioMedio}€)`;
+    
+    console.log(`📈 Estadísticas actualizadas: ${datosFiltrados.length} barrios`);
 }
 
 // ============================================================================
@@ -245,59 +260,107 @@ function inicializarEstadisticasRapidas() {
 
 function renderizarLista() {
     const contenedor = document.getElementById('lista-barrios');
-    contenedor.innerHTML = '';
+    
+    if (!contenedor) return;
     
     if (datosFiltrados.length === 0) {
         contenedor.innerHTML = `
-            <div class="info-box" style="grid-column: 1 / -1;">
-                <p>❌ No se encontraron resultados con los filtros aplicados.</p>
+            <div style="text-align: center; padding: 40px; color: #64748b;">
+                <h3>❌ No se encontraron resultados</h3>
+                <p>Prueba ajustando los filtros</p>
             </div>
         `;
         return;
     }
     
+    // Actualizar contador si existe
+    const contador = document.getElementById('resultado-count');
+    if (contador) {
+        contador.textContent = `${datosFiltrados.length} resultados`;
+    }
+    
+    contenedor.innerHTML = '';
+    
     datosFiltrados.forEach(barrio => {
         const card = document.createElement('div');
         card.className = 'barrio-card';
+        card.style.cssText = `
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        `;
+        
         card.innerHTML = `
-            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
-                <h4>${barrio.nombre}</h4>
-                <span class="zona-badge">${barrio.subzona || barrio.zona}</span>
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 15px;">
+                <h3 style="margin: 0; color: #1e293b; font-size: 1.3rem;">${barrio.nombre}</h3>
+                <span style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                    ${barrio.zona}
+                </span>
             </div>
             
-            <div class="precio">${formatearPrecio(barrio.precioMedio)}/mes</div>
+            ${barrio.distrito ? `<p style="color: #64748b; margin-bottom: 10px; font-size: 0.9rem;">📍 Distrito: ${barrio.distrito}</p>` : ''}
             
-            <div class="detalles">
-                <div class="detalle-item">
-                    <strong>€/m²:</strong> ${barrio.precioM2.toFixed(2)} €
+            <div style="background: ${obtenerColorPorPrecio(barrio.precioMedio)}; color: white; padding: 15px; border-radius: 10px; margin-bottom: 15px; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 800; margin-bottom: 5px;">${barrio.precioMedio}€</div>
+                <div style="font-size: 0.9rem; opacity: 0.95;">al mes</div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #e2e8f0;">
+                <div>
+                    <div style="color: #64748b; font-size: 0.85rem;">Precio/m²</div>
+                    <div style="font-weight: 600; color: #1e293b;">${barrio.precioM2.toFixed(1)} €/m²</div>
                 </div>
-                <div class="detalle-item">
-                    <strong>Tamaño:</strong> ${barrio.metrosCuadrados} m²
+                <div>
+                    <div style="color: #64748b; font-size: 0.85rem;">Tamaño</div>
+                    <div style="font-weight: 600; color: #1e293b;">${barrio.metrosCuadrados} m²</div>
                 </div>
-                <div class="detalle-item">
-                    <strong>Fuente:</strong> ${barrio.fuente}
+                <div>
+                    <div style="color: #64748b; font-size: 0.85rem;">Fuente</div>
+                    <div style="font-weight: 600; color: #3b82f6; font-size: 0.9rem;">${barrio.fuente}</div>
                 </div>
-                <div class="detalle-item">
-                    <strong>Actualizado:</strong> ${barrio.fechaActualizacion}
+                <div>
+                    <div style="color: #64748b; font-size: 0.85rem;">Actualizado</div>
+                    <div style="font-weight: 600; color: #1e293b; font-size: 0.9rem;">${barrio.fechaActualizacion}</div>
                 </div>
             </div>
             
-            <div class="ventajas">
-                <h5>✅ Ventajas:</h5>
-                <ul>
-                    ${barrio.ventajas.slice(0, 3).map(v => `<li>${v}</li>`).join('')}
+            <div style="margin-bottom: 15px;">
+                <h4 style="color: #22c55e; font-size: 1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 5px;">
+                    ✅ Ventajas
+                </h4>
+                <ul style="margin: 0; padding-left: 20px; color: #64748b; font-size: 0.9rem;">
+                    ${barrio.ventajas.slice(0, 3).map(v => `<li style="margin-bottom: 4px;">${v}</li>`).join('')}
                 </ul>
             </div>
             
-            <div class="desventajas">
-                <h5>⚠️ Desventajas:</h5>
-                <ul>
-                    ${barrio.desventajas.slice(0, 3).map(d => `<li>${d}</li>`).join('')}
+            <div>
+                <h4 style="color: #ef4444; font-size: 1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 5px;">
+                    ⚠️ Desventajas
+                </h4>
+                <ul style="margin: 0; padding-left: 20px; color: #64748b; font-size: 0.9rem;">
+                    ${barrio.desventajas.slice(0, 3).map(d => `<li style="margin-bottom: 4px;">${d}</li>`).join('')}
                 </ul>
             </div>
         `;
+        
+        card.addEventListener('mouseenter', function() {
+            this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+            this.style.transform = 'translateY(-4px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.boxShadow = 'none';
+            this.style.transform = 'translateY(0)';
+        });
+        
         contenedor.appendChild(card);
     });
+    
+    console.log(`📋 Lista renderizada: ${datosFiltrados.length} cards`);
 }
 
 // ============================================================================
@@ -305,439 +368,134 @@ function renderizarLista() {
 // ============================================================================
 
 function inicializarGraficos() {
-    crearGraficoCaros();
-    crearGraficoBaratos();
-    crearGraficoZonas();
-    crearGraficoHistograma();
+    console.log('📊 Inicializando gráficos...');
+    
+    crearGraficoPreciosComparativa();
+    crearGraficoM2();
 }
 
-function actualizarGraficos() {
-    Object.values(graficos).forEach(grafico => grafico.destroy());
-    graficos = {};
-    inicializarGraficos();
-}
-
-function crearGraficoCaros() {
-    const ctx = document.getElementById('grafico-caros').getContext('2d');
-    const datos = [...datosFiltrados]
-        .sort((a, b) => b.precioMedio - a.precioMedio)
-        .slice(0, 10);
+function crearGraficoPreciosComparativa() {
+    const canvas = document.getElementById('grafico-precios');
+    if (!canvas) return;
     
-    graficos.caros = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: datos.map(d => d.nombre),
-            datasets: [{
-                label: 'Precio medio (€/mes)',
-                data: datos.map(d => d.precioMedio),
-                backgroundColor: '#ef4444',
-                borderColor: '#dc2626',
-                borderWidth: 2
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: { display: false },
-                tooltip: {
-                    callbacks: {
-                        label: (context) => formatearPrecio(context.parsed.y) + '/mes'
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: (value) => formatearNumero(value) + '€'
-                    }
-                }
-            }
-        }
-    });
-}
-
-function crearGraficoBaratos() {
-    const ctx = document.getElementById('grafico-baratos').getContext('2d');
-    const datos = [...datosFiltrados]
-        .sort((a, b) => a.precioMedio - b.precioMedio)
-        .slice(0, 10);
+    const ctx = canvas.getContext('2d');
     
-    graficos.baratos = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: datos.map(d => d.nombre),
-            datasets: [{
-                label: 'Precio medio (€/mes)',
-                data: datos.map(d => d.precioMedio),
-                backgroundColor: '#22c55e',
-                borderColor: '#16a34a',
-                borderWidth: 2
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: { display: false },
-                tooltip: {
-                    callbacks: {
-                        label: (context) => formatearPrecio(context.parsed.y) + '/mes'
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: (value) => formatearNumero(value) + '€'
-                    }
-                }
-            }
-        }
-    });
-}
-
-function crearGraficoZonas() {
-    const ctx = document.getElementById('grafico-zonas').getContext('2d');
-    const analisisZonas = analizarPorZona(datosFiltrados);
-    
-    const labels = Object.keys(analisisZonas);
-    const datos = labels.map(zona => analisisZonas[zona].precioMedio);
-    
-    graficos.zonas = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Precio medio (€/mes)',
-                data: datos,
-                backgroundColor: '#3b82f6',
-                borderColor: '#2563eb',
-                borderWidth: 2
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: { display: false },
-                tooltip: {
-                    callbacks: {
-                        label: (context) => formatearPrecio(context.parsed.y) + '/mes'
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: (value) => formatearNumero(value) + '€'
-                    }
-                }
-            }
-        }
-    });
-}
-
-function crearGraficoHistograma() {
-    const ctx = document.getElementById('grafico-histograma').getContext('2d');
-    const distribucion = calcularDistribucionFrecuencias(datosFiltrados);
-    
-    graficos.histograma = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: distribucion.map(d => 
-                `${formatearNumero(d.limiteInferior)} - ${formatearNumero(d.limiteSuperior)}€`
-            ),
-            datasets: [{
-                label: 'Frecuencia',
-                data: distribucion.map(d => d.frecuencia),
-                backgroundColor: '#8b5cf6',
-                borderColor: '#7c3aed',
-                borderWidth: 2
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: { display: false },
-                tooltip: {
-                    callbacks: {
-                        label: (context) => `${context.parsed.y} barrios`
-                    }
-                }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        stepSize: 1
-                    }
-                }
-            }
-        }
-    });
-}
-
-// ============================================================================
-// ANÁLISIS ESTADÍSTICO COMPLETO
-// ============================================================================
-
-function mostrarAnalisisEstadistico() {
-    const resumen = generarResumenCompleto(datosFiltrados);
-    
-    // Estadísticas básicas
-    mostrarEstadisticasBasicas(resumen.basicas);
-    
-    // Dispersión
-    mostrarDispersion(resumen.dispersion);
-    
-    // Percentiles
-    mostrarPercentiles(resumen.percentiles);
-    
-    // Outliers
-    mostrarOutliers(resumen.outliers);
-    
-    // Por zona
-    mostrarAnalisisZonas(resumen.porZona);
-    
-    // Comparativa
-    mostrarComparativa(resumen.comparativa);
-    
-    // Oportunidades
-    mostrarOportunidades(resumen.oportunidades);
-}
-
-function mostrarEstadisticasBasicas(stats) {
-    const contenedor = document.getElementById('stats-basicas');
-    contenedor.innerHTML = `
-        <div class="stat-card">
-            <span class="stat-card-label">📊 N (Muestra)</span>
-            <div class="stat-card-value">${stats.n}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📊 Media Aritmética</span>
-            <div class="stat-card-value">${formatearPrecio(stats.media)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📊 Mediana (Q2)</span>
-            <div class="stat-card-value">${formatearPrecio(stats.mediana)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📊 Moda</span>
-            <div class="stat-card-value" style="font-size: 1.2rem;">${stats.moda}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📊 Mínimo</span>
-            <div class="stat-card-value">${formatearPrecio(stats.minimo)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📊 Máximo</span>
-            <div class="stat-card-value">${formatearPrecio(stats.maximo)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📊 Rango</span>
-            <div class="stat-card-value">${formatearPrecio(stats.rango)}</div>
-        </div>
-    `;
-}
-
-function mostrarDispersion(stats) {
-    const contenedor = document.getElementById('stats-dispersion');
-    contenedor.innerHTML = `
-        <div class="stat-card">
-            <span class="stat-card-label">📏 Varianza</span>
-            <div class="stat-card-value">${formatearNumero(stats.varianza)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📏 Desviación Estándar</span>
-            <div class="stat-card-value">${formatearPrecio(stats.desviacionEstandar)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📏 Coef. Variación</span>
-            <div class="stat-card-value">${stats.coeficienteVariacion}%</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📏 Error Estándar</span>
-            <div class="stat-card-value">${formatearPrecio(stats.errorEstandar)}</div>
-        </div>
-    `;
-}
-
-function mostrarPercentiles(stats) {
-    const contenedor = document.getElementById('stats-percentiles');
-    contenedor.innerHTML = `
-        <div class="stat-card">
-            <span class="stat-card-label">📐 P10</span>
-            <div class="stat-card-value">${formatearPrecio(stats.P10)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📐 Q1 (25%)</span>
-            <div class="stat-card-value">${formatearPrecio(stats.Q1)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📐 Q2 (50% - Mediana)</span>
-            <div class="stat-card-value">${formatearPrecio(stats.Q2)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📐 Q3 (75%)</span>
-            <div class="stat-card-value">${formatearPrecio(stats.Q3)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📐 P90</span>
-            <div class="stat-card-value">${formatearPrecio(stats.P90)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📐 P95</span>
-            <div class="stat-card-value">${formatearPrecio(stats.P95)}</div>
-        </div>
-        <div class="stat-card">
-            <span class="stat-card-label">📐 IQR (Rango Intercuartílico)</span>
-            <div class="stat-card-value">${formatearPrecio(stats.IQR)}</div>
-        </div>
-    `;
-}
-
-function mostrarOutliers(stats) {
-    const contenedor = document.getElementById('stats-outliers');
-    
-    let html = `
-        <div class="outliers-list">
-            <p><strong>Límites de detección:</strong></p>
-            <p>Límite inferior: ${formatearPrecio(stats.limiteInferior)}</p>
-            <p>Límite superior: ${formatearPrecio(stats.limiteSuperior)}</p>
-            <p><strong>Total outliers detectados: ${stats.totalOutliers}</strong></p>
-    `;
-    
-    if (stats.outliersSuperiores.length > 0) {
-        html += `<h4 style="margin-top: 15px; color: #ef4444;">Outliers Superiores (Muy caros):</h4>`;
-        stats.outliersSuperiores.forEach(o => {
-            html += `<div class="outlier-item">${o.nombre}: ${formatearPrecio(o.precio)}</div>`;
-        });
+    // Destruir gráfico anterior si existe
+    if (graficoPreciosChart) {
+        graficoPreciosChart.destroy();
     }
     
-    if (stats.outliersInferiores.length > 0) {
-        html += `<h4 style="margin-top: 15px; color: #22c55e;">Outliers Inferiores (Muy baratos):</h4>`;
-        stats.outliersInferiores.forEach(o => {
-            html += `<div class="outlier-item">${o.nombre}: ${formatearPrecio(o.precio)}</div>`;
-        });
+    // Tomar top 10 más caros y más baratos
+    const ordenados = [...datosFiltrados].sort((a, b) => b.precioMedio - a.precioMedio);
+    const top10 = ordenados.slice(0, 10);
+    
+    graficoPreciosChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: top10.map(b => b.nombre),
+            datasets: [{
+                label: 'Precio medio (€/mes)',
+                data: top10.map(b => b.precioMedio),
+                backgroundColor: top10.map(b => obtenerColorPorPrecio(b.precioMedio) + 'CC'),
+                borderColor: top10.map(b => obtenerColorPorPrecio(b.precioMedio)),
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.parsed.y + '€/mes';
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            return value + '€';
+                        }
+                    }
+                }
+            }
+        }
+    });
+    
+    console.log('✅ Gráfico de precios creado');
+}
+
+function crearGraficoM2() {
+    const canvas = document.getElementById('grafico-m2');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    
+    // Destruir gráfico anterior si existe
+    if (graficoM2Chart) {
+        graficoM2Chart.destroy();
     }
     
-    if (stats.totalOutliers === 0) {
-        html += `<p style="color: #22c55e; margin-top: 10px;">✅ No se detectaron valores atípicos</p>`;
-    }
+    // Tomar top 10 más caros por m²
+    const ordenadosM2 = [...datosFiltrados].sort((a, b) => b.precioM2 - a.precioM2);
+    const top10M2 = ordenadosM2.slice(0, 10);
     
-    html += `</div>`;
-    contenedor.innerHTML = html;
-}
-
-function mostrarAnalisisZonas(zonas) {
-    const contenedor = document.getElementById('stats-zonas');
-    
-    let html = '<div class="zona-list">';
-    Object.keys(zonas).forEach(zona => {
-        const datos = zonas[zona];
-        html += `
-            <div class="zona-item">
-                <h4 style="color: #3b82f6; margin-bottom: 8px;">${zona}</h4>
-                <p><strong>Barrios:</strong> ${datos.numBarrios}</p>
-                <p><strong>Precio medio:</strong> ${formatearPrecio(datos.precioMedio)}</p>
-                <p><strong>Rango:</strong> ${formatearPrecio(datos.precioMinimo)} - ${formatearPrecio(datos.precioMaximo)}</p>
-            </div>
-        `;
+    graficoM2Chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: top10M2.map(b => b.nombre),
+            datasets: [{
+                label: 'Precio por m² (€/m²)',
+                data: top10M2.map(b => b.precioM2),
+                backgroundColor: '#8b5cf6CC',
+                borderColor: '#8b5cf6',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.parsed.y.toFixed(1) + '€/m²';
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            return value.toFixed(1) + '€/m²';
+                        }
+                    }
+                }
+            }
+        }
     });
-    html += '</div>';
-    contenedor.innerHTML = html;
-}
-
-function mostrarComparativa(comp) {
-    const contenedor = document.getElementById('stats-comparativa');
-    contenedor.innerHTML = `
-        <div class="stats-grid">
-            <div class="stat-card" style="border-left-color: #ef4444;">
-                <span class="stat-card-label">🏛️ Madrid Capital</span>
-                <div class="stat-card-value">${formatearPrecio(comp.capital.precioMedio)}</div>
-                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;">
-                    ${comp.capital.numBarrios} barrios analizados
-                </p>
-            </div>
-            <div class="stat-card" style="border-left-color: #22c55e;">
-                <span class="stat-card-label">🌳 Área Metropolitana</span>
-                <div class="stat-card-value">${formatearPrecio(comp.periferia.precioMedio)}</div>
-                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;">
-                    ${comp.periferia.numBarrios} municipios analizados
-                </p>
-            </div>
-            <div class="stat-card" style="border-left-color: #8b5cf6;">
-                <span class="stat-card-label">📊 Diferencia Absoluta</span>
-                <div class="stat-card-value">${formatearPrecio(comp.diferencia.absoluta)}</div>
-                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;">
-                    Capital más caro que periferia
-                </p>
-            </div>
-            <div class="stat-card" style="border-left-color: #f97316;">
-                <span class="stat-card-label">📊 Diferencia Porcentual</span>
-                <div class="stat-card-value">${comp.diferencia.porcentual.toFixed(2)}%</div>
-                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;">
-                    Más caro en capital vs periferia
-                </p>
-            </div>
-        </div>
-    `;
-}
-
-function mostrarOportunidades(oportunidades) {
-    const contenedor = document.getElementById('stats-oportunidades');
     
-    let html = '<div class="oportunidades-list">';
-    oportunidades.forEach((op, index) => {
-        const color = index < 3 ? '#22c55e' : index < 7 ? '#3b82f6' : '#f97316';
-        html += `
-            <div class="oportunidad-item">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <strong style="color: ${color};">${index + 1}. ${op.nombre}</strong>
-                    <span style="background: ${color}; color: white; padding: 4px 12px; border-radius: 12px; font-size: 0.85rem;">
-                        Índice: ${op.indice}
-                    </span>
-                </div>
-                <p style="margin-top: 4px; font-size: 0.9rem; color: #64748b;">
-                    ${op.categoria}
-                </p>
-            </div>
-        `;
-    });
-    html += '</div>';
-    contenedor.innerHTML = html;
+    console.log('✅ Gráfico de €/m² creado');
 }
 
 // ============================================================================
-// FUNCIONES AUXILIARES
-// ============================================================================
-
-function formatearPrecio(precio) {
-    return formatearNumero(precio) + ' €';
-}
-
-function formatearNumero(numero) {
-    return numero.toLocaleString('es-ES', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-    });
-}
-
-// ============================================================================
-// CONSOLE LOG INFORMATIVO
+// LOGS Y DEBUGGING
 // ============================================================================
 
 console.log(`
-🏠 MAPA DE ALQUILERES MADRID 2025
-================================
-📊 Datos cargados: ${barriosMadrid.length} ubicaciones
-📍 Madrid Capital: ${barriosMadrid.filter(b => b.zona === 'Capital').length} barrios
+🏠 MAPA DE ALQUILERES MADRID 2025 - FASE 1
+==========================================
+📊 Total ubicaciones: ${barriosMadrid.length}
+🏛️ Madrid Capital: ${barriosMadrid.filter(b => b.zona === 'Capital').length} barrios
 🌳 Área Metropolitana: ${barriosMadrid.filter(b => b.zona === 'Periferia').length} municipios
 📅 Última actualización: Agosto 2025
-🔗 Proyecto Data Science - Universidad
+🎯 Versión: 2.0.0-fase1
 `);

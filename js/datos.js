@@ -1,525 +1,1740 @@
 // ============================================================================
-// DATASET: PRECIOS DE ALQUILER EN MADRID Y ÁREA METROPOLITANA 2025
+// DATASET: PRECIOS DE ALQUILER EN MADRID 2025 - FASE 2 COMPLETA
 // ============================================================================
-// Fuentes: Idealista, Fotocasa, Indomio, OCU, Bankinter, Properfy
-// Fecha de actualización: Enero-Agosto 2025
-// Metodología: Recopilación de datos de 8 fuentes oficiales verificadas
+// Fuentes: Idealista, Fotocasa, Bankinter, OCU, Indomio 2025
+// FASE 2: 65 barrios de 10 distritos + 17 municipios área metropolitana
+// Total: 82 ubicaciones
 // ============================================================================
 
 const barriosMadrid = [
+    
     // ========================================================================
-    // MADRID CAPITAL - ZONA CENTRO (PREMIUM)
+    // DISTRITO 1: CENTRO (6 barrios)
     // ========================================================================
     {
         id: 1,
-        nombre: "Salamanca",
-        lat: 40.4312,
-        lng: -3.6773,
+        nombre: "Palacio",
+        distrito: "Centro",
+        lat: 40.4204,
+        lng: -3.7143,
         zona: "Capital",
         subzona: "Centro",
-        precioMedio: 2064,
-        precioM2: 25.8,
+        precioMedio: 1900,
+        precioM2: 23.8,
         metrosCuadrados: 80,
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Barrio de lujo con tiendas exclusivas",
-            "Excelente conectividad con metro",
-            "Zona segura y tranquila",
-            "Gran oferta cultural y gastronómica"
+            "Palacio Real y Plaza de Oriente",
+            "Teatro Real y ópera",
+            "Arquitectura histórica",
+            "Zona cultural privilegiada"
         ],
         desventajas: [
-            "Precios muy elevados",
-            "Poco ambiente nocturno",
+            "Precio muy elevado",
+            "Muy turístico",
             "Tráfico denso",
-            "Estacionamiento complicado"
+            "Ruido constante"
         ]
     },
     {
         id: 2,
-        nombre: "Chamberí",
-        lat: 40.4378,
-        lng: -3.7025,
+        nombre: "Embajadores (Lavapiés)",
+        distrito: "Centro",
+        lat: 40.4088,
+        lng: -3.7055,
         zona: "Capital",
         subzona: "Centro",
-        precioMedio: 2000,
-        precioM2: 25.0,
+        precioMedio: 1750,
+        precioM2: 21.9,
         metrosCuadrados: 80,
-        fuente: "Idealista",
-        fechaActualizacion: "Febrero 2025",
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Barrio con mucho encanto",
-            "Mercado de Vallehermoso renovado",
-            "Buena conexión de transporte",
-            "Ambiente familiar y cosmopolita"
+            "Barrio multicultural y bohemio",
+            "Ambiente artístico y alternativo",
+            "Tabacalera y centros culturales",
+            "Restaurantes internacionales variados"
         ],
         desventajas: [
-            "Precios en aumento constante",
-            "Calles estrechas",
-            "Pocas zonas verdes",
-            "Alta densidad de población"
+            "Percepción de inseguridad",
+            "Edificios antiguos sin ascensor",
+            "Gentrificación en curso",
+            "Calles estrechas y bulliciosas"
         ]
     },
     {
         id: 3,
-        nombre: "Centro",
-        lat: 40.4168,
-        lng: -3.7038,
+        nombre: "Cortes (Huertas)",
+        distrito: "Centro",
+        lat: 40.4157,
+        lng: -3.6961,
         zona: "Capital",
         subzona: "Centro",
-        precioMedio: 2056,
-        precioM2: 25.7,
-        metrosCuadrados: 80,
-        fuente: "Fotocasa",
-        fechaActualizacion: "Agosto 2025",
+        precioMedio: 2100,
+        precioM2: 24.0,
+        metrosCuadrados: 87,
+        fuente: "Bankinter",
+        fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Corazón de Madrid",
-            "Máxima oferta cultural",
-            "Todos los servicios disponibles",
-            "Vida nocturna intensa"
+            "Barrio de las Letras literario",
+            "Cerca del Museo del Prado",
+            "Vida nocturna intensa",
+            "Plaza Santa Ana emblemática"
         ],
         desventajas: [
+            "Ruidoso por la noche",
             "Muy turístico",
-            "Ruidoso 24/7",
-            "Edificios antiguos sin ascensor",
-            "Precios prohibitivos"
+            "Precios elevados",
+            "Limpieza irregular"
         ]
     },
     {
         id: 4,
-        nombre: "Chamartín",
-        lat: 40.4651,
-        lng: -3.6779,
+        nombre: "Justicia (Chueca)",
+        distrito: "Centro",
+        lat: 40.4252,
+        lng: -3.6981,
         zona: "Capital",
-        subzona: "Norte",
-        precioMedio: 1696,
-        precioM2: 21.2,
-        metrosCuadrados: 80,
+        subzona: "Centro",
+        precioMedio: 2200,
+        precioM2: 24.1,
+        metrosCuadrados: 91,
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Zona de negocios moderna",
-            "Estación de tren principal",
-            "Torres empresariales",
-            "Buena infraestructura"
+            "Barrio LGTBIQ+ referencia mundial",
+            "Ambiente cosmopolita y abierto",
+            "Comercio independiente y diseño",
+            "Mercado de San Antón renovado"
         ],
         desventajas: [
-            "Poco ambiente residencial",
-            "Distancias largas a pie",
-            "Zona muy corporativa",
-            "Precios altos"
+            "Precio premium",
+            "Muy concurrido fines de semana",
+            "Ruido nocturno",
+            "Aparcamiento imposible"
         ]
     },
     {
         id: 5,
-        nombre: "Retiro",
-        lat: 40.4153,
-        lng: -3.6824,
+        nombre: "Universidad (Malasaña)",
+        distrito: "Centro",
+        lat: 40.4266,
+        lng: -3.7073,
         zona: "Capital",
-        subzona: "Centro-Este",
-        precioMedio: 1712,
-        precioM2: 21.4,
-        metrosCuadrados: 80,
-        fuente: "Fotocasa",
-        fechaActualizacion: "Julio 2025",
+        subzona: "Centro",
+        precioMedio: 2100,
+        precioM2: 24.4,
+        metrosCuadrados: 86,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Junto al Parque del Retiro",
-            "Zona muy tranquila",
-            "Edificios señoriales",
-            "Alta calidad de vida"
+            "Barrio hipster y moderno",
+            "Gran oferta de ocio y cultura",
+            "Tiendas vintage y alternativas",
+            "Ambiente joven y dinámico"
         ],
         desventajas: [
-            "Precios elevados",
-            "Poco comercio de proximidad",
-            "Zona muy residencial y silenciosa",
-            "Edificios antiguos"
+            "Precio en alza constante",
+            "Saturación turística",
+            "Ruido hasta altas horas",
+            "Gentrificación avanzada"
+        ]
+    },
+    {
+        id: 6,
+        nombre: "Sol",
+        distrito: "Centro",
+        lat: 40.4168,
+        lng: -3.7038,
+        zona: "Capital",
+        subzona: "Centro",
+        precioMedio: 2050,
+        precioM2: 23.8,
+        metrosCuadrados: 86,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Kilómetro 0 de España",
+            "Conexión excepcional transporte",
+            "Plaza Mayor y comercio",
+            "Centro absoluto de Madrid"
+        ],
+        desventajas: [
+            "Excesivamente turístico",
+            "Ruido 24/7",
+            "Precios inflados",
+            "Masificación constante"
         ]
     },
 
     // ========================================================================
-    // MADRID CAPITAL - ZONA MEDIA-ALTA
+    // DISTRITO 2: SALAMANCA (6 barrios)
     // ========================================================================
     {
-        id: 6,
-        nombre: "Arganzuela",
-        lat: 40.3983,
-        lng: -3.6979,
-        zona: "Capital",
-        subzona: "Sur-Centro",
-        precioMedio: 1616,
-        precioM2: 20.2,
-        metrosCuadrados: 80,
-        fuente: "Idealista",
-        fechaActualizacion: "Abril 2025",
-        ventajas: [
-            "Madrid Río cercano",
-            "Matadero Madrid (cultura)",
-            "Bien comunicado",
-            "Barrio en transformación"
-        ],
-        desventajas: [
-            "Algunas zonas en obras",
-            "Precio en alza",
-            "Pocas zonas comerciales grandes",
-            "Tráfico en hora punta"
-        ]
-    },
-    {
         id: 7,
-        nombre: "Tetuán",
-        lat: 40.4559,
-        lng: -3.6963,
+        nombre: "Recoletos",
+        distrito: "Salamanca",
+        lat: 40.4238,
+        lng: -3.6866,
         zona: "Capital",
-        subzona: "Norte",
-        precioMedio: 1688,
-        precioM2: 21.1,
-        metrosCuadrados: 80,
-        fuente: "Indomio",
-        fechaActualizacion: "Agosto 2025",
+        subzona: "Este",
+        precioMedio: 2400,
+        precioM2: 26.8,
+        metrosCuadrados: 90,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Muy bien comunicado",
-            "Comercio multicultural",
-            "Precios más accesibles que centro",
-            "Ambiente diverso"
+            "Barrio más exclusivo de Madrid",
+            "Junto a Biblioteca Nacional",
+            "Museo Arqueológico Nacional",
+            "Arquitectura señorial impecable"
         ],
         desventajas: [
-            "Algunas calles ruidosas",
-            "Densidad alta",
-            "Pocas zonas verdes",
-            "Gentrificación en proceso"
+            "El más caro de toda Madrid",
+            "Ambiente muy formal",
+            "Poco comercio de barrio",
+            "Estacionamiento carísimo"
         ]
     },
     {
         id: 8,
-        nombre: "Moncloa-Aravaca",
-        lat: 40.4357,
-        lng: -3.7273,
-        zona: "Capital",
-        subzona: "Oeste",
-        precioMedio: 1704,
-        precioM2: 21.3,
-        metrosCuadrados: 80,
-        fuente: "Fotocasa",
-        fechaActualizacion: "Junio 2025",
-        ventajas: [
-            "Casa de Campo cercana",
-            "Universidad Complutense",
-            "Ambiente universitario",
-            "Zonas residenciales tranquilas"
-        ],
-        desventajas: [
-            "Lejos del centro en algunas zonas",
-            "Mucho tráfico universitario",
-            "Precios variables según zona",
-            "Transporte limitado en Aravaca"
-        ]
-    },
-
-    // ========================================================================
-    // MADRID CAPITAL - ZONA MEDIA
-    // ========================================================================
-    {
-        id: 9,
-        nombre: "Ciudad Lineal",
-        lat: 40.4462,
-        lng: -3.6486,
+        nombre: "Goya",
+        distrito: "Salamanca",
+        lat: 40.4255,
+        lng: -3.6701,
         zona: "Capital",
         subzona: "Este",
-        precioMedio: 1416,
-        precioM2: 17.7,
-        metrosCuadrados: 80,
-        fuente: "Idealista",
-        fechaActualizacion: "Mayo 2025",
+        precioMedio: 2200,
+        precioM2: 22.2,
+        metrosCuadrados: 99,
+        fuente: "Bankinter",
+        fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Buena conexión de metro",
-            "Precio razonable",
-            "Barrio familiar",
-            "Comercio de barrio"
+            "Calle Goya comercial principal",
+            "Excelente conexión metro",
+            "Zona residencial consolidada",
+            "Servicios de alta calidad"
         ],
         desventajas: [
-            "Lejos del centro",
-            "Pocas zonas de ocio",
-            "Edificios de los 60-70",
-            "Poco ambiente nocturno"
+            "Precio elevado",
+            "Tráfico intenso calle Goya",
+            "Poco ambiente nocturno",
+            "Edificios antiguos sin reforma"
+        ]
+    },
+    {
+        id: 9,
+        nombre: "Fuente del Berro",
+        distrito: "Salamanca",
+        lat: 40.4331,
+        lng: -3.6574,
+        zona: "Capital",
+        subzona: "Este",
+        precioMedio: 1850,
+        precioM2: 18.6,
+        metrosCuadrados: 99,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Parque Quinta de la Fuente del Berro",
+            "Más económico que otros barrios Salamanca",
+            "Zona tranquila y residencial",
+            "Buena conexión con M-30"
+        ],
+        desventajas: [
+            "Lejos del centro distrito",
+            "Menos comercio que Goya/Serrano",
+            "Metro más alejado algunas zonas",
+            "Edificios más antiguos"
         ]
     },
     {
         id: 10,
-        nombre: "Latina",
-        lat: 40.3915,
-        lng: -3.7453,
+        nombre: "Guindalera",
+        distrito: "Salamanca",
+        lat: 40.4409,
+        lng: -3.6678,
         zona: "Capital",
-        subzona: "Suroeste",
-        precioMedio: 1376,
-        precioM2: 17.2,
-        metrosCuadrados: 80,
-        fuente: "Fotocasa",
-        fechaActualizacion: "Julio 2025",
+        subzona: "Este",
+        precioMedio: 1600,
+        precioM2: 18.9,
+        metrosCuadrados: 85,
+        fuente: "Idealista",
+        fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Barrio castizo con encanto",
-            "Fiestas populares (La Paloma)",
-            "Precio accesible",
-            "Bien comunicado"
+            "Más asequible dentro Salamanca",
+            "Parque de Eva Perón",
+            "Ambiente familiar tranquilo",
+            "Buenas conexiones transporte"
         ],
         desventajas: [
-            "Algunas zonas antiguas",
-            "Tráfico denso",
-            "Calles estrechas",
-            "Pocos espacios verdes"
+            "Menos prestigio que otros barrios",
+            "Lejos de la zona comercial premium",
+            "Menos servicios exclusivos",
+            "Edificación años 60-70"
         ]
     },
     {
         id: 11,
-        nombre: "San Blas",
-        lat: 40.4302,
-        lng: -3.6091,
+        nombre: "Lista",
+        distrito: "Salamanca",
+        lat: 40.4328,
+        lng: -3.6756,
         zona: "Capital",
         subzona: "Este",
-        precioMedio: 1424,
-        precioM2: 17.8,
-        metrosCuadrados: 80,
-        fuente: "Idealista",
-        fechaActualizacion: "Marzo 2025",
+        precioMedio: 2100,
+        precioM2: 24.0,
+        metrosCuadrados: 87,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Precio competitivo",
-            "Parque Juan Carlos I cercano",
-            "Ifema a 10 minutos",
-            "Barrio tranquilo"
+            "Calle Ortega y Gasset lujo",
+            "Zona consolidada y elegante",
+            "Metro Diego de León importante",
+            "Comercio variado y servicios"
         ],
         desventajas: [
-            "Lejos del centro",
-            "Poco comercio grande",
-            "Transporte limitado en algunas zonas",
-            "Poca vida nocturna"
+            "Precio alto",
+            "Mucho tráfico comercial",
+            "Aparcamiento complicado",
+            "Poco ambiente nocturno"
+        ]
+    },
+    {
+        id: 12,
+        nombre: "Castellana",
+        distrito: "Salamanca",
+        lat: 40.4386,
+        lng: -3.6873,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 2350,
+        precioM2: 25.0,
+        metrosCuadrados: 94,
+        fuente: "Bankinter",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Paseo de la Castellana emblemático",
+            "Edificios modernos y clásicos",
+            "Zona empresarial premium",
+            "Excelentes comunicaciones"
+        ],
+        desventajas: [
+            "Segundo más caro Madrid",
+            "Mucho tráfico y ruido",
+            "Zona muy corporativa",
+            "Poco comercio de proximidad"
         ]
     },
 
     // ========================================================================
-    // MADRID CAPITAL - ZONA ECONÓMICA
+    // DISTRITO 3: RETIRO (6 barrios)
     // ========================================================================
     {
-        id: 12,
-        nombre: "Hortaleza",
-        lat: 40.4706,
-        lng: -3.6408,
-        zona: "Capital",
-        subzona: "Norte",
-        precioMedio: 1344,
-        precioM2: 16.8,
-        metrosCuadrados: 80,
-        fuente: "Fotocasa",
-        fechaActualizacion: "Agosto 2025",
-        ventajas: [
-            "Zona en crecimiento",
-            "Buena relación calidad-precio",
-            "Nuevas construcciones",
-            "Ambiente joven"
-        ],
-        desventajas: [
-            "Lejos del centro",
-            "Metro limitado en algunas zonas",
-            "Poco comercio tradicional",
-            "Obras en expansión"
-        ]
-    },
-    {
         id: 13,
-        nombre: "Fuencarral-El Pardo",
-        lat: 40.4976,
-        lng: -3.7125,
+        nombre: "Pacífico",
+        distrito: "Retiro",
+        lat: 40.4044,
+        lng: -3.6723,
         zona: "Capital",
-        subzona: "Norte",
-        precioMedio: 1320,
-        precioM2: 16.5,
-        metrosCuadrados: 80,
-        fuente: "Idealista",
-        fechaActualizacion: "Junio 2025",
+        subzona: "Sureste",
+        precioMedio: 1600,
+        precioM2: 19.5,
+        metrosCuadrados: 82,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Zonas verdes amplias",
-            "Monte de El Pardo",
-            "Barrios nuevos y modernos",
-            "Precio atractivo"
+            "Cerca Estación de Atocha",
+            "Bien comunicado con Cercanías",
+            "Precio razonable para la zona",
+            "Barrio tranquilo y residencial"
         ],
         desventajas: [
-            "Muy extenso y disperso",
-            "Transporte limitado en El Pardo",
-            "Lejos del centro urbano",
-            "Servicios dispersos"
+            "Menos verde que otros Retiro",
+            "Tráfico de Atocha cercano",
+            "Edificios envejecidos",
+            "Menos comercio local"
         ]
     },
     {
         id: 14,
-        nombre: "Carabanchel",
-        lat: 40.3820,
-        lng: -3.7419,
+        nombre: "Adelfas",
+        distrito: "Retiro",
+        lat: 40.3984,
+        lng: -3.6602,
         zona: "Capital",
-        subzona: "Sur",
-        precioMedio: 1288,
-        precioM2: 16.1,
-        metrosCuadrados: 80,
-        fuente: "OCU",
-        fechaActualizacion: "Junio 2025",
+        subzona: "Sureste",
+        precioMedio: 1550,
+        precioM2: 19.0,
+        metrosCuadrados: 82,
+        fuente: "Idealista",
+        fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Precio muy competitivo",
-            "Bien comunicado con metro",
-            "Parque de las Cruces",
-            "Comercio de barrio"
+            "Precio más bajo del distrito",
+            "Cerca M-30 y salidas ciudad",
+            "Zona residencial familiar",
+            "Parques y zonas infantiles"
         ],
         desventajas: [
-            "Imagen social negativa",
-            "Algunas zonas antiguas",
-            "Pocos espacios culturales",
-            "Edificios antiguos"
+            "Lejos del Retiro parque",
+            "Menos servicios premium",
+            "Edificios años 70",
+            "Ambiente más periférico"
         ]
     },
     {
         id: 15,
-        nombre: "Usera",
-        lat: 40.3870,
-        lng: -3.7024,
+        nombre: "Estrella",
+        distrito: "Retiro",
+        lat: 40.4089,
+        lng: -3.6638,
         zona: "Capital",
-        subzona: "Sur",
-        precioMedio: 1376,
-        precioM2: 17.2,
-        metrosCuadrados: 80,
+        subzona: "Este",
+        precioMedio: 1700,
+        precioM2: 20.5,
+        metrosCuadrados: 83,
         fuente: "Bankinter",
-        fechaActualizacion: "Agosto 2025",
+        fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Mayor crecimiento 2025 (+21.5%)",
-            "Precio asequible",
-            "Multicultural y diverso",
-            "Mejorando infraestructuras"
+            "Cerca del Retiro",
+            "Zona tranquila y señorial",
+            "Buenos colegios cercanos",
+            "Arquitectura cuidada"
         ],
         desventajas: [
-            "Históricamente menos valorado",
-            "Pocas zonas verdes",
-            "Servicios básicos",
-            "Gentrificación incipiente"
+            "Metro algo alejado",
+            "Poco comercio de proximidad",
+            "Aparcamiento complicado",
+            "Precio en alza"
         ]
     },
     {
         id: 16,
-        nombre: "Puente de Vallecas",
-        lat: 40.3970,
-        lng: -3.6652,
+        nombre: "Ibiza",
+        distrito: "Retiro",
+        lat: 40.4173,
+        lng: -3.6739,
         zona: "Capital",
-        subzona: "Sureste",
-        precioMedio: 1360,
-        precioM2: 17.0,
-        metrosCuadrados: 80,
-        fuente: "Bankinter",
-        fechaActualizacion: "Agosto 2025",
+        subzona: "Este",
+        precioMedio: 1950,
+        precioM2: 22.5,
+        metrosCuadrados: 87,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Fuerte crecimiento (+18.8%)",
-            "Precio económico",
-            "Barrio con identidad",
-            "Mejoras urbanísticas"
+            "Junto al Retiro",
+            "Zona muy residencial",
+            "Calles amplias y arboladas",
+            "Ambiente exclusivo"
         ],
         desventajas: [
-            "Percepción social",
-            "Lejos de zonas premium",
-            "Densidad muy alta",
-            "Edificios antiguos"
+            "Precio elevado",
+            "Poco ambiente comercial",
+            "Zona muy tranquila (para algunos)",
+            "Edificios sin modernizar"
         ]
     },
     {
         id: 17,
-        nombre: "Moratalaz",
-        lat: 40.4079,
-        lng: -3.6455,
+        nombre: "Jerónimos",
+        distrito: "Retiro",
+        lat: 40.4142,
+        lng: -3.6866,
         zona: "Capital",
-        subzona: "Este",
-        precioMedio: 1200,
-        precioM2: 15.0,
-        metrosCuadrados: 80,
-        fuente: "Fotocasa",
-        fechaActualizacion: "Julio 2025",
+        subzona: "Centro-Este",
+        precioMedio: 2200,
+        precioM2: 24.0,
+        metrosCuadrados: 92,
+        fuente: "Bankinter",
+        fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Precio muy asequible",
-            "Barrio residencial tranquilo",
-            "Cerro del Tío Pío (vistas)",
-            "Buena conexión de metro"
+            "Junto al Prado y Reina Sofía",
+            "Zona monumentales icónica",
+            "Puerta de Alcalá y Retiro",
+            "Máximo prestigio"
         ],
         desventajas: [
-            "Lejos del centro",
-            "Poco ocio y cultura",
-            "Edificios de los 70",
-            "Pocas zonas comerciales"
+            "Muy caro",
+            "Excesivamente turístico",
+            "Poco comercio cotidiano",
+            "Tráfico constante"
         ]
     },
     {
         id: 18,
-        nombre: "Villa de Vallecas",
-        lat: 40.3790,
-        lng: -3.6122,
+        nombre: "Niño Jesús",
+        distrito: "Retiro",
+        lat: 40.4120,
+        lng: -3.6781,
         zona: "Capital",
-        subzona: "Sureste",
-        precioMedio: 1200,
-        precioM2: 15.0,
-        metrosCuadrados: 80,
+        subzona: "Este",
+        precioMedio: 1800,
+        precioM2: 21.0,
+        metrosCuadrados: 86,
         fuente: "Idealista",
-        fechaActualizacion: "Mayo 2025",
+        fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Más económico de Madrid capital",
-            "Barrio nuevo y planificado",
-            "Parque Forestal de Entrevías",
-            "Construcciones modernas"
+            "Hospital Niño Jesús referencia",
+            "Cerca del Retiro",
+            "Zona residencial consolidada",
+            "Buen balance precio-calidad"
         ],
         desventajas: [
-            "Muy alejado del centro",
-            "Solo línea 1 de metro",
-            "Pocos servicios consolidados",
-            "Sensación de periferia"
+            "Algo alejado del centro",
+            "Tráfico hospitalario",
+            "Menos comercio que otras zonas",
+            "Metro más distante"
         ]
     },
+
+    // ========================================================================
+    // DISTRITO 4: CHAMBERÍ (6 barrios)
+    // ========================================================================
     {
         id: 19,
-        nombre: "Villaverde",
-        lat: 40.3470,
-        lng: -3.7058,
+        nombre: "Gaztambide",
+        distrito: "Chamberí",
+        lat: 40.4372,
+        lng: -3.7182,
         zona: "Capital",
-        subzona: "Sur",
-        precioMedio: 1200,
-        precioM2: 15.0,
-        metrosCuadrados: 80,
-        fuente: "Fotocasa",
-        fechaActualizacion: "Agosto 2025",
+        subzona: "Noroeste",
+        precioMedio: 1900,
+        precioM2: 23.0,
+        metrosCuadrados: 83,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Precio muy bajo",
-            "Cercanías y metro",
-            "En proceso de renovación",
-            "Espacios industriales reconvertidos"
+            "Junto a la Ciudad Universitaria",
+            "Ambiente joven y dinámico",
+            "Buena conexión con Moncloa",
+            "Precio razonable para Chamberí"
         ],
         desventajas: [
-            "Zona industrial histórica",
-            "Lejos del centro",
-            "Imagen poco atractiva",
-            "Servicios limitados"
+            "Ruido universitario temporadas",
+            "Algo alejado del centro distrito",
+            "Tráfico de Cea Bermúdez",
+            "Parking complicado"
         ]
     },
     {
         id: 20,
-        nombre: "Vicálvaro",
-        lat: 40.4026,
-        lng: -3.6047,
+        nombre: "Arapiles",
+        distrito: "Chamberí",
+        lat: 40.4324,
+        lng: -3.7117,
+        zona: "Capital",
+        subzona: "Centro-Oeste",
+        precioMedio: 1950,
+        precioM2: 23.5,
+        metrosCuadrados: 83,
+        fuente: "Bankinter",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Céntrico y bien comunicado",
+            "Templo de Debod cercano",
+            "Comercio variado",
+            "Zona consolidada"
+        ],
+        desventajas: [
+            "Edificios antiguos",
+            "Calles estrechas",
+            "Precio en fuerte alza (+20%)",
+            "Poco aparcamiento"
+        ]
+    },
+    {
+        id: 21,
+        nombre: "Trafalgar",
+        distrito: "Chamberí",
+        lat: 40.4283,
+        lng: -3.7065,
+        zona: "Capital",
+        subzona: "Centro",
+        precioMedio: 2100,
+        precioM2: 24.5,
+        metrosCuadrados: 86,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Corazón de Chamberí",
+            "Calle Fuencarral comercial",
+            "Excelente transporte",
+            "Arquitectura cuidada"
+        ],
+        desventajas: [
+            "Precio premium alto",
+            "Muy transitado",
+            "Ruido del comercio",
+            "Poco espacio verde"
+        ]
+    },
+    {
+        id: 22,
+        nombre: "Almagro",
+        distrito: "Chamberí",
+        lat: 40.4337,
+        lng: -3.6965,
         zona: "Capital",
         subzona: "Este",
-        precioMedio: 1136,
-        precioM2: 14.2,
+        precioMedio: 2150,
+        precioM2: 24.8,
+        metrosCuadrados: 87,
+        fuente: "Bankinter",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Uno de los más elegantes",
+            "Junto a Paseo de la Castellana",
+            "Embajadas y edificios señoriales",
+            "Máxima calidad de vida"
+        ],
+        desventajas: [
+            "Muy caro",
+            "Zona muy formal",
+            "Poco comercio cotidiano",
+            "Aparcamiento imposible"
+        ]
+    },
+    {
+        id: 23,
+        nombre: "Vallehermoso",
+        distrito: "Chamberí",
+        lat: 40.4422,
+        lng: -3.7101,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1880,
+        precioM2: 22.8,
+        metrosCuadrados: 82,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Mercado Vallehermoso renovado",
+            "Ambiente de barrio auténtico",
+            "Polideportivo Canal Isabel II",
+            "Zona verde del Canal"
+        ],
+        desventajas: [
+            "Algo alejado del centro Chamberí",
+            "Cuestas pronunciadas",
+            "Metro algo lejos",
+            "Edificios antiguos"
+        ]
+    },
+    {
+        id: 24,
+        nombre: "Ríos Rosas",
+        distrito: "Chamberí",
+        lat: 40.4437,
+        lng: -3.7001,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1800,
+        precioM2: 22.0,
+        metrosCuadrados: 82,
+        fuente: "Idealista",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Cerca de Nuevos Ministerios",
+            "Buena conexión transporte",
+            "Zona tranquila residencial",
+            "Precio contenido para Chamberí"
+        ],
+        desventajas: [
+            "Algo impersonal",
+            "Mucho tráfico oficinas",
+            "Poco comercio local",
+            "Ambiente corporativo"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 5: PUENTE DE VALLECAS (6 barrios)
+    // ========================================================================
+    {
+        id: 25,
+        nombre: "Entrevías",
+        distrito: "Puente de Vallecas",
+        lat: 40.3846,
+        lng: -3.6521,
+        zona: "Capital",
+        subzona: "Sureste",
+        precioMedio: 1100,
+        precioM2: 13.7,
         metrosCuadrados: 80,
         fuente: "Idealista",
-        fechaActualizacion: "Abril 2025",
+        fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "El más barato de Madrid",
-            "Campus universitario URJC",
-            "Ensanche de Vallecas en desarrollo",
+            "Precio más bajo del distrito",
+            "Metro L1 Buenos Aires",
+            "Barrio obrero auténtico",
+            "En proceso de renovación"
+        ],
+        desventajas: [
+            "Imagen social negativa",
+            "Edificios muy antiguos",
+            "Lejos del centro Madrid",
+            "Pocas zonas verdes"
+        ]
+    },
+    {
+        id: 26,
+        nombre: "San Diego",
+        distrito: "Puente de Vallecas",
+        lat: 40.3918,
+        lng: -3.6634,
+        zona: "Capital",
+        subzona: "Sureste",
+        precioMedio: 1250,
+        precioM2: 15.6,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Precio económico",
+            "Metro Portazgo y Congosto",
+            "Zona multicultural",
+            "Comercio de proximidad"
+        ],
+        desventajas: [
+            "Densidad muy alta",
+            "Edificios años 60-70",
+            "Pocas opciones de ocio",
+            "Percepción barrio obrero"
+        ]
+    },
+    {
+        id: 27,
+        nombre: "Palomeras Bajas",
+        distrito: "Puente de Vallecas",
+        lat: 40.3859,
+        lng: -3.6423,
+        zona: "Capital",
+        subzona: "Sureste",
+        precioMedio: 1280,
+        precioM2: 16.0,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Parque de Palomeras",
+            "Precio asequible",
+            "Zona familiar",
+            "Metro Buenos Aires y Vinateros"
+        ],
+        desventajas: [
+            "Muy alejado centro",
+            "Edificios monótonos",
+            "Poco atractivo urbanístico",
+            "Servicios básicos"
+        ]
+    },
+    {
+        id: 28,
+        nombre: "Palomeras Sureste",
+        distrito: "Puente de Vallecas",
+        lat: 40.3796,
+        lng: -3.6342,
+        zona: "Capital",
+        subzona: "Sureste",
+        precioMedio: 1300,
+        precioM2: 16.2,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Precio económico",
+            "Cerca Parque Forestal Entrevías",
+            "Zona residencial tranquila",
+            "Viviendas más amplias"
+        ],
+        desventajas: [
+            "Muy periférico",
+            "Metro algo alejado",
+            "Pocas opciones culturales",
+            "Distancia al centro"
+        ]
+    },
+    {
+        id: 29,
+        nombre: "Portazgo",
+        distrito: "Puente de Vallecas",
+        lat: 40.3962,
+        lng: -3.6503,
+        zona: "Capital",
+        subzona: "Sureste",
+        precioMedio: 1320,
+        precioM2: 16.5,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Metro Portazgo L1",
+            "Centro Comercial Alcampo",
+            "Precio razonable",
+            "Hospital Infanta Leonor"
+        ],
+        desventajas: [
+            "Zona comercial saturada",
+            "Tráfico Avenida Albufera",
+            "Estética urbana mejorable",
+            "Lejos del centro"
+        ]
+    },
+    {
+        id: 30,
+        nombre: "Numancia",
+        distrito: "Puente de Vallecas",
+        lat: 40.4015,
+        lng: -3.6565,
+        zona: "Capital",
+        subzona: "Sureste",
+        precioMedio: 1400,
+        precioM2: 17.5,
+        metrosCuadrados: 80,
+        fuente: "Bankinter",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Más caro del distrito (mejor zona)",
+            "Metro Nueva Numancia L1",
+            "Mejor conexión que otros barrios",
+            "Zona más valorada Vallecas"
+        ],
+        desventajas: [
+            "Aún lejos del centro",
+            "Precio 300€ más que Entrevías",
+            "Tráfico M-30 cercano",
+            "Menos servicios que centro"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 6: CHAMARTÍN (6 barrios) - NUEVO FASE 2
+    // ========================================================================
+    {
+        id: 31,
+        nombre: "El Viso",
+        distrito: "Chamartín",
+        lat: 40.4553,
+        lng: -3.6814,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 2000,
+        precioM2: 22.5,
+        metrosCuadrados: 89,
+        fuente: "Bankinter",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Barrio jardín exclusivo",
+            "Chalets y casas unifamiliares",
+            "Zona muy tranquila y verde",
+            "Prestigio social alto"
+        ],
+        desventajas: [
+            "Precio muy elevado",
+            "Metro algo alejado",
+            "Poco comercio de barrio",
+            "Dependiente del coche"
+        ]
+    },
+    {
+        id: 32,
+        nombre: "Prosperidad",
+        distrito: "Chamartín",
+        lat: 40.4503,
+        lng: -3.6729,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1700,
+        precioM2: 20.5,
+        metrosCuadrados: 83,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Metro Prosperidad L4",
+            "Zona comercial consolidada",
+            "Precio razonable Chamartín",
+            "Ambiente residencial familiar"
+        ],
+        desventajas: [
+            "Edificios años 60-70",
+            "Menos prestigio que El Viso",
+            "Calles con mucho tráfico",
+            "Poco espacio verde"
+        ]
+    },
+    {
+        id: 33,
+        nombre: "Ciudad Jardín",
+        distrito: "Chamartín",
+        lat: 40.4653,
+        lng: -3.6686,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1850,
+        precioM2: 21.0,
+        metrosCuadrados: 88,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Zona residencial tranquila",
+            "Cercano a parques",
+            "Buen equilibrio precio-calidad",
+            "Ambiente familiar"
+        ],
+        desventajas: [
+            "Metro algo lejos",
+            "Poco comercio local",
+            "Lejos del centro Madrid",
+            "Dependiente del bus"
+        ]
+    },
+    {
+        id: 34,
+        nombre: "Hispanoamérica",
+        distrito: "Chamartín",
+        lat: 40.4602,
+        lng: -3.6782,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1900,
+        precioM2: 21.5,
+        metrosCuadrados: 88,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Plaza de Castilla cercana",
+            "Buena conexión transporte",
+            "Zona moderna y renovada",
+            "Torres empresariales cerca"
+        ],
+        desventajas: [
+            "Mucho tráfico comercial",
+            "Zona muy corporativa",
+            "Precio en alza",
+            "Poco ambiente residencial"
+        ]
+    },
+    {
+        id: 35,
+        nombre: "Nueva España",
+        distrito: "Chamartín",
+        lat: 40.4674,
+        lng: -3.6843,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1950,
+        precioM2: 22.0,
+        metrosCuadrados: 89,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Junto a Bernabéu",
+            "Zona premium consolidada",
+            "Excelentes comunicaciones",
+            "Edificios modernos"
+        ],
+        desventajas: [
+            "Precio alto",
+            "Tráfico días partido",
+            "Aparcamiento complicado",
+            "Zona muy transitada"
+        ]
+    },
+    {
+        id: 36,
+        nombre: "Castilla",
+        distrito: "Chamartín",
+        lat: 40.4719,
+        lng: -3.6912,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1650,
+        precioM2: 19.5,
+        metrosCuadrados: 85,
+        fuente: "Idealista",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Plaza Castilla intercambiador",
+            "Conexión excepcional transporte",
+            "Precio más bajo Chamartín",
+            "Torres Kio emblemáticas"
+        ],
+        desventajas: [
+            "Muy corporativo",
+            "Poco residencial",
+            "Mucho tráfico",
+            "Ambiente oficinas"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 7: ARGANZUELA (7 barrios) - NUEVO FASE 2
+    // ========================================================================
+    {
+        id: 37,
+        nombre: "Imperial",
+        distrito: "Arganzuela",
+        lat: 40.3983,
+        lng: -3.7129,
+        zona: "Capital",
+        subzona: "Sur-Centro",
+        precioMedio: 1550,
+        precioM2: 19.5,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Madrid Río cercano",
+            "Precio razonable",
+            "Metro Acacias L5",
+            "Zona en renovación"
+        ],
+        desventajas: [
+            "Edificios antiguos",
+            "Algo alejado del centro",
+            "Pocas zonas comerciales",
+            "En proceso de transformación"
+        ]
+    },
+    {
+        id: 38,
+        nombre: "Acacias",
+        distrito: "Arganzuela",
+        lat: 40.3991,
+        lng: -3.7058,
+        zona: "Capital",
+        subzona: "Sur-Centro",
+        precioMedio: 1600,
+        precioM2: 20.0,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Metro Acacias L5",
+            "Cerca de Embajadores",
+            "Zona multicultural",
+            "Precio competitivo"
+        ],
+        desventajas: [
+            "Edificios envejecidos",
+            "Poco comercio moderno",
+            "Calles estrechas",
+            "Parking difícil"
+        ]
+    },
+    {
+        id: 39,
+        nombre: "Chopera",
+        distrito: "Arganzuela",
+        lat: 40.4009,
+        lng: -3.6991,
+        zona: "Capital",
+        subzona: "Sur-Centro",
+        precioMedio: 1700,
+        precioM2: 21.2,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Parque Tierno Galván",
+            "Planetario cercano",
+            "Madrid Río accesible",
+            "Zona en transformación"
+        ],
+        desventajas: [
+            "Metro algo alejado",
+            "Tráfico M-30",
+            "Obras en la zona",
+            "Poco consolidado aún"
+        ]
+    },
+    {
+        id: 40,
+        nombre: "Legazpi",
+        distrito: "Arganzuela",
+        lat: 40.3924,
+        lng: -3.6934,
+        zona: "Capital",
+        subzona: "Sur",
+        precioMedio: 1650,
+        precioM2: 20.5,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Metro Legazpi intercambiador",
+            "Matadero Madrid cultura",
+            "Madrid Río espectacular",
+            "Zona muy bien comunicada"
+        ],
+        desventajas: [
+            "Zona industrial histórica",
+            "Edificios antiguos",
+            "Algo alejado centro",
+            "En gentrificación"
+        ]
+    },
+    {
+        id: 41,
+        nombre: "Delicias",
+        distrito: "Arganzuela",
+        lat: 40.3953,
+        lng: -3.6869,
+        zona: "Capital",
+        subzona: "Sur-Centro",
+        precioMedio: 1620,
+        precioM2: 20.2,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Museo del Ferrocarril",
+            "Cerca de Atocha",
+            "Buena conexión transporte",
+            "Precio razonable"
+        ],
+        desventajas: [
+            "Edificios envejecidos",
+            "Zona algo ruidosa",
+            "Tráfico ferroviario",
+            "Pocas zonas verdes"
+        ]
+    },
+    {
+        id: 42,
+        nombre: "Palos de Moguer",
+        distrito: "Arganzuela",
+        lat: 40.3887,
+        lng: -3.6799,
+        zona: "Capital",
+        subzona: "Sur",
+        precioMedio: 1580,
+        precioM2: 19.8,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Precio más bajo Arganzuela",
+            "Metro Palos Frontera L3",
+            "Zona residencial tranquila",
+            "Comercio de barrio"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Edificios años 60",
+            "Poco atractivo urbano",
+            "Servicios básicos"
+        ]
+    },
+    {
+        id: 43,
+        nombre: "Atocha",
+        distrito: "Arganzuela",
+        lat: 40.4073,
+        lng: -3.6918,
+        zona: "Capital",
+        subzona: "Centro-Sur",
+        precioMedio: 1750,
+        precioM2: 21.8,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Estación Atocha principal",
+            "Excelente conexión nacional",
+            "Cerca del Retiro y Reina Sofía",
+            "Zona céntrica"
+        ],
+        desventajas: [
+            "Muy turístico",
+            "Tráfico constante",
+            "Ruido de trenes",
+            "Precio en alza"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 8: TETUÁN (6 barrios) - NUEVO FASE 2
+    // ========================================================================
+    {
+        id: 44,
+        nombre: "Bellas Vistas",
+        distrito: "Tetuán",
+        lat: 40.4517,
+        lng: -3.7054,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1620,
+        precioM2: 20.2,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Metro Estrecho L1",
+            "Precio accesible",
+            "Zona comercial activa",
+            "Bien comunicado"
+        ],
+        desventajas: [
+            "Densidad alta",
+            "Edificios antiguos",
+            "Calles con tráfico",
+            "Pocas zonas verdes"
+        ]
+    },
+    {
+        id: 45,
+        nombre: "Cuatro Caminos",
+        distrito: "Tetuán",
+        lat: 40.4489,
+        lng: -3.7021,
+        zona: "Capital",
+        subzona: "Norte-Centro",
+        precioMedio: 1700,
+        precioM2: 21.2,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Intercambiador Cuatro Caminos",
+            "Conexión excepcional",
+            "Comercio variado",
+            "Zona consolidada"
+        ],
+        desventajas: [
+            "Muy transitado",
+            "Mucho tráfico",
+            "Ruido constante",
+            "Poco espacio verde"
+        ]
+    },
+    {
+        id: 46,
+        nombre: "Castillejos",
+        distrito: "Tetuán",
+        lat: 40.4554,
+        lng: -3.6992,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1650,
+        precioM2: 20.6,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Metro Alvarado L1",
+            "Precio razonable",
+            "Barrio familiar",
+            "Comercio de proximidad"
+        ],
+        desventajas: [
+            "Edificios envejecidos",
+            "Poco atractivo urbanístico",
+            "Calles estrechas",
+            "Parking complicado"
+        ]
+    },
+    {
+        id: 47,
+        nombre: "Almenara",
+        distrito: "Tetuán",
+        lat: 40.4629,
+        lng: -3.6965,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1580,
+        precioM2: 19.7,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Precio más bajo Tetuán",
+            "Zona residencial tranquila",
+            "Parque de la Ventilla",
+            "Ambiente familiar"
+        ],
+        desventajas: [
+            "Metro algo alejado",
+            "Lejos del centro",
+            "Servicios básicos",
+            "Edificios años 70"
+        ]
+    },
+    {
+        id: 48,
+        nombre: "Valdeacederas",
+        distrito: "Tetuán",
+        lat: 40.4682,
+        lng: -3.7008,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1550,
+        precioM2: 19.3,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Más barato distrito",
+            "Metro Valdeacederas L1",
+            "Zona en renovación",
+            "Nuevos espacios verdes"
+        ],
+        desventajas: [
+            "Históricamente degradado",
+            "Lejos del centro",
+            "En proceso transformación",
+            "Servicios mejorando"
+        ]
+    },
+    {
+        id: 49,
+        nombre: "Berruguete",
+        distrito: "Tetuán",
+        lat: 40.4634,
+        lng: -3.7084,
+        zona: "Capital",
+        subzona: "Norte",
+        precioMedio: 1600,
+        precioM2: 20.0,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Metro Francos Rodríguez L7",
+            "Precio competitivo",
+            "Barrio auténtico",
+            "Comercio local activo"
+        ],
+        desventajas: [
+            "Edificios antiguos",
+            "Pocas zonas verdes",
+            "Algo alejado",
+            "Densidad alta"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 9: CIUDAD LINEAL (9 barrios) - NUEVO FASE 2
+    // ========================================================================
+    {
+        id: 50,
+        nombre: "Ventas",
+        distrito: "Ciudad Lineal",
+        lat: 40.4307,
+        lng: -3.6612,
+        zona: "Capital",
+        subzona: "Este",
+        precioMedio: 1400,
+        precioM2: 17.5,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Plaza toros Las Ventas",
+            "Metro Ventas L2 y L5",
+            "Zona comercial activa",
+            "Buen precio calidad"
+        ],
+        desventajas: [
+            "Tráfico días toros",
+            "Edificios años 60",
+            "Lejos del centro",
+            "Poco espacio verde"
+        ]
+    },
+    {
+        id: 51,
+        nombre: "Pueblo Nuevo",
+        distrito: "Ciudad Lineal",
+        lat: 40.4361,
+        lng: -3.6538,
+        zona: "Capital",
+        subzona: "Este",
+        precioMedio: 1380,
+        precioM2: 17.2,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Metro Carmen L5",
+            "Precio asequible",
+            "Zona residencial familiar",
+            "Comercio de barrio"
+        ],
+        desventajas: [
+            "Lejos del centro Madrid",
+            "Edificios envejecidos",
+            "Pocas opciones ocio",
+            "Metro algo lejos"
+        ]
+    },
+    {
+        id: 52,
+        nombre: "Quintana",
+        distrito: "Ciudad Lineal",
+        lat: 40.4408,
+        lng: -3.6473,
+        zona: "Capital",
+        subzona: "Este",
+        precioMedio: 1350,
+        precioM2: 16.8,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Precio económico",
+            "Metro Quintana L5",
+            "Zona tranquila",
+            "Familiar y residencial"
+        ],
+        desventajas: [
+            "Muy alejado centro",
+            "Edificios años 70",
+            "Servicios básicos",
+            "Poco atractivo"
+        ]
+    },
+    {
+        id: 53,
+        nombre: "Concepción",
+        distrito: "Ciudad Lineal",
+        lat: 40.4281,
+        lng: -3.6498,
+        zona: "Capital",
+        subzona: "Este",
+        precioMedio: 1420,
+        precioM2: 17.7,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Metro Ciudad Lineal L5",
+            "Bien comunicado",
+            "Precio razonable",
+            "Comercio variado"
+        ],
+        desventajas: [
+            "Edificios antiguos",
+            "Lejos del centro",
+            "Calles con tráfico",
+            "Pocas zonas verdes"
+        ]
+    },
+    {
+        id: 54,
+        nombre: "San Pascual",
+        distrito: "Ciudad Lineal",
+        lat: 40.4456,
+        lng: -3.6409,
+        zona: "Capital",
+        subzona: "Este",
+        precioMedio: 1360,
+        precioM2: 17.0,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Precio económico",
+            "Metro San Pascual L5",
+            "Zona residencial",
+            "Tranquilo"
+        ],
+        desventajas: [
+            "Muy lejos centro",
+            "Edificios años 60-70",
+            "Poco comercio",
+            "Servicios limitados"
+        ]
+    },
+    {
+        id: 55,
+        nombre: "San Juan Bautista",
+        distrito: "Ciudad Lineal",
+        lat: 40.4389,
+        lng: -3.6361,
+        zona: "Capital",
+        subzona: "Este",
+        precioMedio: 1390,
+        precioM2: 17.3,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Precio competitivo",
+            "Parque Juan Carlos I cerca",
+            "Zona familiar",
+            "Metro Torre Arias L5"
+        ],
+        desventajas: [
+            "Alejado del centro",
+            "Metro algo lejos",
+            "Edificios monótonos",
+            "Poco ambiente"
+        ]
+    },
+    {
+        id: 56,
+        nombre: "Colina",
+        distrito: "Ciudad Lineal",
+        lat: 40.4514,
+        lng: -3.6346,
+        zona: "Capital",
+        subzona: "Este",
+        precioMedio: 1340,
+        precioM2: 16.7,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Uno de los más baratos",
+            "Zona tranquila",
+            "Residencial familiar",
+            "Espacios verdes"
+        ],
+        desventajas: [
+            "Muy periférico",
+            "Metro alejado",
+            "Pocas opciones culturales",
+            "Dependiente bus"
+        ]
+    },
+    {
+        id: 57,
+        nombre: "Atalaya",
+        distrito: "Ciudad Lineal",
+        lat: 40.4569,
+        lng: -3.6283,
+        zona: "Capital",
+        subzona: "Este",
+        precioMedio: 1330,
+        precioM2: 16.6,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Precio muy económico",
+            "Zona residencial",
+            "Tranquilo y seguro",
+            "Parques cercanos"
+        ],
+        desventajas: [
+            "Muy alejado",
+            "Sin metro cercano",
+            "Servicios básicos",
+            "Poco comercio"
+        ]
+    },
+    {
+        id: 58,
+        nombre: "Costillares",
+        distrito: "Ciudad Lineal",
+        lat: 40.4621,
+        lng: -3.6218,
+        zona: "Capital",
+        subzona: "Este",
+        precioMedio: 1320,
+        precioM2: 16.5,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Más barato Ciudad Lineal",
+            "Zona muy tranquila",
+            "Residencial puro",
+            "Aire de barrio"
+        ],
+        desventajas: [
+            "Extremadamente alejado",
+            "Sin metro",
+            "Dependiente del bus",
+            "Servicios limitados"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 10: HORTALEZA (7 barrios) - NUEVO FASE 2
+    // ========================================================================
+    {
+        id: 59,
+        nombre: "Palomas",
+        distrito: "Hortaleza",
+        lat: 40.4673,
+        lng: -3.6532,
+        zona: "Capital",
+        subzona: "Norte-Este",
+        precioMedio: 1320,
+        precioM2: 16.5,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Precio económico",
+            "Zona residencial tranquila",
+            "Parque de la Huerta del Obispo",
+            "Ambiente familiar"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Metro alejado",
+            "Servicios básicos",
+            "Poco comercio"
+        ]
+    },
+    {
+        id: 60,
+        nombre: "Valdefuentes",
+        distrito: "Hortaleza",
+        lat: 40.4847,
+        lng: -3.6378,
+        zona: "Capital",
+        subzona: "Norte-Este",
+        precioMedio: 1400,
+        precioM2: 17.5,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Zona nueva en expansión",
+            "Construcciones modernas",
+            "Precio competitivo",
+            "Zonas verdes amplias"
+        ],
+        desventajas: [
+            "Muy alejado centro",
+            "Sin metro",
+            "En desarrollo",
+            "Servicios en construcción"
+        ]
+    },
+    {
+        id: 61,
+        nombre: "Canillas",
+        distrito: "Hortaleza",
+        lat: 40.4729,
+        lng: -3.6471,
+        zona: "Capital",
+        subzona: "Norte-Este",
+        precioMedio: 1340,
+        precioM2: 16.7,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Metro Canillas L4",
+            "Precio asequible",
+            "Zona tranquila",
+            "Comercio de barrio"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Edificios años 70",
+            "Poco atractivo urbano",
+            "Servicios básicos"
+        ]
+    },
+    {
+        id: 62,
+        nombre: "Pinar del Rey",
+        distrito: "Hortaleza",
+        lat: 40.4781,
+        lng: -3.6409,
+        zona: "Capital",
+        subzona: "Norte-Este",
+        precioMedio: 1360,
+        precioM2: 17.0,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Metro Mar de Cristal L8",
+            "Zona residencial moderna",
+            "Precio razonable",
+            "Bien planificado"
+        ],
+        desventajas: [
+            "Alejado del centro",
+            "Zona dormitorio",
+            "Poco ambiente nocturno",
+            "Dependiente transporte"
+        ]
+    },
+    {
+        id: 63,
+        nombre: "Apóstol Santiago",
+        distrito: "Hortaleza",
+        lat: 40.4612,
+        lng: -3.6412,
+        zona: "Capital",
+        subzona: "Norte-Este",
+        precioMedio: 1330,
+        precioM2: 16.6,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Precio económico",
+            "Metro Parque de Santa María L4",
+            "Zona tranquila",
+            "Residencial familiar"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Edificios años 80",
+            "Servicios limitados",
+            "Poco comercio grande"
+        ]
+    },
+    {
+        id: 64,
+        nombre: "Piovera",
+        distrito: "Hortaleza",
+        lat: 40.4678,
+        lng: -3.6348,
+        zona: "Capital",
+        subzona: "Norte-Este",
+        precioMedio: 1350,
+        precioM2: 16.8,
+        metrosCuadrados: 80,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Marzo 2025",
+        ventajas: [
+            "Precio competitivo",
+            "Zona residencial nueva",
+            "Parques y zonas verdes",
+            "Ambiente familiar"
+        ],
+        desventajas: [
+            "Metro algo alejado",
+            "Lejos del centro",
+            "Servicios en desarrollo",
+            "Poco consolidado"
+        ]
+    },
+    {
+        id: 65,
+        nombre: "Cañaveral",
+        distrito: "Hortaleza",
+        lat: 40.4893,
+        lng: -3.6156,
+        zona: "Capital",
+        subzona: "Norte-Este",
+        precioMedio: 1280,
+        precioM2: 16.0,
+        metrosCuadrados: 80,
+        fuente: "Idealista",
+        fechaActualizacion: "Febrero 2025",
+        ventajas: [
+            "Más barato Hortaleza",
+            "Zona nueva PAU",
+            "Construcciones modernas",
             "Precio imbatible"
         ],
         desventajas: [
-            "Muy alejado del centro",
-            "Transporte limitado",
-            "Pocas opciones de ocio",
-            "En desarrollo urbanístico"
+            "Extremadamente alejado",
+            "Sin metro (en proyecto)",
+            "Aún en desarrollo",
+            "Servicios limitados"
         ]
     },
 
@@ -527,7 +1742,7 @@ const barriosMadrid = [
     // ÁREA METROPOLITANA - ZONA OESTE (PREMIUM)
     // ========================================================================
     {
-        id: 21,
+        id: 66,
         nombre: "Pozuelo de Alarcón",
         lat: 40.4353,
         lng: -3.8124,
@@ -540,9 +1755,9 @@ const barriosMadrid = [
         fechaActualizacion: "Julio 2025",
         ventajas: [
             "Zona premium de alto poder adquisitivo",
-            "Colegios internacionales",
+            "Colegios internacionales prestigiosos",
             "Casas unifamiliares y chalets",
-            "Muy seguro"
+            "Muy seguro y residencial"
         ],
         desventajas: [
             "Precio muy elevado",
@@ -552,7 +1767,7 @@ const barriosMadrid = [
         ]
     },
     {
-        id: 22,
+        id: 67,
         nombre: "Boadilla del Monte",
         lat: 40.4032,
         lng: -3.8770,
@@ -565,7 +1780,7 @@ const barriosMadrid = [
         fechaActualizacion: "Julio 2025",
         ventajas: [
             "Urbanizaciones de calidad",
-            "Ambiente familiar",
+            "Ambiente familiar exclusivo",
             "Zonas verdes amplias",
             "Buena calidad de vida"
         ],
@@ -573,11 +1788,11 @@ const barriosMadrid = [
             "Sin metro",
             "Totalmente dependiente del coche",
             "Precio elevado",
-            "Alejado de Madrid"
+            "Alejado de Madrid centro"
         ]
     },
     {
-        id: 23,
+        id: 68,
         nombre: "Majadahonda",
         lat: 40.4730,
         lng: -3.8720,
@@ -586,23 +1801,23 @@ const barriosMadrid = [
         precioMedio: 2170,
         precioM2: 15.6,
         metrosCuadrados: 139,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Julio 2025",
         ventajas: [
             "Nivel de vida alto",
             "Centros comerciales grandes",
-            "Instalaciones deportivas",
+            "Instalaciones deportivas excelentes",
             "Buena oferta educativa"
         ],
         desventajas: [
             "Sin metro directo",
             "Coche imprescindible",
-            "Tráfico en hora punta",
+            "Tráfico en hora punta A-6",
             "Precio alto"
         ]
     },
     {
-        id: 24,
+        id: 69,
         nombre: "Las Rozas",
         lat: 40.4925,
         lng: -3.8738,
@@ -611,10 +1826,10 @@ const barriosMadrid = [
         precioMedio: 1621,
         precioM2: 15.0,
         metrosCuadrados: 108,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Abril 2025",
         ventajas: [
-            "Centro comercial Las Rozas Village",
+            "Las Rozas Village outlet",
             "Cercanías directo a Madrid",
             "Entorno residencial tranquilo",
             "Buena conectividad A-6"
@@ -622,8 +1837,8 @@ const barriosMadrid = [
         desventajas: [
             "Sin metro",
             "Coche necesario",
-            "Tráfico A-6",
-            "Lejos del centro"
+            "Tráfico A-6 problemático",
+            "Lejos del centro urbano"
         ]
     },
 
@@ -631,7 +1846,7 @@ const barriosMadrid = [
     // ÁREA METROPOLITANA - ZONA NORTE
     // ========================================================================
     {
-        id: 25,
+        id: 70,
         nombre: "Alcobendas",
         lat: 40.5478,
         lng: -3.6410,
@@ -640,23 +1855,23 @@ const barriosMadrid = [
         precioMedio: 1510,
         precioM2: 18.9,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Julio 2025",
         ventajas: [
-            "Metro directo (L10)",
+            "Metro directo L10",
             "Zona empresarial importante",
             "La Moraleja cercana",
             "Servicios de calidad"
         ],
         desventajas: [
-            "Precio en alza",
+            "Precio en alza continua",
             "Mucho tráfico laboral",
             "Zona muy corporativa",
             "Pocas zonas de ocio"
         ]
     },
     {
-        id: 26,
+        id: 71,
         nombre: "San Sebastián de los Reyes",
         lat: 40.5525,
         lng: -3.6254,
@@ -665,23 +1880,23 @@ const barriosMadrid = [
         precioMedio: 1500,
         precioM2: 18.75,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Julio 2025",
         ventajas: [
-            "Metro (L10)",
-            "Micropolix (ciudad infantil)",
+            "Metro L10",
+            "Micropolix ciudad infantil",
             "Centro comercial Plaza Norte 2",
-            "Precio razonable"
+            "Precio razonable zona norte"
         ],
         desventajas: [
-            "Lejos del centro de Madrid",
+            "Lejos del centro Madrid",
             "Polígonos industriales",
             "Ambiente poco urbano",
             "Dependencia del transporte"
         ]
     },
     {
-        id: 27,
+        id: 72,
         nombre: "La Moraleja",
         lat: 40.5122,
         lng: -3.6398,
@@ -693,16 +1908,16 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Zona exclusiva",
+            "Zona exclusiva de máximo prestigio",
             "Urbanizaciones de lujo",
             "Seguridad máxima",
-            "Prestigio social"
+            "Prestigio social elevado"
         ],
         desventajas: [
             "Precio muy elevado",
             "Pocas viviendas en alquiler",
             "Dependiente del coche",
-            "Aislamiento social"
+            "Aislamiento social posible"
         ]
     },
 
@@ -710,7 +1925,7 @@ const barriosMadrid = [
     // ÁREA METROPOLITANA - ZONA SUR (ECONÓMICA)
     // ========================================================================
     {
-        id: 28,
+        id: 73,
         nombre: "Getafe",
         lat: 40.3057,
         lng: -3.7327,
@@ -719,23 +1934,23 @@ const barriosMadrid = [
         precioMedio: 1498,
         precioM2: 18.7,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Abril 2025",
         ventajas: [
-            "Metro y Cercanías",
+            "Metro y Cercanías directos",
             "Universidad Carlos III",
             "Hospital universitario",
-            "Precio competitivo"
+            "Precio competitivo sur"
         ],
         desventajas: [
-            "Lejos del centro de Madrid",
-            "Imagen industrial",
+            "Lejos del centro Madrid",
+            "Imagen industrial histórica",
             "Base aérea cercana",
-            "Pocos espacios verdes"
+            "Pocas zonas verdes"
         ]
     },
     {
-        id: 29,
+        id: 74,
         nombre: "Leganés",
         lat: 40.3272,
         lng: -3.7636,
@@ -744,12 +1959,12 @@ const barriosMadrid = [
         precioMedio: 1194,
         precioM2: 14.9,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Julio 2025",
         ventajas: [
             "Precio asequible",
-            "Metro directo (L12)",
-            "Universidad Carlos III",
+            "Metro directo L12",
+            "Universidad Carlos III campus",
             "Parquesur cercano"
         ],
         desventajas: [
@@ -760,7 +1975,7 @@ const barriosMadrid = [
         ]
     },
     {
-        id: 30,
+        id: 75,
         nombre: "Alcorcón",
         lat: 40.3458,
         lng: -3.8242,
@@ -769,12 +1984,12 @@ const barriosMadrid = [
         precioMedio: 1105,
         precioM2: 13.8,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Julio 2025",
         ventajas: [
             "Precio muy económico",
-            "Metro (L10, L12)",
-            "Tres Aguas (centro comercial)",
+            "Metro L10 y L12",
+            "Tres Aguas centro comercial",
             "Hospital Fundación Alcorcón"
         ],
         desventajas: [
@@ -785,7 +2000,7 @@ const barriosMadrid = [
         ]
     },
     {
-        id: 31,
+        id: 76,
         nombre: "Móstoles",
         lat: 40.3225,
         lng: -3.8651,
@@ -794,13 +2009,13 @@ const barriosMadrid = [
         precioMedio: 1097,
         precioM2: 13.7,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Julio 2025",
         ventajas: [
             "Uno de los más baratos",
-            "Metro (L12)",
+            "Metro L12",
             "Hospital Universitario",
-            "URJC campus"
+            "URJC campus universitario"
         ],
         desventajas: [
             "Muy alejado",
@@ -810,7 +2025,7 @@ const barriosMadrid = [
         ]
     },
     {
-        id: 32,
+        id: 77,
         nombre: "Fuenlabrada",
         lat: 40.2842,
         lng: -3.7947,
@@ -819,11 +2034,11 @@ const barriosMadrid = [
         precioMedio: 1157,
         precioM2: 14.5,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Julio 2025",
         ventajas: [
             "Precio competitivo",
-            "Metro directo (L12)",
+            "Metro directo L12",
             "Cercanías a Atocha",
             "Servicios básicos completos"
         ],
@@ -835,7 +2050,7 @@ const barriosMadrid = [
         ]
     },
     {
-        id: 33,
+        id: 78,
         nombre: "Parla",
         lat: 40.2370,
         lng: -3.7703,
@@ -864,7 +2079,7 @@ const barriosMadrid = [
     // ÁREA METROPOLITANA - ZONA ESTE (ECONÓMICA)
     // ========================================================================
     {
-        id: 34,
+        id: 79,
         nombre: "Alcalá de Henares",
         lat: 40.4818,
         lng: -3.3643,
@@ -873,11 +2088,11 @@ const barriosMadrid = [
         precioMedio: 1082,
         precioM2: 13.5,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Abril 2025",
         ventajas: [
             "Patrimonio UNESCO",
-            "Universidad histórica",
+            "Universidad histórica UAH",
             "Cercanías frecuente",
             "Precio muy asequible"
         ],
@@ -885,11 +2100,11 @@ const barriosMadrid = [
             "Muy lejos (35 km)",
             "Sin metro",
             "Tiempo de desplazamiento alto",
-            "Limitado para trabajo en Madrid"
+            "Limitado para trabajo Madrid"
         ]
     },
     {
-        id: 35,
+        id: 80,
         nombre: "Torrejón de Ardoz",
         lat: 40.4557,
         lng: -3.4766,
@@ -898,11 +2113,11 @@ const barriosMadrid = [
         precioMedio: 1000,
         precioM2: 12.5,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Julio 2025",
         ventajas: [
             "Precio muy económico",
-            "Metro directo (L7 extendida)",
+            "Metro directo L7 extendida",
             "Parque Europa",
             "Base aérea (empleo)"
         ],
@@ -914,7 +2129,7 @@ const barriosMadrid = [
         ]
     },
     {
-        id: 36,
+        id: 81,
         nombre: "Coslada",
         lat: 40.4209,
         lng: -3.5606,
@@ -923,7 +2138,7 @@ const barriosMadrid = [
         precioMedio: 920,
         precioM2: 11.5,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Julio 2025",
         ventajas: [
             "Muy económico",
@@ -939,7 +2154,7 @@ const barriosMadrid = [
         ]
     },
     {
-        id: 37,
+        id: 82,
         nombre: "San Fernando de Henares",
         lat: 40.4240,
         lng: -3.5351,
@@ -948,7 +2163,7 @@ const barriosMadrid = [
         precioMedio: 880,
         precioM2: 11.0,
         metrosCuadrados: 80,
-        fuente: "Noticias para Municipios",
+        fuente: "Noticias Municipios",
         fechaActualizacion: "Julio 2025",
         ventajas: [
             "El más barato del área metropolitana",
@@ -966,8 +2181,9 @@ const barriosMadrid = [
 ];
 
 // ============================================================================
-// METADATOS Y CONFIGURACIÓN
+// CONFIGURACIÓN Y FUNCIONES AUXILIARES
 // ============================================================================
+
 const configuracionMapa = {
     centroMadrid: {
         lat: 40.4168,
@@ -976,67 +2192,30 @@ const configuracionMapa = {
     zoomInicial: 11,
     zoomMaximo: 18,
     zoomMinimo: 10,
-    radioCobertura: 20000, // 20km desde el centro
     
-    // Nuevos rangos de precios 2025 (actualizados con datos reales)
+    // Rangos actualizados con datos reales 2025
     rangosPrecio: {
-        muyBajo: { min: 0, max: 1200, color: '#22c55e', label: 'Muy Económico' },
-        bajo: { min: 1200, max: 1400, color: '#84cc16', label: 'Económico' },
-        medio: { min: 1400, max: 1600, color: '#eab308', label: 'Medio' },
-        medioAlto: { min: 1600, max: 1800, color: '#f97316', label: 'Medio-Alto' },
-        alto: { min: 1800, max: Infinity, color: '#ef4444', label: 'Alto/Premium' }
+        muyBajo: { min: 0, max: 1000, color: '#22c55e', label: 'Muy Económico' },
+        bajo: { min: 1000, max: 1300, color: '#84cc16', label: 'Económico' },
+        medio: { min: 1300, max: 1600, color: '#eab308', label: 'Medio' },
+        medioAlto: { min: 1600, max: 1900, color: '#f97316', label: 'Medio-Alto' },
+        alto: { min: 1900, max: Infinity, color: '#ef4444', label: 'Alto/Premium' }
     },
     
-    fuentesDatos: [
-        { nombre: 'Idealista', periodo: 'Enero-Agosto 2025', tipo: 'Principal' },
-        { nombre: 'Fotocasa', periodo: 'Abril-Agosto 2025', tipo: 'Índice Inmobiliario' },
-        { nombre: 'Indomio', periodo: 'Agosto 2025', tipo: 'Portal Inmobiliario' },
-        { nombre: 'Noticias para Municipios', periodo: 'Abril-Julio 2025', tipo: 'Medios' },
-        { nombre: 'Properfy', periodo: 'Julio 2025', tipo: 'Análisis Mercado' },
-        { nombre: 'OCU', periodo: 'Junio 2025', tipo: 'Estudio Consumidores' },
-        { nombre: 'Bankinter', periodo: 'Agosto 2025', tipo: 'Informe Financiero' },
-        { nombre: 'Madrid Actual', periodo: 'Julio 2025', tipo: 'Medios Locales' }
-    ],
-    
     ultimaActualizacion: '2025-08-30',
-    version: '2.0.0',
-    autor: 'Proyecto Data Science - Universidad'
+    version: '2.0.0-fase2',
+    totalUbicaciones: 82
 };
 
-// ============================================================================
-// FUNCIONES DE UTILIDAD
-// ============================================================================
-
 /**
- * Obtiene el color correspondiente según el precio del alquiler
- * Rangos actualizados con datos reales de 2025
+ * Obtiene el color según el precio (rangos actualizados 2025)
  */
 function obtenerColorPorPrecio(precio) {
-    const rangos = configuracionMapa.rangosPrecio;
-    
-    if (precio < rangos.muyBajo.max) return rangos.muyBajo.color;
-    if (precio < rangos.bajo.max) return rangos.bajo.color;
-    if (precio < rangos.medio.max) return rangos.medio.color;
-    if (precio < rangos.medioAlto.max) return rangos.medioAlto.color;
-    return rangos.alto.color;
-}
-
-/**
- * Obtiene estadísticas básicas del dataset
- */
-function obtenerEstadisticasGenerales() {
-    const precios = barriosMadrid.map(b => b.precioMedio);
-    const preciosM2 = barriosMadrid.map(b => b.precioM2);
-    
-    return {
-        totalUbicaciones: barriosMadrid.length,
-        precioMedio: (precios.reduce((a, b) => a + b, 0) / precios.length).toFixed(2),
-        precioMinimo: Math.min(...precios),
-        precioMaximo: Math.max(...precios),
-        precioM2Medio: (preciosM2.reduce((a, b) => a + b, 0) / preciosM2.length).toFixed(2),
-        precioM2Minimo: Math.min(...preciosM2).toFixed(2),
-        precioM2Maximo: Math.max(...preciosM2).toFixed(2)
-    };
+    if (precio < 1000) return '#22c55e';  // Verde - Muy económico
+    if (precio < 1300) return '#84cc16';  // Verde lima - Económico
+    if (precio < 1600) return '#eab308';  // Amarillo - Medio
+    if (precio < 1900) return '#f97316';  // Naranja - Medio-Alto
+    return '#ef4444';                      // Rojo - Alto/Premium
 }
 
 // Exportar para uso en otros archivos
@@ -1044,7 +2223,16 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         barriosMadrid,
         configuracionMapa,
-        obtenerColorPorPrecio,
-        obtenerEstadisticasGenerales
+        obtenerColorPorPrecio
     };
 }
+
+console.log(`
+🏠 DATASET CARGADO - FASE 2 COMPLETA
+====================================
+📊 Total ubicaciones: ${barriosMadrid.length}
+🏛️ Madrid Capital: ${barriosMadrid.filter(b => b.zona === 'Capital').length} barrios (10 distritos)
+🌳 Área Metropolitana: ${barriosMadrid.filter(b => b.zona === 'Periferia').length} municipios
+📅 Última actualización: Agosto 2025
+🎯 Versión: 2.0.0-fase2
+`);
