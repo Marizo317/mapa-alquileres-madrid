@@ -156,7 +156,7 @@ y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
 ## Enlaces
 
-- [Repositorio GitHub](https://github.com/tu-usuario/mapa-alquileres-madrid)
-- [Demo en Vivo](https://tu-usuario.github.io/mapa-alquileres-madrid)
-- [Issues](https://github.com/tu-usuario/mapa-alquileres-madrid/issues)
-- [Pull Requests](https://github.com/tu-usuario/mapa-alquileres-madrid/pulls)
+- [Repositorio GitHub](https://github.com/Marizo317/mapa-alquileres-madrid)
+- [Demo en Vivo](https://Marizo317.github.io/mapa-alquileres-madrid)
+- [Issues](https://github.com/Marizo317/mapa-alquileres-madrid/issues)
+- [Pull Requests](https://github.com/Marizo317/mapa-alquileres-madrid/pulls)
