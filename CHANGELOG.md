@@ -1,223 +1,162 @@
 # Changelog
 
-Todos los cambios importantes de este proyecto serán documentados en este archivo.
+Todos los cambios notables de este proyecto serán documentados en este archivo.
 
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.0.0/),
-y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
 ---
 
-## [2.0.0] - 2025-10-05
+## [2.0.0] - 2025-10-06
 
-### 🎉 VERSIÓN MAYOR - Datos Reales 2025
+### 🎉 Fase 2 Completada
 
-Esta es una actualización completa del proyecto con datos verificados del mercado inmobiliario real de Madrid 2025.
+### Añadido
+- ✅ **82 ubicaciones totales** mapeadas
+  - 65 barrios de Madrid Capital (10 distritos completos)
+  - 17 municipios del área metropolitana
+- ✅ **Nuevos distritos** incluidos en Madrid Capital:
+  - Centro (5 barrios)
+  - Salamanca (6 barrios)
+  - Retiro (6 barrios)
+  - Arganzuela (7 barrios)
+  - Chamartín (6 barrios)
+  - Tetuán (6 barrios)
+  - Chamberí (6 barrios)
+  - Ciudad Lineal (9 barrios)
+  - Hortaleza (8 barrios)
+  - Puente de Vallecas (6 barrios)
+- ✅ Campo `distrito` en cada barrio para mejor organización
+- ✅ **Ventajas y desventajas** (4 de cada una) por cada ubicación
+- ✅ Campo `fuente` para indicar origen de los datos
+- ✅ Campo `fechaActualizacion` para trazabilidad
 
-### ✨ Añadido
+### Mejorado
+- 📊 **Actualización de datos a 2025** de 8 fuentes oficiales:
+  - Idealista, Fotocasa, Indomio, OCU, Bankinter, Properfy, Ayto. Madrid, INE
+- 🎨 **Interfaz visual mejorada**:
+  - Gradientes modernos en botones y paneles
+  - Efecto glassmorphism en tarjetas
+  - Animaciones suaves en hover
+  - Sombras y profundidad mejoradas
+- 🗺️ **Leyenda del mapa actualizada** con nuevos rangos de precio:
+  - Verde: < €15/m² (Económico)
+  - Amarillo: €15-€20/m² (Moderado)
+  - Naranja: €20-€25/m² (Caro)
+  - Rojo: > €25/m² (Muy caro)
+- 📈 **Gráficos optimizados** para mejor legibilidad
+- 🔍 **Tooltips informativos** en toda la aplicación
 
-#### Datos
-- **37 ubicaciones con datos reales** (20 barrios de Madrid Capital + 17 municipios del área metropolitana)
-- **8 fuentes oficiales verificadas**: Idealista, Fotocasa, Indomio, OCU, Bankinter, Properfy, Noticias para Municipios, Madrid Actual
-- Campo `fuente` en cada ubicación para transparencia
-- Campo `fechaActualizacion` para trazabilidad de datos
-- Datos de precio/m² reales para cada ubicación
+### Cambiado
+- 🎯 Función `obtenerColorPorPrecio()` actualizada con nuevos rangos
+- 📊 Estadísticas recalculadas con el dataset completo
+- 🏷️ Footer actualizado: "Fase 2 Completa - 82 ubicaciones, 10 distritos"
 
-#### Funcionalidades
-- **Sistema de pestañas mejorado**: 4 secciones principales (Mapa, Lista, Gráficos, Análisis Estadístico)
-- **Análisis estadístico completo**:
-  - Estadísticas descriptivas básicas
-  - Medidas de dispersión avanzadas
-  - Análisis de percentiles (Q1, Q2, Q3, P10, P90, P95)
-  - Detección automática de outliers (método IQR)
-  - Distribución de frecuencias con histogramas
-  - Análisis por zonas geográficas
-  - Comparativa Capital vs Área Metropolitana
-  - Índice de oportunidad (relación calidad-precio)
+### Documentación
+- 📝 README.md completo y profesional
+- 📋 CHANGELOG.md añadido
+- 🔬 Metodología documentada
+- 📊 Fuentes de datos referenciadas
 
-- **4 tipos de gráficos con Chart.js**:
+---
+
+## [1.0.0] - 2025-10-05
+
+### 🚀 Lanzamiento Inicial (Fase 1)
+
+### Añadido
+- 🗺️ **Mapa interactivo** con Leaflet.js
+  - Mapa de calor con colores por precio
+  - Marcadores clicables con información detallada
+  - Zoom y navegación fluida
+- 📊 **Panel de estadísticas** en tiempo real
+  - Precio medio por m² y mensual
+  - Precios mínimos y máximos
+  - Barrio más económico y más caro
+  - Total de barrios mapeados
+- 📈 **Gráficos interactivos** con Chart.js
   - Top 10 barrios más caros
   - Top 10 barrios más económicos
-  - Precio medio por zona geográfica
-  - Histograma de distribución de precios
+  - Comparativa Capital vs Área Metropolitana
+  - Distribución por rangos de precio
+- 🎛️ **4 vistas personalizables**:
+  - Vista General (todos los barrios)
+  - Solo Madrid Capital
+  - Solo Área Metropolitana
+  - Barrios Económicos (<€20/m²)
+- 📊 **Dataset inicial**: 30 ubicaciones (20 barrios + 10 municipios)
+- 🎨 **Diseño responsive**: Adaptado a móviles, tablets y escritorio
 
-- **Panel de estadísticas rápidas** en sidebar con actualización dinámica
-- **Footer con fuentes** para transparencia y credibilidad
-
-#### Interfaz
-- Diseño completamente responsive (móvil, tablet, desktop)
-- Animaciones suaves en transiciones
-- Tooltips informativos para estadísticas
-- Cards con información detallada en vista lista
-- Sistema de colores actualizado según precios reales 2025
-
-#### Documentación
-- README.md completamente reescrito y ampliado
-- Sección de fuentes de datos verificadas
-- Metodología de recopilación documentada
-- Guía de instalación y uso detallada
-- Roadmap para futuras versiones
-- CHANGELOG.md para seguimiento de versiones
-
-### 🔄 Cambiado
-
-#### Datos
-- **Rangos de precios actualizados** según mercado 2025:
-  - Muy Económico: < 1.200€ (antes: < 1.000€)
-  - Económico: 1.200€ - 1.400€ (antes: 1.000€ - 1.200€)
-  - Medio: 1.400€ - 1.600€ (antes: 1.200€ - 1.500€)
-  - Medio-Alto: 1.600€ - 1.800€ (antes: 1.500€ - 1.800€)
-  - Alto/Premium: > 1.800€ (antes: > 1.800€)
-
-- **Precios realistas** en todas las ubicaciones
-- Estructura de datos mejorada con más campos informativos
-
-#### Funcionalidades
-- Sistema de filtros optimizado con mejor UX
-- Gráficos más informativos con tooltips mejorados
-- Popups del mapa con diseño más profesional
-- Actualización dinámica más eficiente
-
-#### Interfaz
-- Paleta de colores refinada
-- Tipografía mejorada para mejor legibilidad
-- Espaciado y márgenes optimizados
-- Componentes más consistentes
-
-### 🐛 Corregido
-- Problema de visualización en móviles pequeños
-- Bug en ordenamiento alfabético
-- Corrección de errores tipográficos en ventajas/desventajas
-- Mejora en el rendimiento de actualización de marcadores
-
-### 📊 Estadísticas de la Versión
-- Líneas de código: ~3,500+
-- Funciones JavaScript: 40+
-- Estilos CSS: ~800 líneas
-- Ubicaciones: 37
-- Fuentes de datos: 8
+### Características Técnicas
+- HTML5 semántico
+- CSS3 con Grid y Flexbox
+- JavaScript ES6+ vanilla (sin frameworks)
+- Leaflet.js 1.9.4 para mapas
+- Chart.js 4.4.0 para gráficos
+- OpenStreetMap como proveedor de mapas
 
 ---
 
-## [1.0.0] - 2025-09-15
+## [0.1.0] - 2025-10-04
 
-### 🎉 VERSIÓN INICIAL - MVP
+### 🔧 Prototipo Inicial
 
-Primera versión funcional del proyecto con datos simulados.
-
-### ✨ Añadido
-
-#### Estructura Base
-- `index.html`: Página principal con estructura completa
-- `css/estilos.css`: Sistema de estilos con variables CSS
-- `js/datos.js`: Dataset inicial con 31 ubicaciones (datos simulados)
-- `js/estadisticas.js`: Funciones estadísticas básicas
-- `js/app.js`: Lógica principal de la aplicación
-
-#### Funcionalidades Core
-- Mapa interactivo con Leaflet.js
-- Sistema básico de filtros (precio, zona)
-- Marcadores con código de colores
-- Popups informativos
-- Vista de lista con cards
-- Estadísticas descriptivas básicas
-- Gráfico de barras simple
-
-#### Interfaz
-- Diseño responsive básico
-- Sistema de pestañas
-- Panel lateral con filtros
-- Leyenda de colores
-
-#### Documentación
-- README.md inicial
-- Licencia MIT
-- .gitignore configurado
-
-### 📊 Estadísticas de la Versión
-- Líneas de código: ~2,000
-- Ubicaciones: 31 (datos simulados)
-- Funciones estadísticas: 8
+### Añadido
+- Estructura básica del proyecto
+- Configuración de Visual Studio Code
+- Instalación de dependencias CDN
+- Mapa estático con Leaflet
+- Dataset de prueba (10 ubicaciones)
 
 ---
 
-## [Unreleased] - Próximas Versiones
+## 🔮 Próximas Versiones Planificadas
 
-### 🔮 Planificado para v3.0.0 - Machine Learning
+### [3.0.0] - Fase 3: Cobertura Total (Próximamente)
+- [ ] Completar 131 barrios de Madrid Capital
+- [ ] Incluir 11 distritos restantes:
+  - Moncloa-Aravaca, Latina, Carabanchel, Usera, Moratalaz
+  - Fuencarral-El Pardo, San Blas-Canillejas, Barajas
+  - Vicálvaro, Villa de Vallecas, Villaverde
+- [ ] Total: **148 ubicaciones** (131 barrios + 17 municipios)
 
-#### Nuevas Funcionalidades ML
-- [ ] Modelo de predicción de precios
+### [4.0.0] - Fase 4: Machine Learning
+- [ ] Modelo de predicción de precios (Regresión)
 - [ ] Clustering de barrios similares (K-Means)
 - [ ] Sistema de recomendación personalizado
-- [ ] Análisis de series temporales
-- [ ] Predicción de tendencias
+- [ ] Análisis de tendencias temporales
 
-#### Análisis Avanzado
-- [ ] Correlaciones múltiples con heatmap
-- [ ] Análisis de componentes principales (PCA)
-- [ ] Gráficos de dispersión interactivos
-- [ ] Análisis de regresión
+### [5.0.0] - Fase 5: Mejoras UX/UI
+- [ ] Búsqueda por nombre de barrio
+- [ ] Filtro por rango de precio personalizado
+- [ ] Comparador de hasta 3 barrios
+- [ ] Calculadora de rentabilidad
+- [ ] Modo oscuro / claro
+- [ ] Exportar a CSV/PDF
 
-### 🚀 Planificado para v2.1.0 - Features Extra
-
-#### Calculadoras
-- [ ] Calculadora de rentabilidad (ROI)
-- [ ] Calculadora de hipoteca
-- [ ] Estimador de gastos mensuales
-
-#### Comparativas
-- [ ] Comparador lado a lado de 2-3 zonas
-- [ ] Análisis DAFO por barrio
-- [ ] Rankings personalizables
-
-#### UX/UI
-- [ ] Modo oscuro/claro
-- [ ] Tooltips explicativos mejorados
-- [ ] Tour guiado interactivo
-- [ ] Exportar análisis a PDF
-
-#### Datos
+### [6.0.0] - Fase 6: Automatización
 - [ ] Web scraping automatizado
-- [ ] Actualización automática de datos
-- [ ] Datos históricos de 6 meses
-- [ ] Gráficos de evolución temporal
-
-### 🔧 Mejoras Técnicas Pendientes
-- [ ] Tests unitarios con Jest
-- [ ] Tests E2E con Cypress
-- [ ] Optimización de rendimiento
-- [ ] Service Worker para PWA
-- [ ] API REST para desarrolladores
-- [ ] Internacionalización (i18n)
+- [ ] Actualización diaria de precios
+- [ ] API REST para consumo externo
+- [ ] Sistema de alertas por email
 
 ---
 
-## Tipos de Cambios
+## Leyenda de Tipos de Cambios
 
 - **Añadido**: Nuevas funcionalidades
+- **Mejorado**: Mejoras en funcionalidades existentes
 - **Cambiado**: Cambios en funcionalidades existentes
-- **Deprecado**: Funcionalidades que pronto serán eliminadas
+- **Obsoleto**: Funcionalidades que serán eliminadas
 - **Eliminado**: Funcionalidades eliminadas
 - **Corregido**: Corrección de bugs
-- **Seguridad**: Vulnerabilidades corregidas
-
----
-
-## Formato de Versiones
-
-Este proyecto usa [Semantic Versioning](https://semver.org/):
-- **MAJOR** (X.0.0): Cambios incompatibles en la API
-- **MINOR** (x.X.0): Nueva funcionalidad compatible
-- **PATCH** (x.x.X): Correcciones de bugs compatibles
+- **Seguridad**: Cambios de seguridad
 
 ---
 
 ## Enlaces
 
-- [Repositorio en GitHub](https://github.com/tu-usuario/mapa-alquileres-madrid)
+- [Repositorio GitHub](https://github.com/tu-usuario/mapa-alquileres-madrid)
+- [Demo en Vivo](https://tu-usuario.github.io/mapa-alquileres-madrid)
 - [Issues](https://github.com/tu-usuario/mapa-alquileres-madrid/issues)
 - [Pull Requests](https://github.com/tu-usuario/mapa-alquileres-madrid/pulls)
-- [Releases](https://github.com/tu-usuario/mapa-alquileres-madrid/releases)
-
----
-
-**Fecha de última actualización**: 5 de Octubre, 2025

@@ -41,6 +41,13 @@
     
     /* Transiciones */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Z-indexes */
+    --z-mapa: 1;
+    --z-contenido: 10;
+    --z-panel: 50;
+    --z-header: 100;
+    --z-modal: 1000;
 }
 
 /* ============================================================================
@@ -68,7 +75,7 @@ body {
 }
 
 /* ============================================================================
-   HEADER
+   HEADER - CORREGIDO PARA ESTAR SIEMPRE ENCIMA
    ============================================================================ */
 
 .header {
@@ -78,7 +85,7 @@ body {
     box-shadow: var(--shadow-lg);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: var(--z-header); /* z-index: 100 - MUY IMPORTANTE */
     backdrop-filter: blur(10px);
 }
 
@@ -145,16 +152,19 @@ body {
     grid-template-columns: 320px 1fr;
     gap: var(--spacing-lg);
     min-height: calc(100vh - 300px);
+    position: relative; /* IMPORTANTE */
+    z-index: var(--z-contenido); /* z-index: 10 */
 }
 
 /* ============================================================================
-   PANEL DE CONTROL
+   PANEL DE CONTROL - CORREGIDO PARA ESTAR ENCIMA DEL MAPA
    ============================================================================ */
 
 .panel-control {
     position: sticky;
     top: calc(var(--spacing-lg) + 100px);
     height: fit-content;
+    z-index: var(--z-panel); /* z-index: 50 - Por encima del mapa */
 }
 
 .panel-card {
@@ -162,6 +172,8 @@ body {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
     overflow: hidden;
+    position: relative; /* IMPORTANTE */
+    z-index: var(--z-panel); /* z-index: 50 */
 }
 
 .card-header {
@@ -224,18 +236,22 @@ body {
 
 /* Slider personalizado */
 .slider-custom {
-  outline: none;
-  -webkit-appearance: none; /* Para navegadores WebKit */
-  appearance: none;         /* Estándar para el resto */
-  cursor: pointer;
-  box-shadow: var(--shadow-sm);
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
 }
 
 .slider-custom::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Para navegadores WebKit */
-  appearance: none;         /* Estándar para el resto */
-  width: 24px;
-  height: 24px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background: white;
     cursor: pointer;
@@ -437,6 +453,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+    position: relative; /* IMPORTANTE */
+    z-index: var(--z-contenido); /* z-index: 10 */
 }
 
 /* Pestañas */
@@ -447,6 +465,8 @@ body {
     display: flex;
     gap: var(--spacing-xs);
     box-shadow: var(--shadow);
+    position: relative; /* IMPORTANTE */
+    z-index: var(--z-contenido); /* z-index: 10 */
 }
 
 .pestana {
@@ -513,6 +533,8 @@ body {
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-md);
     overflow: hidden;
+    position: relative; /* IMPORTANTE */
+    z-index: var(--z-contenido); /* z-index: 10 */
 }
 
 .vista-card .card-header {
@@ -528,20 +550,47 @@ body {
     font-weight: 500;
 }
 
-/* Mapa */
+/* ============================================================================
+   MAPA - CORREGIDO PARA NO SUPERPONERSE
+   ============================================================================ */
+
 .mapa-container {
     padding: var(--spacing-md);
     background: var(--color-bg);
+    position: relative; /* IMPORTANTE */
+    z-index: var(--z-mapa); /* z-index: 1 - BAJO para no superponer */
 }
 
 #mapa {
+    width: 100%;
+    height: 600px;
+    border-radius: var(--border-radius-sm);
     box-shadow: var(--shadow-md);
+    position: relative; /* IMPORTANTE - NO usar fixed */
+    z-index: var(--z-mapa); /* z-index: 1 */
+}
+
+/* Asegurar que los controles de Leaflet no se superpongan */
+.leaflet-container {
+    z-index: var(--z-mapa) !important; /* z-index: 1 */
+}
+
+.leaflet-pane {
+    z-index: var(--z-mapa) !important; /* z-index: 1 */
+}
+
+/* Los controles de zoom de Leaflet tienen su propio z-index */
+.leaflet-top,
+.leaflet-bottom {
+    z-index: calc(var(--z-mapa) + 5) !important; /* z-index: 6 - Sobre el mapa pero bajo el contenido */
 }
 
 .leyenda {
     background: white;
     padding: var(--spacing-md);
     border-top: 1px solid #e2e8f0;
+    position: relative; /* IMPORTANTE */
+    z-index: var(--z-contenido); /* z-index: 10 */
 }
 
 .leyenda-header {
@@ -597,6 +646,8 @@ body {
     gap: var(--spacing-md);
     margin-top: var(--spacing-md);
     border: 1px solid #93c5fd;
+    position: relative; /* IMPORTANTE */
+    z-index: var(--z-contenido); /* z-index: 10 */
 }
 
 .tip-icon {
@@ -634,6 +685,8 @@ body {
     color: white;
     padding: var(--spacing-xl) var(--spacing-md);
     margin-top: var(--spacing-xl);
+    position: relative; /* IMPORTANTE */
+    z-index: var(--z-contenido); /* z-index: 10 */
 }
 
 .footer-content {
