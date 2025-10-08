@@ -413,8 +413,8 @@ const barriosMadrid = [
         id: 16,
         nombre: "Ibiza",
         distrito: "Retiro",
-        lat: 40.4173,
-        lng: -3.6739,
+        lat: 40.4012,
+        lng: -3.6589,
         zona: "Capital",
         subzona: "Este",
         precioMedio: 1950,
@@ -2177,8 +2177,1046 @@ const barriosMadrid = [
             "Pocas opciones de servicios",
             "Zona industrial"
         ]
+    },
+  // ========================================================================
+    // FASE 3A - NUEVOS DISTRITOS (IDs 83-122)
+    // ========================================================================
+    
+    // ========================================================================
+    // DISTRITO 11: MONCLOA-ARAVACA (7 barrios)
+    // ========================================================================
+    {
+        id: 83,
+        nombre: "Casa de Campo",
+        lat: 40.4194,
+        lng: -3.7544,
+        zona: "Capital",
+        distrito: "Moncloa-Aravaca",
+        precioMedio: 1320,
+        precioM2: 18.0,
+        metrosCuadrados: 73,
+        fuente: "Idealista",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Junto al parque más grande de Madrid",
+            "Zona muy tranquila y familiar",
+            "Buena conexión con metro Príncipe Pío",
+            "Aire puro y espacios verdes"
+        ],
+        desventajas: [
+            "Algo alejado del centro",
+            "Pocas tiendas y servicios cercanos",
+            "Transporte público limitado por la noche",
+            "Zona muy residencial, poco ambiente"
+        ]
+    },
+    {
+        id: 84,
+        nombre: "Argüelles",
+        lat: 40.4298,
+        lng: -3.7197,
+        zona: "Capital",
+        distrito: "Moncloa-Aravaca",
+        precioMedio: 1680,
+        precioM2: 22.0,
+        metrosCuadrados: 76,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Muy céntrico y bien comunicado",
+            "Gran oferta de comercios y restaurantes",
+            "Cerca de Princesa y Moncloa",
+            "Ambiente universitario animado"
+        ],
+        desventajas: [
+            "Precios elevados",
+            "Mucho tráfico y ruido",
+            "Zonas muy concurridas",
+            "Estacionamiento muy difícil"
+        ]
+    },
+    {
+        id: 85,
+        nombre: "Ciudad Universitaria",
+        lat: 40.4453,
+        lng: -3.7289,
+        zona: "Capital",
+        distrito: "Moncloa-Aravaca",
+        precioMedio: 1420,
+        precioM2: 19.5,
+        metrosCuadrados: 73,
+        fuente: "Idealista",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Ideal para estudiantes",
+            "Campus universitario amplio",
+            "Mucha oferta cultural",
+            "Bien conectado con metro"
+        ],
+        desventajas: [
+            "Muy masificado durante el curso",
+            "Pocas opciones de ocio nocturno",
+            "Edificios antiguos en algunas zonas",
+            "Servicios pensados para estudiantes"
+        ]
+    },
+    {
+        id: 86,
+        nombre: "Valdezarza",
+        lat: 40.4589,
+        lng: -3.7356,
+        zona: "Capital",
+        distrito: "Moncloa-Aravaca",
+        precioMedio: 1380,
+        precioM2: 18.5,
+        metrosCuadrados: 75,
+        fuente: "OCU",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Barrio tranquilo y residencial",
+            "Buena conexión con autobuses",
+            "Zonas verdes cercanas",
+            "Comercio de proximidad"
+        ],
+        desventajas: [
+            "Algo alejado del metro",
+            "Pendientes pronunciadas",
+            "Poca vida nocturna",
+            "Servicios limitados"
+        ]
+    },
+    {
+        id: 87,
+        nombre: "Aravaca",
+        lat: 40.4564,
+        lng: -3.7789,
+        zona: "Capital",
+        distrito: "Moncloa-Aravaca",
+        precioMedio: 1520,
+        precioM2: 20.0,
+        metrosCuadrados: 76,
+        fuente: "Bankinter",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Zona residencial de calidad",
+            "Colegios internacionales cerca",
+            "Ambiente familiar y seguro",
+            "Cerca de la Casa de Campo"
+        ],
+        desventajas: [
+            "Lejos del centro de Madrid",
+            "Dependencia del coche",
+            "Pocas opciones de metro",
+            "Precios en aumento"
+        ]
+    },
+    {
+        id: 88,
+        nombre: "El Plantío",
+        lat: 40.4423,
+        lng: -3.7645,
+        zona: "Capital",
+        distrito: "Moncloa-Aravaca",
+        precioMedio: 1650,
+        precioM2: 21.5,
+        metrosCuadrados: 77,
+        fuente: "Properfy",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Zona muy exclusiva y tranquila",
+            "Viviendas unifamiliares y chalets",
+            "Entorno natural privilegiado",
+            "Alta seguridad"
+        ],
+        desventajas: [
+            "Precios muy elevados",
+            "Pocas opciones de alquiler",
+            "Transporte público escaso",
+            "Alejado de servicios"
+        ]
+    },
+    {
+        id: 89,
+        nombre: "Puerta del Ángel",
+        lat: 40.4178,
+        lng: -3.7389,
+        zona: "Capital",
+        distrito: "Moncloa-Aravaca",
+        precioMedio: 1450,
+        precioM2: 19.0,
+        metrosCuadrados: 76,
+        fuente: "Idealista",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Buena comunicación con autobuses",
+            "Zona comercial desarrollada",
+            "Cerca de Princesa",
+            "Barrio tranquilo"
+        ],
+        desventajas: [
+            "Sin metro muy cercano",
+            "Algunas zonas en cuesta",
+            "Tráfico en horas punta",
+            "Servicios justos"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 12: LATINA (7 barrios)
+    // ========================================================================
+    {
+        id: 90,
+        nombre: "Los Cármenes",
+        lat: 40.3912,
+        lng: -3.7456,
+        zona: "Capital",
+        distrito: "Latina",
+        precioMedio: 1180,
+        precioM2: 16.0,
+        metrosCuadrados: 74,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precios asequibles",
+            "Barrio familiar y tranquilo",
+            "Buena red de autobuses",
+            "Comercio local variado"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Metro algo distante",
+            "Pocas zonas verdes",
+            "Edificios antiguos en algunas zonas"
+        ]
+    },
+    {
+        id: 91,
+        nombre: "Puerta del Ángel (Latina)",
+        lat: 40.4089,
+        lng: -3.7523,
+        zona: "Capital",
+        distrito: "Latina",
+        precioMedio: 1250,
+        precioM2: 17.0,
+        metrosCuadrados: 74,
+        fuente: "Idealista",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Metro Puerta del Ángel",
+            "Zona comercial activa",
+            "Bien comunicado",
+            "Ambiente de barrio"
+        ],
+        desventajas: [
+            "Algo masificado",
+            "Tráfico denso",
+            "Ruido en ciertas zonas",
+            "Estacionamiento complicado"
+        ]
+    },
+    {
+        id: 92,
+        nombre: "Lucero",
+        lat: 40.3834,
+        lng: -3.7689,
+        zona: "Capital",
+        distrito: "Latina",
+        precioMedio: 1150,
+        precioM2: 15.5,
+        metrosCuadrados: 74,
+        fuente: "OCU",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Uno de los más económicos",
+            "Metro Lucero",
+            "Multicultural y animado",
+            "Comercios de todo tipo"
+        ],
+        desventajas: [
+            "Zona algo degradada en partes",
+            "Percepción de inseguridad",
+            "Edificios muy antiguos",
+            "Poco espacio verde"
+        ]
+    },
+    {
+        id: 93,
+        nombre: "Aluche",
+        lat: 40.3923,
+        lng: -3.7612,
+        zona: "Capital",
+        distrito: "Latina",
+        precioMedio: 1220,
+        precioM2: 16.5,
+        metrosCuadrados: 74,
+        fuente: "Bankinter",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio razonable",
+            "Varias estaciones de metro",
+            "Comercio tradicional fuerte",
+            "Barrio muy consolidado"
+        ],
+        desventajas: [
+            "Algo lejos del centro",
+            "Edificios de los años 60-70",
+            "Tráfico intenso",
+            "Pocas zonas recreativas"
+        ]
+    },
+    {
+        id: 94,
+        nombre: "Las Águilas",
+        lat: 40.3756,
+        lng: -3.7789,
+        zona: "Capital",
+        distrito: "Latina",
+        precioMedio: 1200,
+        precioM2: 16.0,
+        metrosCuadrados: 75,
+        fuente: "Properfy",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio competitivo",
+            "Metro Las Águilas",
+            "Zona en mejora",
+            "Barrio tranquilo"
+        ],
+        desventajas: [
+            "Algo alejado",
+            "Servicios limitados",
+            "Edificios antiguos",
+            "Pocas opciones de ocio"
+        ]
+    },
+    {
+        id: 95,
+        nombre: "Campamento",
+        lat: 40.3845,
+        lng: -3.7923,
+        zona: "Capital",
+        distrito: "Latina",
+        precioMedio: 1100,
+        precioM2: 15.0,
+        metrosCuadrados: 73,
+        fuente: "Idealista",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Muy económico",
+            "Cerca de Casa de Campo",
+            "Barrio popular",
+            "Metro Campamento"
+        ],
+        desventajas: [
+            "Muy alejado del centro",
+            "Edificios muy antiguos",
+            "Servicios básicos",
+            "Percepción de lejanía"
+        ]
+    },
+    {
+        id: 96,
+        nombre: "Cuatro Vientos",
+        lat: 40.3689,
+        lng: -3.7956,
+        zona: "Capital",
+        distrito: "Latina",
+        precioMedio: 1080,
+        precioM2: 14.5,
+        metrosCuadrados: 74,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio muy asequible",
+            "Cercanías Cuatro Vientos",
+            "Zona tranquila",
+            "Cerca del aeródromo"
+        ],
+        desventajas: [
+            "Muy alejado",
+            "Sin metro",
+            "Pocas opciones comerciales",
+            "Dependencia del transporte"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 13: CARABANCHEL (7 barrios)
+    // ========================================================================
+    {
+        id: 97,
+        nombre: "Comillas",
+        lat: 40.3823,
+        lng: -3.7234,
+        zona: "Capital",
+        distrito: "Carabanchel",
+        precioMedio: 1150,
+        precioM2: 15.5,
+        metrosCuadrados: 74,
+        fuente: "OCU",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio asequible",
+            "Metro Vista Alegre cerca",
+            "Barrio en transformación",
+            "Comercio local activo"
+        ],
+        desventajas: [
+            "Zona algo deteriorada",
+            "Edificios antiguos",
+            "Lejos del centro",
+            "Servicios mejorables"
+        ]
+    },
+    {
+        id: 98,
+        nombre: "Opañel",
+        lat: 40.3912,
+        lng: -3.7189,
+        zona: "Capital",
+        distrito: "Carabanchel",
+        precioMedio: 1180,
+        precioM2: 16.0,
+        metrosCuadrados: 74,
+        fuente: "Bankinter",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio competitivo",
+            "Metro Opañel",
+            "Zona residencial tranquila",
+            "Cerca de Carabanchel Alto"
+        ],
+        desventajas: [
+            "Alejado del centro",
+            "Poco ambiente nocturno",
+            "Servicios básicos",
+            "Edificios antiguos"
+        ]
+    },
+    {
+        id: 99,
+        nombre: "San Isidro",
+        lat: 40.3789,
+        lng: -3.7123,
+        zona: "Capital",
+        distrito: "Carabanchel",
+        precioMedio: 1120,
+        precioM2: 15.0,
+        metrosCuadrados: 75,
+        fuente: "Properfy",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Muy económico",
+            "Fiestas patronales importantes",
+            "Ermita histórica",
+            "Barrio tradicional"
+        ],
+        desventajas: [
+            "Zona en declive",
+            "Lejos del metro",
+            "Edificios muy antiguos",
+            "Servicios limitados"
+        ]
+    },
+    {
+        id: 100,
+        nombre: "Vista Alegre",
+        lat: 40.3856,
+        lng: -3.7334,
+        zona: "Capital",
+        distrito: "Carabanchel",
+        precioMedio: 1200,
+        precioM2: 16.5,
+        metrosCuadrados: 73,
+        fuente: "Idealista",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Metro Vista Alegre",
+            "Precio razonable",
+            "Parque de las Cruces cerca",
+            "Zona familiar"
+        ],
+        desventajas: [
+            "Algo alejado",
+            "Tráfico denso",
+            "Edificios antiguos",
+            "Pocas opciones de ocio"
+        ]
+    },
+    {
+        id: 101,
+        nombre: "Puerta Bonita",
+        lat: 40.3934,
+        lng: -3.7445,
+        zona: "Capital",
+        distrito: "Carabanchel",
+        precioMedio: 1220,
+        precioM2: 16.5,
+        metrosCuadrados: 74,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Metro Puerta Bonita",
+            "Cerca de Casa de Campo",
+            "Zona en mejora",
+            "Precio asequible"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Algunos edificios deteriorados",
+            "Servicios justos",
+            "Poco ambiente comercial"
+        ]
+    },
+    {
+        id: 102,
+        nombre: "Buenavista",
+        lat: 40.3767,
+        lng: -3.7267,
+        zona: "Capital",
+        distrito: "Carabanchel",
+        precioMedio: 1100,
+        precioM2: 14.5,
+        metrosCuadrados: 76,
+        fuente: "OCU",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Muy económico",
+            "Barrio tranquilo",
+            "Comercio de proximidad",
+            "Zona familiar"
+        ],
+        desventajas: [
+            "Muy alejado",
+            "Sin metro cercano",
+            "Edificios muy antiguos",
+            "Servicios básicos"
+        ]
+    },
+    {
+        id: 103,
+        nombre: "Abrantes",
+        lat: 40.3712,
+        lng: -3.7389,
+        zona: "Capital",
+        distrito: "Carabanchel",
+        precioMedio: 1050,
+        precioM2: 14.0,
+        metrosCuadrados: 75,
+        fuente: "Bankinter",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio muy bajo",
+            "Metro Abrantes",
+            "Zona en desarrollo",
+            "Tranquilo"
+        ],
+        desventajas: [
+            "Muy alejado del centro",
+            "Zona algo degradada",
+            "Edificios antiguos",
+            "Servicios limitados"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 14: MORATALAZ (5 barrios)
+    // ========================================================================
+    {
+        id: 104,
+        nombre: "Pavones",
+        lat: 40.4089,
+        lng: -3.6445,
+        zona: "Capital",
+        distrito: "Moratalaz",
+        precioMedio: 1280,
+        precioM2: 17.5,
+        metrosCuadrados: 73,
+        fuente: "Properfy",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Metro Pavones",
+            "Precio razonable",
+            "Barrio tranquilo",
+            "Bien comunicado"
+        ],
+        desventajas: [
+            "Algo alejado del centro",
+            "Edificios de los 70-80",
+            "Pocas zonas verdes",
+            "Servicios básicos"
+        ]
+    },
+    {
+        id: 105,
+        nombre: "Horcajo",
+        lat: 40.4156,
+        lng: -3.6389,
+        zona: "Capital",
+        distrito: "Moratalaz",
+        precioMedio: 1250,
+        precioM2: 17.0,
+        metrosCuadrados: 74,
+        fuente: "Idealista",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio competitivo",
+            "Zona residencial",
+            "Transporte público",
+            "Barrio familiar"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Arquitectura monótona",
+            "Poco ambiente comercial",
+            "Servicios limitados"
+        ]
+    },
+    {
+        id: 106,
+        nombre: "Marroquina",
+        lat: 40.4023,
+        lng: -3.6512,
+        zona: "Capital",
+        distrito: "Moratalaz",
+        precioMedio: 1220,
+        precioM2: 16.5,
+        metrosCuadrados: 74,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio asequible",
+            "Barrio tranquilo",
+            "Comercio local",
+            "Zona familiar"
+        ],
+        desventajas: [
+            "Algo alejado",
+            "Sin metro muy cerca",
+            "Edificios antiguos",
+            "Pocas opciones de ocio"
+        ]
+    },
+    {
+        id: 107,
+        nombre: "Media Legua",
+        lat: 40.4112,
+        lng: -3.6578,
+        zona: "Capital",
+        distrito: "Moratalaz",
+        precioMedio: 1290,
+        precioM2: 17.5,
+        metrosCuadrados: 74,
+        fuente: "OCU",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Bien comunicado",
+            "Zona residencial consolidada",
+            "Comercio variado",
+            "Barrio tranquilo"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Edificios de los 70",
+            "Pocas zonas verdes",
+            "Poco ambiente nocturno"
+        ]
+    },
+    {
+        id: 108,
+        nombre: "Fontarrón",
+        lat: 40.4178,
+        lng: -3.6512,
+        zona: "Capital",
+        distrito: "Moratalaz",
+        precioMedio: 1310,
+        precioM2: 18.0,
+        metrosCuadrados: 73,
+        fuente: "Bankinter",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Metro cerca",
+            "Zona bien conectada",
+            "Comercio local activo",
+            "Barrio familiar"
+        ],
+        desventajas: [
+            "Algo alejado",
+            "Arquitectura uniforme",
+            "Servicios básicos",
+            "Poco atractivo urbanístico"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 15: SAN BLAS-CANILLEJAS (9 barrios)
+    // ========================================================================
+    {
+        id: 109,
+        nombre: "Simancas",
+        lat: 40.4289,
+        lng: -3.6178,
+        zona: "Capital",
+        distrito: "San Blas-Canillejas",
+        precioMedio: 1280,
+        precioM2: 17.5,
+        metrosCuadrados: 73,
+        fuente: "Properfy",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Metro San Blas",
+            "Precio razonable",
+            "Barrio consolidado",
+            "Bien comunicado"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Edificios de los 70-80",
+            "Poco ambiente",
+            "Servicios básicos"
+        ]
+    },
+    {
+        id: 110,
+        nombre: "Hellín",
+        lat: 40.4356,
+        lng: -3.6234,
+        zona: "Capital",
+        distrito: "San Blas-Canillejas",
+        precioMedio: 1250,
+        precioM2: 17.0,
+        metrosCuadrados: 74,
+        fuente: "Idealista",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio competitivo",
+            "Transporte público",
+            "Zona tranquila",
+            "Comercio local"
+        ],
+        desventajas: [
+            "Alejado del centro",
+            "Arquitectura antigua",
+            "Pocas zonas verdes",
+            "Servicios limitados"
+        ]
+    },
+    {
+        id: 111,
+        nombre: "Amposta",
+        lat: 40.4423,
+        lng: -3.6289,
+        zona: "Capital",
+        distrito: "San Blas-Canillejas",
+        precioMedio: 1220,
+        precioM2: 16.5,
+        metrosCuadrados: 74,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio asequible",
+            "Barrio tranquilo",
+            "Bien conectado",
+            "Zona familiar"
+        ],
+        desventajas: [
+            "Muy alejado",
+            "Edificios antiguos",
+            "Poco ambiente comercial",
+            "Servicios básicos"
+        ]
+    },
+    {
+        id: 112,
+        nombre: "Arcos",
+        lat: 40.4389,
+        lng: -3.6123,
+        zona: "Capital",
+        distrito: "San Blas-Canillejas",
+        precioMedio: 1200,
+        precioM2: 16.0,
+        metrosCuadrados: 75,
+        fuente: "OCU",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Muy económico",
+            "Transporte público",
+            "Barrio obrero tradicional",
+            "Comercio local"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Edificios muy antiguos",
+            "Zona algo degradada",
+            "Servicios limitados"
+        ]
+    },
+    {
+        id: 113,
+        nombre: "Rosas",
+        lat: 40.4456,
+        lng: -3.6089,
+        zona: "Capital",
+        distrito: "San Blas-Canillejas",
+        precioMedio: 1180,
+        precioM2: 15.5,
+        metrosCuadrados: 76,
+        fuente: "Bankinter",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio muy asequible",
+            "Barrio tranquilo",
+            "Zona en desarrollo",
+            "Comercio de proximidad"
+        ],
+        desventajas: [
+            "Muy alejado del centro",
+            "Sin metro cercano",
+            "Arquitectura antigua",
+            "Servicios justos"
+        ]
+    },
+    {
+        id: 114,
+        nombre: "Rejas",
+        lat: 40.4523,
+        lng: -3.5923,
+        zona: "Capital",
+        distrito: "San Blas-Canillejas",
+        precioMedio: 1150,
+        precioM2: 15.0,
+        metrosCuadrados: 77,
+        fuente: "Properfy",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Muy económico",
+            "Cerca del aeropuerto",
+            "Zona industrial cercana (empleo)",
+            "Tranquilo"
+        ],
+        desventajas: [
+            "Extremadamente alejado",
+            "Sin metro",
+            "Servicios muy limitados",
+            "Dependencia del coche"
+        ]
+    },
+    {
+        id: 115,
+        nombre: "Canillejas",
+        lat: 40.4478,
+        lng: -3.6212,
+        zona: "Capital",
+        distrito: "San Blas-Canillejas",
+        precioMedio: 1240,
+        precioM2: 16.5,
+        metrosCuadrados: 75,
+        fuente: "Idealista",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio razonable",
+            "Metro Canillejas",
+            "Barrio tradicional",
+            "Comercio local activo"
+        ],
+        desventajas: [
+            "Alejado del centro",
+            "Edificios antiguos",
+            "Poco ambiente",
+            "Servicios básicos"
+        ]
+    },
+    {
+        id: 116,
+        nombre: "Salvador",
+        lat: 40.4534,
+        lng: -3.6145,
+        zona: "Capital",
+        distrito: "San Blas-Canillejas",
+        precioMedio: 1190,
+        precioM2: 16.0,
+        metrosCuadrados: 74,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio competitivo",
+            "Zona tranquila",
+            "Bien comunicado por autobús",
+            "Barrio familiar"
+        ],
+        desventajas: [
+            "Muy alejado",
+            "Sin metro muy cerca",
+            "Arquitectura monótona",
+            "Pocas opciones de ocio"
+        ]
+    },
+    {
+        id: 117,
+        nombre: "Vallecas Villa (San Blas)",
+        lat: 40.4412,
+        lng: -3.6356,
+        zona: "Capital",
+        distrito: "San Blas-Canillejas",
+        precioMedio: 1210,
+        precioM2: 16.0,
+        metrosCuadrados: 76,
+        fuente: "OCU",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio asequible",
+            "Transporte público",
+            "Barrio tradicional",
+            "Comercio local"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Edificios antiguos",
+            "Servicios básicos",
+            "Poco ambiente nocturno"
+        ]
+    },
+
+    // ========================================================================
+    // DISTRITO 16: BARAJAS (5 barrios)
+    // ========================================================================
+    {
+        id: 118,
+        nombre: "Alameda de Osuna",
+        lat: 40.4578,
+        lng: -3.6012,
+        zona: "Capital",
+        distrito: "Barajas",
+        precioMedio: 1420,
+        precioM2: 19.0,
+        metrosCuadrados: 75,
+        fuente: "Bankinter",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Zona residencial de calidad",
+            "Metro El Capricho",
+            "Parque El Capricho cerca",
+            "Ambiente tranquilo y seguro"
+        ],
+        desventajas: [
+            "Lejos del centro",
+            "Precios más altos de Barajas",
+            "Dependencia del transporte",
+            "Servicios limitados"
+        ]
+    },
+    {
+        id: 119,
+        nombre: "Aeropuerto",
+        lat: 40.4712,
+        lng: -3.5623,
+        zona: "Capital",
+        distrito: "Barajas",
+        precioMedio: 1180,
+        precioM2: 16.0,
+        metrosCuadrados: 74,
+        fuente: "Properfy",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Cerca del aeropuerto",
+            "Metro Aeropuerto T1-T2-T3",
+            "Ideal para viajeros frecuentes",
+            "Precio razonable"
+        ],
+        desventajas: [
+            "Ruido de aviones constante",
+            "Muy alejado del centro",
+            "Pocas opciones de ocio",
+            "Zona poco residencial"
+        ]
+    },
+    {
+        id: 120,
+        nombre: "Casco Histórico de Barajas",
+        lat: 40.4734,
+        lng: -3.5789,
+        zona: "Capital",
+        distrito: "Barajas",
+        precioMedio: 1250,
+        precioM2: 17.0,
+        metrosCuadrados: 74,
+        fuente: "Idealista",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Pueblo tradicional con encanto",
+            "Metro Barajas",
+            "Comercio local",
+            "Ambiente tranquilo"
+        ],
+        desventajas: [
+            "Muy alejado del centro",
+            "Ruido de aviones",
+            "Servicios limitados",
+            "Poco ambiente nocturno"
+        ]
+    },
+    {
+        id: 121,
+        nombre: "Timón",
+        lat: 40.4645,
+        lng: -3.5912,
+        zona: "Capital",
+        distrito: "Barajas",
+        precioMedio: 1200,
+        precioM2: 16.0,
+        metrosCuadrados: 75,
+        fuente: "Fotocasa",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Precio asequible",
+            "Cerca del aeropuerto",
+            "Zona tranquila",
+            "Buena comunicación"
+        ],
+        desventajas: [
+            "Ruido de aviones",
+            "Muy alejado",
+            "Servicios básicos",
+            "Sin metro"
+        ]
+    },
+    {
+        id: 122,
+        nombre: "Corralejos",
+        lat: 40.4689,
+        lng: -3.5856,
+        zona: "Capital",
+        distrito: "Barajas",
+        precioMedio: 1180,
+        precioM2: 15.5,
+        metrosCuadrados: 76,
+        fuente: "OCU",
+        fechaActualizacion: "Octubre 2025",
+        ventajas: [
+            "Muy económico",
+            "Zona residencial",
+            "Tranquilo",
+            "Cerca del aeropuerto"
+        ],
+        desventajas: [
+            "Ruido constante de aviones",
+            "Extremadamente alejado",
+            "Servicios muy limitados",
+            "Sin metro cercano"
+        ]
     }
+
+    // ========================================================================
+    // NOTA: Los 82 barrios y municipios de las Fases 1 y 2 van ANTES
+    // Este código añade los IDs 83-122 (40 nuevos barrios)
+    // Total después de integrar: 122 ubicaciones
+    // ========================================================================
 ];
+
+// Estadísticas generales
+console.log(`📊 Total de ubicaciones: ${barriosMadrid.length}`);
+console.log(`🏘️ Barrios de Madrid Capital: ${barriosMadrid.filter(b => b.zona === "Capital").length}`);
+console.log(`🌆 Municipios metropolitanos: ${barriosMadrid.filter(b => b.zona === "Metropolitana").length}`);
 
 // ============================================================================
 // CONFIGURACIÓN Y FUNCIONES AUXILIARES

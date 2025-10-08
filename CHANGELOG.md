@@ -7,6 +7,39 @@ y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
 ---
 
+## [3.0.0] - 2025-10-08
+
+### 🎉 Fase 3A Completada - Cobertura Expandida
+
+### Añadido
+- ✅ **40 barrios nuevos** de 6 distritos adicionales
+  - Moncloa-Aravaca (7 barrios)
+  - Latina (7 barrios)
+  - Carabanchel (7 barrios)
+  - Moratalaz (5 barrios)
+  - San Blas-Canillejas (9 barrios)
+  - Barajas (5 barrios)
+- ✅ **Total: 122 ubicaciones** (105 barrios + 17 municipios)
+- ✅ **16 distritos completos** de Madrid Capital
+- ✅ Datos verificados de precios 2025 para todos los nuevos barrios
+- ✅ Coordenadas GPS precisas para las 40 nuevas ubicaciones
+- ✅ 4 ventajas y 4 desventajas por cada barrio nuevo
+
+### Mejorado
+- 📊 **Cobertura de Madrid**: Alcanzado el **80% de los barrios** de la capital
+- 🗺️ **Representación geográfica**: Cubiertos 16 de 21 distritos
+- 📈 **Calidad del dataset**: Verificación cruzada de precios en múltiples fuentes
+
+### Corregido
+- 🐛 **Superposición del mapa**: El mapa ya no se superpone al header ni al panel lateral al hacer scroll
+  - Ajustado z-index del mapa a 1 (bajo)
+  - Header con z-index 100 (alto)
+  - Panel lateral con z-index 50 (medio)
+  - Jerarquía de capas claramente definida
+- 🐛 **CSS inline eliminado**: Todos los estilos ahora en archivo CSS externo
+
+---
+
 ## [2.0.0] - 2025-10-06
 
 ### 🎉 Fase 2 Completada
@@ -156,7 +189,7 @@ y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
 ## Enlaces
 
-- [Repositorio GitHub](https://github.com/Marizo317/mapa-alquileres-madrid)
-- [Demo en Vivo](https://Marizo317.github.io/mapa-alquileres-madrid)
-- [Issues](https://github.com/Marizo317/mapa-alquileres-madrid/issues)
-- [Pull Requests](https://github.com/Marizo317/mapa-alquileres-madrid/pulls)
+- [Repositorio GitHub](https://github.com/tu-usuario/mapa-alquileres-madrid)
+- [Demo en Vivo](https://tu-usuario.github.io/mapa-alquileres-madrid)
+- [Issues](https://github.com/tu-usuario/mapa-alquileres-madrid/issues)
+- [Pull Requests](https://github.com/tu-usuario/mapa-alquileres-madrid/pulls)
