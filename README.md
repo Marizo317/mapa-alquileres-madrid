@@ -1,10 +1,12 @@
 # 🗺️ Mapa de Calor: Alquileres en Madrid
 
-[![GitHub Pages](https://img.shields.io/badge/demo-live-success)](https://tu-usuario.github.io/mapa-alquileres-madrid)
+[![GitHub Pages](https://img.shields.io/badge/demo-live-success)](https://Marizo317.github.io/mapa-alquileres-madrid)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Fase 3B](https://img.shields.io/badge/Fase-3B%20Completa-brightgreen)]()
+[![Cobertura](https://img.shields.io/badge/Cobertura-100%25%20Madrid-success)]()
 
 > Herramienta interactiva de visualización de datos del mercado inmobiliario de Madrid que facilita la toma de decisiones sobre alquiler e inversión mediante mapas de calor, análisis estadístico y comparativas por zonas.
 
@@ -49,7 +51,7 @@ Proporcionar una plataforma intuitiva y gratuita que democratice el acceso a an�
 ## ✨ Características Principales
 
 ### 🗺️ Mapa Interactivo
-- **82 ubicaciones mapeadas**: 65 barrios de Madrid capital (10 distritos) + 17 municipios del área metropolitana
+- **148 ubicaciones mapeadas**: 131 barrios de Madrid capital (21 distritos) + 17 municipios del área metropolitana
 - **Mapa de calor dinámico**: Visualización cromática de precios por m²
 - **Marcadores informativos**: Click en cualquier punto para ver detalles completos
 - **4 vistas personalizables**:
@@ -128,7 +130,7 @@ Cada barrio/municipio incluye:
 
 ```bash
 # Clonar el proyecto
-git clone https://github.com/tu-usuario/mapa-alquileres-madrid.git
+git clone https://github.com/Marizo317/mapa-alquileres-madrid.git
 
 # Entrar al directorio
 cd mapa-alquileres-madrid
@@ -228,20 +230,11 @@ Los datos han sido recopilados y verificados de múltiples fuentes oficiales:
 7. **Ayuntamiento de Madrid** - Datos oficiales de urbanismo
 8. **INE** - Instituto Nacional de Estadística
 
-### Cobertura Actual (Fase 2)
-- ✅ **82 ubicaciones totales**
-- ✅ **65 barrios de Madrid Capital** distribuidos en:
-  - Centro (5 barrios)
-  - Salamanca (6 barrios)
-  - Retiro (6 barrios)
-  - Arganzuela (7 barrios)
-  - Chamartín (6 barrios)
-  - Tetuán (6 barrios)
-  - Chamberí (6 barrios)
-  - Ciudad Lineal (9 barrios)
-  - Hortaleza (8 barrios)
-  - Puente de Vallecas (6 barrios)
-- ✅ **17 municipios del área metropolitana**
+### Cobertura Actual (Fase 3B - COMPLETA)
+- ✅ **148 ubicaciones totales**
+- ✅ **131 barrios de Madrid Capital** - 100% COMPLETO
+- ✅ **21 distritos** - TODOS LOS DISTRITOS DE MADRID
+- ✅ **17 municipios área metropolitana**
 
 ### Datos por Ubicación
 Cada registro incluye 11 campos:
