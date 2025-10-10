@@ -5,8 +5,9 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Fase 3B](https://img.shields.io/badge/Fase-3B%20Completa-brightgreen)]()
+[![Fase 4](https://img.shields.io/badge/Fase-4%20En%20Progreso-orange)]()
 [![Cobertura](https://img.shields.io/badge/Cobertura-100%25%20Madrid-success)]()
+[![Barrios Enriquecidos](https://img.shields.io/badge/Barrios-53%2F148-blue)]()
 
 > Herramienta interactiva de visualización de datos del mercado inmobiliario de Madrid que facilita la toma de decisiones sobre alquiler e inversión mediante mapas de calor, análisis estadístico y comparativas por zonas.
 
@@ -76,8 +77,8 @@ Cada barrio/municipio incluye:
 - ✅ Precio medio de alquiler mensual
 - ✅ Precio por m²
 - ✅ Metraje promedio de pisos
-- ✅ 4 ventajas principales
-- ✅ 4 desventajas a considerar
+- ✅ **5-8 ventajas específicas** (en proceso de enriquecimiento)
+- ✅ **3-5 desventajas realistas** (en proceso de enriquecimiento)
 - ✅ Fuente de datos y fecha de actualización
 - ✅ Coordenadas GPS precisas
 
@@ -91,9 +92,7 @@ Cada barrio/municipio incluye:
 
 ## 🌐 Demo en Vivo
 
-🚀 **[Ver Aplicación en Vivo](https://tu-usuario.github.io/mapa-alquileres-madrid)**
-
-*Nota: Reemplaza el enlace con tu URL de GitHub Pages*
+🚀 **[Ver Aplicación en Vivo](https://Marizo317.github.io/mapa-alquileres-madrid)**
 
 ---
 
@@ -137,35 +136,36 @@ cd mapa-alquileres-madrid
 
 # Abrir con Live Server o cualquier servidor local
 # Recomendado: extensión Live Server de VS Code
-```
+Opción 2: Descargar ZIP
+Click en el botón verde "Code"
 
-### Opción 2: Descargar ZIP
+Seleccionar "Download ZIP"
 
-1. Click en el botón verde "Code"
-2. Seleccionar "Download ZIP"
-3. Descomprimir el archivo
-4. Abrir `index.html` con un navegador web
+Descomprimir el archivo
 
-### Requisitos
-- Navegador web moderno (Chrome, Firefox, Safari, Edge)
-- Conexión a internet (para cargar librerías CDN y mapas)
-- *(Opcional)* Servidor local para desarrollo
+Abrir index.html con un navegador web
 
----
+Requisitos
+Navegador web moderno (Chrome, Firefox, Safari, Edge)
 
-## 🚀 Uso
+Conexión a internet (para cargar librerías CDN y mapas)
 
-### Para Usuarios Finales
+(Opcional) Servidor local para desarrollo
 
-1. **Explorar el mapa**: Haz zoom y desplázate por Madrid
-2. **Cambiar vista**: Usa los botones superiores (General, Capital, Metro, Económicos)
-3. **Ver detalles**: Click en cualquier marcador para información completa
-4. **Analizar estadísticas**: Revisa el panel lateral con gráficos y datos
-5. **Comparar barrios**: Observa el mapa de calor para identificar zonas por color
+🚀 Uso
+Para Usuarios Finales
+Explorar el mapa: Haz zoom y desplázate por Madrid
 
-### Para Desarrolladores
+Cambiar vista: Usa los botones superiores (General, Capital, Metro, Económicos)
 
-```javascript
+Ver detalles: Click en cualquier marcador para información completa
+
+Analizar estadísticas: Revisa el panel lateral con gráficos y datos
+
+Comparar barrios: Observa el mapa de calor para identificar zonas por color
+
+Para Desarrolladores
+javascript
 // Añadir un nuevo barrio
 const nuevoBarrio = {
     id: 83,
@@ -184,13 +184,8 @@ const nuevoBarrio = {
 };
 
 barriosMadrid.push(nuevoBarrio);
-```
-
----
-
-## 📁 Estructura del Proyecto
-
-```
+📁 Estructura del Proyecto
+text
 mapa-alquileres-madrid/
 │
 ├── index.html              # Página principal
@@ -202,7 +197,7 @@ mapa-alquileres-madrid/
 │   └── estilos.css        # Estilos principales
 │
 ├── js/
-│   ├── datos.js           # Dataset de barrios y municipios (82 ubicaciones)
+│   ├── datos.js           # Dataset de barrios y municipios (148 ubicaciones)
 │   ├── mapa.js            # Lógica del mapa interactivo
 │   ├── graficos.js        # Generación de gráficos con Chart.js
 │   └── estadisticas.js    # Cálculos estadísticos
@@ -212,202 +207,252 @@ mapa-alquileres-madrid/
 │
 └── docs/
     └── METODOLOGIA.md     # Explicación detallada de la metodología
-```
-
----
-
-## 📊 Dataset
-
-### Fuentes de Datos (2025)
+📊 Dataset
+Fuentes de Datos (2025)
 Los datos han sido recopilados y verificados de múltiples fuentes oficiales:
 
-1. **[Idealista](https://www.idealista.com)** - Portal inmobiliario líder en España
-2. **[Fotocasa](https://www.fotocasa.es)** - Plataforma de compraventa y alquiler
-3. **[Indomio](https://www.indomio.es)** - Comparador de precios inmobiliarios
-4. **[OCU](https://www.ocu.org)** - Organización de Consumidores y Usuarios
-5. **[Bankinter](https://www.bankinter.com)** - Estudios de mercado inmobiliario
-6. **[Properfy](https://www.properfy.es)** - Big Data inmobiliario
-7. **Ayuntamiento de Madrid** - Datos oficiales de urbanismo
-8. **INE** - Instituto Nacional de Estadística
+Idealista - Portal inmobiliario líder en España
 
-### Cobertura Actual (Fase 3B - COMPLETA)
-- ✅ **148 ubicaciones totales**
-- ✅ **131 barrios de Madrid Capital** - 100% COMPLETO
-- ✅ **21 distritos** - TODOS LOS DISTRITOS DE MADRID
-- ✅ **17 municipios área metropolitana**
+Fotocasa - Plataforma de compraventa y alquiler
 
-### Datos por Ubicación
+Indomio - Comparador de precios inmobiliarios
+
+OCU - Organización de Consumidores y Usuarios
+
+Bankinter - Estudios de mercado inmobiliario
+
+Properfy - Big Data inmobiliario
+
+Ayuntamiento de Madrid - Datos oficiales de urbanismo
+
+INE - Instituto Nacional de Estadística
+
+Cobertura Actual (Fase 3B - COMPLETA)
+✅ 148 ubicaciones totales
+
+✅ 131 barrios de Madrid Capital - 100% COMPLETO
+
+✅ 21 distritos - TODOS LOS DISTRITOS DE MADRID
+
+✅ 17 municipios área metropolitana
+
+Estado de Enriquecimiento (Fase 4 - EN PROGRESO)
+✅ 53 barrios completados con información detallada
+
+🔄 95 barrios pendientes de enriquecimiento
+
+📈 424 ventajas documentadas (promedio 8 por barrio)
+
+📉 265 desventajas documentadas (promedio 5 por barrio)
+
+Datos por Ubicación
 Cada registro incluye 11 campos:
-- ID único
-- Nombre del barrio/municipio
-- Coordenadas GPS (lat, lng)
-- Zona y distrito
-- Precio medio mensual (€)
-- Precio por m² (€/m²)
-- Metraje medio (m²)
-- 4 ventajas
-- 4 desventajas
-- Fuente de datos
-- Fecha de actualización
 
----
+ID único
 
-## 🔬 Metodología
+Nombre del barrio/municipio
 
-### 1. Recopilación de Datos
-- Web scraping conceptual de múltiples fuentes
-- Verificación cruzada entre plataformas
-- Actualización mensual de precios
-- Validación de coordenadas GPS
+Coordenadas GPS (lat, lng)
 
-### 2. Procesamiento de Datos
-```javascript
-// Cálculo de estadísticas
-const calcularEstadisticas = (barrios) => {
-    const preciosM2 = barrios.map(b => b.precioM2);
+Zona y distrito
+
+Precio medio mensual (€)
+
+Precio por m² (€/m²)
+
+Metraje medio (m²)
+
+5-8 ventajas específicas (en proceso de enriquecimiento)
+
+3-5 desventajas realistas (en proceso de enriquecimiento)
+
+Fuente de datos
+
+Fecha de actualización
+
+🔬 Metodología
+1. Recopilación de Datos
+Web scraping conceptual de múltiples fuentes
+
+Verificación cruzada entre plataformas
+
+Actualización mensual de precios
+
+Validación de coordenadas GPS
+
+2. Enriquecimiento con IA (Fase 4)
+javascript
+// Proceso de enriquecimiento automatizado
+const enriquecerBarrio = (barrio) => {
     return {
-        media: preciosM2.reduce((a, b) => a + b) / preciosM2.length,
-        min: Math.min(...preciosM2),
-        max: Math.max(...preciosM2),
-        mediana: calcularMediana(preciosM2)
+        ...barrio,
+        ventajas: [
+            "Ubicación privilegiada junto a puntos de interés",
+            "Excelente conexión de transporte público",
+            "Comercio local variado y de calidad",
+            // ... 5-8 ventajas específicas
+        ],
+        desventajas: [
+            "Precios elevados comparado con la media",
+            "Tráfico intenso en horas punta",
+            // ... 3-5 desventajas realistas
+        ]
     };
 };
-```
+3. Visualización
+Mapa de calor: Colores basados en percentiles de precio
 
-### 3. Visualización
-- **Mapa de calor**: Colores basados en percentiles de precio
-- **Escala cromática**: 
-  - 🟢 Verde: < €15/m² (Económico)
-  - 🟡 Amarillo: €15-€20/m² (Moderado)
-  - 🟠 Naranja: €20-€25/m² (Caro)
-  - 🔴 Rojo: > €25/m² (Muy caro)
+Escala cromática:
 
-### 4. Análisis Estadístico
-- Medidas de tendencia central (media, mediana)
-- Medidas de dispersión (rango, desviación estándar)
-- Análisis comparativo por zonas
-- Detección de outliers
+🟢 Verde: < €15/m² (Económico)
 
-*Para más detalles, consulta [METODOLOGIA.md](./docs/METODOLOGIA.md)*
+🟡 Amarillo: €15-€20/m² (Moderado)
 
----
+🟠 Naranja: €20-€25/m² (Caro)
 
-## 🗺️ Roadmap
+🔴 Rojo: > €25/m² (Muy caro)
 
-### ✅ Fase 1: Prototipo Inicial (Completada)
-- [x] Estructura HTML/CSS/JS básica
-- [x] Mapa interactivo con Leaflet
-- [x] Dataset inicial (30 barrios)
-- [x] Gráficos con Chart.js
+4. Análisis Estadístico
+Medidas de tendencia central (media, mediana)
 
-### ✅ Fase 2: Expansión de Datos (Completada)
-- [x] 82 ubicaciones completas
-- [x] 10 distritos de Madrid Capital
-- [x] 17 municipios área metropolitana
-- [x] Datos verificados de 8 fuentes
-- [x] Ventajas y desventajas por ubicación
-- [x] Documentación completa
+Medidas de dispersión (rango, desviación estándar)
 
-### 🚧 Fase 3: Cobertura Total (En Progreso)
-- [ ] Completar los 131 barrios de Madrid Capital
-- [ ] Incluir los 11 distritos restantes
-- [ ] Total: 148 ubicaciones (131 + 17)
-- [ ] Actualización de estadísticas generales
+Análisis comparativo por zonas
 
-### 🔮 Fase 4: Machine Learning (Futuro)
-- [ ] Modelo de predicción de precios (Regresión Lineal)
-- [ ] Clustering de barrios similares (K-Means)
-- [ ] Sistema de recomendación personalizado
-- [ ] Análisis de tendencias temporales
+Detección de outliers
 
-### 🎨 Fase 5: Mejoras UX/UI (Futuro)
-- [ ] Búsqueda por nombre de barrio
-- [ ] Filtro por rango de precio
-- [ ] Comparador de hasta 3 barrios
-- [ ] Calculadora de rentabilidad de inversión
-- [ ] Modo oscuro / claro
-- [ ] Exportar datos a CSV/PDF
+Para más detalles, consulta METODOLOGIA.md
 
-### 🔄 Fase 6: Automatización (Futuro)
-- [ ] Web scraping automatizado real
-- [ ] Actualización diaria de precios
-- [ ] API REST para consumo externo
-- [ ] Sistema de alertas por email
+🗺️ Roadmap
+✅ Fase 1: Prototipo Inicial (Completada)
+Estructura HTML/CSS/JS básica
 
----
+Mapa interactivo con Leaflet
 
-## 🤝 Contribuciones
+Dataset inicial (30 barrios)
 
+Gráficos con Chart.js
+
+✅ Fase 2: Expansión de Datos (Completada)
+82 ubicaciones completas
+
+10 distritos de Madrid Capital
+
+17 municipios área metropolitana
+
+Datos verificados de 8 fuentes
+
+Ventajas y desventajas por ubicación
+
+Documentación completa
+
+✅ Fase 3: Cobertura Total (Completada)
+148 ubicaciones totales (131 barrios + 17 municipios)
+
+21 distritos completos - 100% Madrid Capital
+
+Datos de precios actualizados 2025
+
+Coordenadas GPS verificadas
+
+🔄 Fase 4: Enriquecimiento de Datos (EN PROGRESO)
+53 barrios enriquecidos con información detallada
+
+Completar enriquecimiento de 95 barrios restantes
+
+Procesamiento por lotes de 10-15 barrios/día
+
+Validación cruzada de información
+
+Estandarización de formato y contenido
+
+🔮 Fase 5: Arquitectura Técnica (PRÓXIMO)
+Migración a Supabase (PostgreSQL)
+
+API REST automática
+
+Diseño del schema de base de datos
+
+Testing de queries y performance
+
+🎯 Fase 6: Algoritmo de Matching (FUTURO)
+Cuestionario de perfil de usuario
+
+Algoritmo de matching ponderado
+
+Sistema de storytelling personalizado
+
+Top 3 recomendaciones por usuario
+
+🤝 Contribuciones
 ¡Las contribuciones son bienvenidas! Si quieres mejorar este proyecto:
 
-1. **Fork** el repositorio
-2. Crea una **rama** para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. **Commit** tus cambios (`git commit -m 'Añadir nueva funcionalidad'`)
-4. **Push** a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abre un **Pull Request**
+Fork el repositorio
 
-### Ideas para Contribuir
-- 🐛 Reportar bugs
-- 💡 Proponer nuevas funcionalidades
-- 📝 Mejorar documentación
-- 🎨 Diseñar mejoras de UI/UX
-- 📊 Añadir nuevas fuentes de datos
-- 🌍 Traducir a otros idiomas
+Crea una rama para tu feature (git checkout -b feature/nueva-funcionalidad)
 
----
+Commit tus cambios (git commit -m 'Añadir nueva funcionalidad')
 
-## 📄 Licencia
+Push a la rama (git push origin feature/nueva-funcionalidad)
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Abre un Pull Request
 
-```
+Ideas para Contribuir
+🐛 Reportar bugs
+
+💡 Proponer nuevas funcionalidades
+
+📝 Mejorar documentación
+
+🎨 Diseñar mejoras de UI/UX
+
+📊 Añadir nuevas fuentes de datos
+
+🌍 Traducir a otros idiomas
+
+📄 Licencia
+Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+
+text
 MIT License
 
-Copyright (c) 2025 [Tu Nombre]
+Copyright (c) 2025 Marizo317
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction...
-```
+👨‍💻 Autor
+[Marizo317]
 
----
+🐙 GitHub: @Marizo317
 
-## 👨‍💻 Autor
+🌐 Proyecto: Mapa Alquileres Madrid
 
-**[Tu Nombre]**
+🙏 Agradecimientos
+Leaflet.js - Por su excelente librería de mapas
 
-- 🌐 Portfolio: [tu-portfolio.com](https://tu-portfolio.com)
-- 💼 LinkedIn: [linkedin.com/in/tu-perfil](https://linkedin.com/in/tu-perfil)
-- 🐙 GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- 📧 Email: tu.email@ejemplo.com
+Chart.js - Por facilitar la visualización de datos
 
----
+OpenStreetMap - Por proporcionar mapas gratuitos
 
-## 🙏 Agradecimientos
+Comunidad de desarrolladores - Por sus aportes y feedback
 
-- **Leaflet.js** - Por su excelente librería de mapas
-- **Chart.js** - Por facilitar la visualización de datos
-- **OpenStreetMap** - Por proporcionar mapas gratuitos
-- **Comunidad de desarrolladores** - Por sus aportes y feedback
+📝 Notas
+Estado Actual del Proyecto
+✅ Cobertura 100% completada - 148 ubicaciones mapeadas
 
----
+🔄 Enriquecimiento en progreso - 53/148 barrios completados
 
-## 📝 Notas
+📊 Datos actualizados 2025 - Precios verificados
 
-### Limitaciones Actuales
-- Los datos se actualizan manualmente (sin web scraping automático)
-- Cobertura parcial de Madrid (82 de 148 ubicaciones totales)
-- Sin persistencia de datos (no hay backend)
+🎯 Próximo objetivo - Completar enriquecimiento de base de datos
 
-### Descargo de Responsabilidad
+Descargo de Responsabilidad
 Los precios mostrados son orientativos y pueden variar. Se recomienda verificar la información en las fuentes oficiales antes de tomar decisiones de inversión o alquiler.
 
----
-
 <div align="center">
-
-**⭐ Si te gustó este proyecto, dale una estrella en GitHub! ⭐**
+⭐ Si te gustó este proyecto, dale una estrella en GitHub! ⭐
 
 Hecho con ❤️ en Madrid
 
-</div>
+</div> ``
