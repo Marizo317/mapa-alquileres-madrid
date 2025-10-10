@@ -25,16 +25,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Palacio Real y Plaza de Oriente",
-            "Teatro Real y ópera",
-            "Arquitectura histórica",
-            "Zona cultural privilegiada"
+            "Ubicación privilegiada junto al Palacio Real y Plaza de Oriente",
+            "Teatro Real - principal escenario de ópera de España a menos de 200m",
+            "Catedral de la Almudena y Jardines de Sabatini a 5 minutos andando", 
+            "Excelente conexión de transporte: Ópera (L2, L5, Ramal Norte) y Sol (L1, L2, L3)",
+            "Ambiente señorial y arquitectura histórica bien conservada",
+            "Zona de alta seguridad con presencia policial constante",
+            "Proximidad a restaurantes de lujo y comercios exclusivos en Calle del Arenal",
+            "Vistas panorámicas únicas de Madrid desde la Cornisa del Palacio"
         ],
         desventajas: [
-            "Precio muy elevado",
-            "Muy turístico",
-            "Tráfico denso",
-            "Ruido constante"
+            "Precios de alquiler 40% superiores a la media de Madrid (€23.8/m²)",
+            "Masificación turística permanente, especialmente en Plaza de Oriente",
+            "Tráfico denso en Calles Bailén y Mayor con restricciones frecuentes",
+            "Ruido constante por actividades turísticas hasta altas horas",
+            "Falta de supermercados asequibles - predominan tiendas de lujo y souvenirs",
+            "Dificultad extrema para aparcar - zona de máxima restricción ORA",
+            "Escasez de servicios cotidianos como farmacias o bancos no turísticos"
         ]
     },
     {
@@ -51,16 +58,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Barrio multicultural y bohemio",
-            "Ambiente artístico y alternativo",
-            "Tabacalera y centros culturales",
-            "Restaurantes internacionales variados"
+            "Centro social autogestionado La Tabacalera - referente cultural alternativo",
+            "Ambiente multicultural único con comunidades de más de 80 nacionalidades",
+            "Mercado de San Fernando con productos internacionales y precios asequibles",
+            "Excelente comunicación: Metro Lavapiés (L3), Embajadores (L3) y Atocha (L1) a 10 min",
+            "Oferta gastronómica diversa: restaurantes indios, senegaleses, bangladesíes y fusión",
+            "Galeries de arte independientes y talleres de artistas en Calles Tribulete y Amparo",
+            "Proyectos comunitarios y asociaciones vecinales muy activas",
+            "Rutas de tapas alternativas en Calles Argumosa y Ave María"
         ],
         desventajas: [
-            "Percepción de inseguridad",
-            "Edificios antiguos sin ascensor",
-            "Gentrificación en curso",
-            "Calles estrechas y bulliciosas"
+            "Edificios del siglo XIX sin ascensor en 70% de las viviendas",
+            "Calles estrechas como la Cabeza o Sombrerete con acumulación de basura",
+            "Proceso de gentrificación acelerado - precios subieron 22% en 2 años",
+            "Percepción de inseguridad nocturna en zonas alejadas de calles principales",
+            "Ruido constante por vida en la calle y comercio hasta tarde",
+            "Dificultad para aparcar - zona de residentes muy disputada",
+            "Conflicto vecinal entre tradición y nueva población gentrificada"
         ]
     },
     {
@@ -77,16 +91,23 @@ const barriosMadrid = [
         fuente: "Bankinter",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Barrio de las Letras literario",
-            "Cerca del Museo del Prado",
-            "Vida nocturna intensa",
-            "Plaza Santa Ana emblemática"
+            "Corazón del Barrio de las Letras con citas literarias en adoquines",
+            "A 5 minutos del Triángulo del Arte: Prado, Thyssen y Reina Sofía",
+            "Plaza Santa Ana - epicentro de terrazas y vida social madrileña",
+            "Excelente transporte: Sevilla (L2), Sol (L1,L2,L3) y Antón Martín (L1)",
+            "Ambiente cultural vibrante con teatros como Español y La Latina",
+            "Restaurantes de alta cocina en Calles Echegaray y Huertas",
+            "Arquitectura histórica bien conservada con patios señoriales",
+            "Proximidad a instituciones como Congreso de los Diputados"
         ],
         desventajas: [
-            "Ruidoso por la noche",
-            "Muy turístico",
-            "Precios elevados",
-            "Limpieza irregular"
+            "Ruido nocturno extremo en calles Huertas y Príncipe hasta 4-5 AM",
+            "Masificación turística permanente - difícil intimidad vecinal",
+            "Precios de alquiler más altos de Centro (€24/m²)",
+            "Problemas de limpieza en fin de semana por acumulación de residuos",
+            "Imposible aparcar - zona turística con máxima rotación",
+            "Comercios orientados al turismo, falta servicios cotidianos",
+            "Viviendas antiguas con problemas de aislamiento acústico"
         ]
     },
     {
@@ -103,16 +124,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Barrio LGTBIQ+ referencia mundial",
-            "Ambiente cosmopolita y abierto",
-            "Comercio independiente y diseño",
-            "Mercado de San Antón renovado"
+            "Epicentro LGTBIQ+ de España con ambiente de tolerancia y diversidad",
+            "Mercado de San Antón - gastronomía premium y rooftop con vistas",
+            "Comercio de diseño independiente en Calles Hortaleza y Argensola",
+            "Excelente comunicación: Metro Chueca (L5), Alonso Martínez (L4,L5,L10)",
+            "Restaurantes de moda y cocina fusión en Calles Pelayo y Augusto Figueroa",
+            "Eventos culturales constantes: Madrid Pride, festivales de diseño",
+            "Ambiente cosmopolita con residentes internacionales y creativos",
+            "Servicios especializados: gimnasios boutique, spas y wellness centers"
         ],
         desventajas: [
-            "Precio premium",
-            "Muy concurrido fines de semana",
-            "Ruido nocturno",
-            "Aparcamiento imposible"
+            "Precios premium - alquileres 45% superiores a media madrileña",
+            "Masificación los fines de semana - calles colapsadas de viernes a domingo",
+            "Ruido nocturno constante en Plaza de Chueca y calles aledañas",
+            "Aparcamiento prácticamente imposible - zona de máxima restricción",
+            "Gentrificación extrema - desplazamiento de comercio tradicional",
+            "Viviendas reformadas pero con precios de lujo en edificios antiguos",
+            "Falta de tranquilidad - actividad comercial y ocio 24/7"
         ]
     },
     {
@@ -129,16 +157,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Barrio hipster y moderno",
-            "Gran oferta de ocio y cultura",
-            "Tiendas vintage y alternativas",
-            "Ambiente joven y dinámico"
+            "Cuna de la Movida Madrileña con ambiente creativo y alternativo",
+            "Plaza del 2 de Mayo - epicentro de terrazas y vida social juvenil",
+            "Comercio vintage y tiendas independientes en Calles Velarde y Espíritu Santo",
+            "Excelente transporte: Tribunal (L1,L10), Bilbao (L1,L4) y San Bernardo (L2,L4)",
+            "Oferta cultural en centros como Instituto Europeo de Design y galerías urbanas",
+            "Bares de cócteles de autor y gastronomía trendy en Calles Corredera Alta y San Vicente Ferrer",
+            "Ambiente joven y dinámico con eventos como Mercado de Motores",
+            "Arquitectura tradicional con patios reconvertidos en espacios coworking"
         ],
         desventajas: [
-            "Precio en alza constante",
-            "Saturación turística",
-            "Ruido hasta altas horas",
-            "Gentrificación avanzada"
+            "Gentrificación avanzada - precios subieron 35% en últimos 3 años",
+            "Saturación turística en calles Fuencarral y Gran Vía los fines de semana",
+            "Ruido constante hasta 4-5 AM en zonas de ocio nocturno",
+            "Viviendas pequeñas y antiguas con precios de barrio premium",
+            "Dificultad para residentes tradicionales por cambio de comercio local",
+            "Aparcamiento caótico - una de las zonas más conflictivas de Madrid",
+            "Masificación en horarios de tapeo y copas - colas en bares populares"
         ]
     },
     {
@@ -155,16 +190,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Kilómetro 0 de España",
-            "Conexión excepcional transporte",
-            "Plaza Mayor y comercio",
-            "Centro absoluto de Madrid"
+            "Kilómetro 0 de España - centro neurálgico de la red de carreteras nacional",
+            "Conexión de transporte excepcional: Sol (L1,L2,L3) y múltiples líneas de bus",
+            "Plaza Mayor a 2 minutos - arquitectura histórica y eventos culturales",
+            "Acceso inmediato a centros comerciales como El Corte Inglés Callao",
+            "Puerta del Sol - reloj de la Casa de Correos y emblemática estatua del Oso y el Madroño",
+            "Calle Preciados - principal eje comercial peatonal de Madrid",
+            "Servicios 24/7: farmacias de guardia, comisarías centrales, oficinas de turismo",
+            "Proximidad a instituciones como Comunidad de Madrid y Real Casa de Correos"
         ],
         desventajas: [
-            "Excesivamente turístico",
-            "Ruido 24/7",
-            "Precios inflados",
-            "Masificación constante"
+            "Masificación turística extrema - más de 300.000 personas diarias en temporada alta",
+            "Ruido constante 24/7 por tráfico, turistas y actividades comerciales",
+            "Precios inflados en comercios y restaurantes orientados al turismo",
+            "Imposible tranquilidad - ambiente de 'no parque temático' permanente",
+            "Seguridad complicada en horas nocturnas por concentración de botellón",
+            "Falta absoluta de aparcamiento - zona de máxima restricción y rotación",
+            "Comercio local desaparecido - sustituido por franquicias y tiendas de souvenirs"
         ]
     },
 
@@ -185,16 +227,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Barrio más exclusivo de Madrid",
-            "Junto a Biblioteca Nacional",
-            "Museo Arqueológico Nacional",
-            "Arquitectura señorial impecable"
+            "Paseo de Recoletos - una de las avenidas más exclusivas de Europa",
+            "Biblioteca Nacional y Museo Arqueológico Nacional a menos de 200m",
+            "Arquitectura señorial del siglo XIX con fachadas perfectamente conservadas",
+            "Barrio más seguro de Madrid con presencia policial y seguridad privada",
+            "Cercanía a parques emblemáticos: Jardines del Descubrimiento y Retiro",
+            "Restaurantes con estrella Michelin y gastronomía de alta gama",
+            "Comercio de lujo en Calles Serrano y Velázquez a 5 minutos andando",
+            "Excelente transporte: Colón (L4), Serrano (L4) y Recoletos (Cercanías)"
         ],
         desventajas: [
-            "El más caro de toda Madrid",
-            "Ambiente muy formal",
-            "Poco comercio de barrio",
-            "Estacionamiento carísimo"
+            "Precio más elevado de Madrid - €26.8/m², 60% superior a la media",
+            "Ambiente excesivamente formal y conservador - poco diversidad social",
+            "Comercio exclusivamente de lujo - falta supermercados y tiendas cotidianas",
+            "Estacionamiento en garajes privados desde €250-€400 mensuales",
+            "Vida nocturna casi inexistente - ambiente residencial muy tranquilo",
+            "Edificios con normas de comunidad estrictas y conservadoras",
+            "Alejado de ambiente auténtico madrileño - muy internacional y elitista"
         ]
     },
     {
@@ -211,16 +260,23 @@ const barriosMadrid = [
         fuente: "Bankinter",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Calle Goya comercial principal",
-            "Excelente conexión metro",
-            "Zona residencial consolidada",
-            "Servicios de alta calidad"
+            "Calle Goya - eje comercial principal con 1.5km de tiendas y servicios",
+            "Estación de metro Goya (L2, L4) - una de las mejor conectadas de Madrid",
+            "Zona residencial consolidada con amplias viviendas familiares (media 99m²)",
+            "Servicios de alta calidad: colegios privados, clínicas exclusivas, bancos",
+            "Mercado de la Paz - productos gourmet y gastronomía de calidad",
+            "Proximidad a Parque del Retiro - acceso a 10 minutos andando",
+            "Ambiente tranquilo y familiar con amplias aceras y zonas arboladas",
+            "Comercio especializado: moda infantil, decoración y servicios premium"
         ],
         desventajas: [
-            "Precio elevado",
-            "Tráfico intenso calle Goya",
-            "Poco ambiente nocturno",
-            "Edificios antiguos sin reforma"
+            "Tráfico intenso en Calle Goya - congestión constante en horas punta",
+            "Precios elevados - 35% superiores a la media madrileña",
+            "Vida nocturna casi inexistente - ambiente residencial muy tranquilo",
+            "Edificios de los años 60-70 sin reformar en calles secundarias",
+            "Falta de diversidad social y cultural - perfil socioeconómico homogéneo",
+            "Aparcamiento complicado a pesar de ser zona residencial",
+            "Comercio muy convencional - pocas opciones alternativas o jóvenes"
         ]
     },
     {
@@ -237,16 +293,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Parque Quinta de la Fuente del Berro",
-            "Más económico que otros barrios Salamanca",
-            "Zona tranquila y residencial",
-            "Buena conexión con M-30"
+            "Parque Quinta de la Fuente del Berro - jardín histórico del siglo XVII con especies botánicas únicas",
+            "Precios más asequibles que el resto de Salamanca - 15% menos que Goya/Serrano",
+            "Zona residencial muy tranquila con calles arboladas y poco tráfico",
+            "Excelente conexión con M-30 - acceso directo en 2 minutos por Avenida de la Paz",
+            "Ambiente familiar y seguro - una de las zonas preferidas por familias del distrito",
+            "Mercado de San Pascual - comercio tradicional con productos de calidad",
+            "Colegios públicos y privados de prestigio en radio cercano",
+            "Viviendas espaciosas con terrazas y zonas comunes amplias"
         ],
         desventajas: [
-            "Lejos del centro distrito",
-            "Menos comercio que Goya/Serrano",
-            "Metro más alejado algunas zonas",
-            "Edificios más antiguos"
+            "Alejado del centro del distrito - 20-25 minutos andando a Serrano/Goya",
+            "Comercio limitado comparado con ejes principales del barrio de Salamanca",
+            "Metro más alejado: Ventas (L5) a 10-15 minutos andando para algunas calles",
+            "Edificios de los años 70-80 sin las reformas de lujo de otras zonas de Salamanca",
+            "Menos servicios de ocio y restauración - predominio de comercio local básico",
+            "Falta de ambiente juvenil - población mayoritariamente familiar y senior",
+            "Transporte público menos frecuente que en zonas céntricas del distrito"
         ]
     },
     {
@@ -263,16 +326,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Más asequible dentro Salamanca",
-            "Parque de Eva Perón",
-            "Ambiente familiar tranquilo",
-            "Buenas conexiones transporte"
+            "La opción más asequible del distrito Salamanca - 25% más barato que Goya",
+            "Parque de Eva Perón - amplia zona verde con áreas infantiles y deportivas",
+            "Ambiente familiar muy tranquilo - calles residenciales poco transitadas",
+            "Excelente conexión de transporte: Diego de León (L4,L5,L6,L7) y Avenida de América",
+            "Mercado de la Guindalera - comercio tradicional con precios razonables",
+            "Proximidad a centros comerciales como ABC Serrano y El Corte Inglés de Avenida de América",
+            "Colegios públicos bien valorados y guarderías en zona cercana",
+            "Zona en proceso de renovación con nuevas promociones residenciales"
         ],
         desventajas: [
-            "Menos prestigio que otros barrios",
-            "Lejos de la zona comercial premium",
-            "Menos servicios exclusivos",
-            "Edificación años 60-70"
+            "Menor prestigio que el resto de Salamanca - considerado 'el hermano pobre' del distrito",
+            "Alejado de la zona comercial premium de Serrano/Goya - 30 minutos andando",
+            "Edificación de los años 60-70 sin el glamour de la arquitectura señorial salamantina",
+            "Servicios menos exclusivos - predominio de comercio básico y cadenas estándar",
+            "Menos ambiente y vida social - zona principalmente dormitorio",
+            "Tráfico en calles periféricas como Francisco Silvela y Doctor Esquerdo",
+            "Falta de identidad propia - transición entre Salamanca y Chamartín"
         ]
     },
     {
@@ -289,16 +359,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Calle Ortega y Gasset lujo",
-            "Zona consolidada y elegante",
-            "Metro Diego de León importante",
-            "Comercio variado y servicios"
+            "Calle Ortega y Gasset - eje de comercio de lujo con boutiques internacionales",
+            "Zona residencial consolidada y elegante con arquitectura señorial bien conservada",
+            "Nudo de transporte Diego de León (L4,L5,L6,L7) - mejor conectado del distrito",
+            "Comercio variado desde alta gama hasta cadenas internacionales en Calles López de Hoyos y Príncipe de Vergara",
+            "Ambiente sofisticado con galerías de arte y anticuarios en Calles Juan Bravo y Lagasca",
+            "Servicios premium: clínicas privadas exclusivas, consulados y oficinas corporativas",
+            "Proximidad a Parque de la Fuente del Berro y Quinta de los Molinos",
+            "Restaurantes de alta cocina y gastronomía internacional en Calles Padilla y Ayala"
         ],
         desventajas: [
-            "Precio alto",
-            "Mucho tráfico comercial",
-            "Aparcamiento complicado",
-            "Poco ambiente nocturno"
+            "Precios entre los más altos de Salamanca - €24/m² solo superado por Recoletos",
+            "Tráfico intenso constante en ejes principales como Ortega y Gasset y Príncipe de Vergara",
+            "Aparcamiento extremadamente complicado - zona comercial con alta rotación",
+            "Vida nocturna casi inexistente - ambiente residencial y comercial diurno",
+            "Masificación en horas comerciales - calles colapsadas de compradores",
+            "Edificios con normas de comunidad muy estrictas y conservadoras",
+            "Falta de diversidad social - perfil socioeconómico muy homogéneo y alto"
         ]
     },
     {
@@ -315,16 +392,23 @@ const barriosMadrid = [
         fuente: "Bankinter",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Paseo de la Castellana emblemático",
-            "Edificios modernos y clásicos",
-            "Zona empresarial premium",
-            "Excelentes comunicaciones"
+            "Paseo de la Castellana - principal arteria de Madrid con arquitectura emblemática",
+            "Edificios corporativos y residenciales de alta gama con vistas panorámicas",
+            "Zona empresarial premium con sedes de multinacionales e instituciones financieras",
+            "Excelentes comunicaciones: Cuzco (L10), Santiago Bernabéu (L10) y Nuevos Ministerios (L6,L8,L10,Cercanías)",
+            "Torres emblemáticas como Picasso, Europa y Space con servicios de lujo",
+            "Proximidad al estadio Santiago Bernabéu y centros de convenciones IFEMA",
+            "Seguridad y vigilancia 24/7 en zona de alto valor corporativo",
+            "Gastronomía ejecutiva y restaurantes de negocios de alta gama"
         ],
         desventajas: [
-            "Segundo más caro Madrid",
-            "Mucho tráfico y ruido",
-            "Zona muy corporativa",
-            "Poco comercio de proximidad"
+            "Segundo barrio más caro de Madrid - solo superado por Recoletos en precio",
+            "Tráfico intenso constante en Paseo de la Castellana - ruido permanente",
+            "Ambiente excesivamente corporativo - vacío los fines de semana y noches",
+            "Comercio de proximidad casi inexistente - predominio de oficinas y restaurantes ejecutivos",
+            "Falta de vida vecinal auténtica - población flotante de ejecutivos internacionales",
+            "Aparcamiento en garajes privados desde €300-€500 mensuales",
+            "Zona fría y impersonal - carece del carácter tradicional madrileño"
         ]
     },
 
@@ -345,16 +429,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Cerca Estación de Atocha",
-            "Bien comunicado con Cercanías",
-            "Precio razonable para la zona",
-            "Barrio tranquilo y residencial"
+            "Estación de Atocha a 10 minutos - conexión nacional e internacional de trenes",
+            "Excelente comunicación: Metro Pacífico (L6), Menéndez Pelayo (L1) y Cercanías",
+            "Precio más razonable del distrito Retiro - 20% más barato que Jerónimos",
+            "Barrio tranquilo y residencial con calles poco transitadas",
+            "Mercado de Pacífico - comercio tradicional con precios asequibles",
+            "Centros de salud y colegios públicos bien dotados en zona cercana",
+            "Proceso de renovación urbana con nuevas promociones residenciales",
+            "Fácil acceso a M-30 y salidas de ciudad por Avenida de la Ciudad de Barcelona"
         ],
         desventajas: [
-            "Menos verde que otros Retiro",
-            "Tráfico de Atocha cercano",
-            "Edificios envejecidos",
-            "Menos comercio local"
+            "Menos zonas verdes que otros barrios de Retiro - alejado del parque principal",
+            "Tráfico constante de Atocha y estación de autobuses en calles aledañas",
+            "Edificios de los años 60-70 envejecidos sin reformas integrales",
+            "Comercio local limitado - predominio de cadenas estándar y servicios básicos",
+            "Ambiente menos exclusivo que otras zonas del distrito Retiro",
+            "Aparcamiento complicado en horas laborables por proximidad a estación",
+            "Falta de identidad propia - zona de transición entre centro y periferia"
         ]
     },
     {
@@ -371,16 +462,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Precio más bajo del distrito",
-            "Cerca M-30 y salidas ciudad",
-            "Zona residencial familiar",
-            "Parques y zonas infantiles"
+            "Precio más bajo del distrito Retiro - 30% más económico que Jerónimos",
+            "Acceso directo a M-30 - salidas rápidas a cualquier punto de Madrid",
+            "Zona residencial familiar con parques infantiles y áreas deportivas",
+            "Parque de la Arganzuela y Madrid Río a 15 minutos andando",
+            "Comunicación aceptable: Metro Conde de Casal (L6) y múltiples líneas de bus",
+            "Comercio local asequible en Calles Martínez de la Riva y Doctor Esquerdo",
+            "Ambiente tranquilo y seguro - preferido por familias jóvenes",
+            "Proceso de mejora urbana con nuevas zonas verdes y equipamientos"
         ],
         desventajas: [
-            "Lejos del Retiro parque",
-            "Menos servicios premium",
-            "Edificios años 70",
-            "Ambiente más periférico"
+            "Más alejado del Parque del Retiro - 25-30 minutos andando",
+            "Menos servicios premium que otras zonas del distrito",
+            "Edificios de los años 70 con necesidades de reforma",
+            "Ambiente más periférico - carece del carácter señorial de Retiro",
+            "Transporte público menos frecuente que en zonas céntricas",
+            "Falta de oferta cultural y de ocio - principalmente zona dormitorio",
+            "Comercio básico - pocas opciones de restauración y ocio nocturno"
         ]
     },
     {
@@ -397,16 +495,23 @@ const barriosMadrid = [
         fuente: "Bankinter",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Cerca del Retiro",
-            "Zona tranquila y señorial",
-            "Buenos colegios cercanos",
-            "Arquitectura cuidada"
+            "A 10 minutos del Parque del Retiro - acceso por Puerta de O'Donnell",
+            "Zona tranquila y señorial con arquitectura bien conservada",
+            "Colegios públicos y concertados de prestigio en radio cercano",
+            "Calles arboladas y amplias aceras - ideal para familias",
+            "Ambiente residencial de calidad con baja densidad de tráfico",
+            "Mercado de la Estrella - productos frescos y comercio tradicional",
+            "Proximidad a instalaciones deportivas del Canal de Isabel II",
+            "Arquitectura de los años 40-50 bien mantenida con carácter histórico"
         ],
         desventajas: [
-            "Metro algo alejado",
-            "Poco comercio de proximidad",
-            "Aparcamiento complicado",
-            "Precio en alza"
+            "Metro más alejado - Ibiza (L9) a 10-15 minutos andando para algunas calles",
+            "Comercio de proximidad limitado - pocas opciones de ocio y restauración",
+            "Aparcamiento complicado - zona residencial con alta ocupación",
+            "Precios en alza constante - gentrificación en proceso",
+            "Vida nocturna casi inexistente - ambiente familiar y tranquilo",
+            "Falta de diversidad generacional - población mayoritariamente estable",
+            "Servicios concentrados en ejes principales - dispersión en calles interiores"
         ]
     },
     {
@@ -423,16 +528,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Junto al Retiro",
-            "Zona muy residencial",
-            "Calles amplias y arboladas",
-            "Ambiente exclusivo"
+            "Junto al Parque del Retiro - acceso directo por Puerta de Ibiza",
+            "Zona muy residencial exclusiva con calles amplias y arboladas",
+            "Arquitectura señorial y edificios de calidad bien conservados",
+            "Ambiente exclusivo y tranquilo - uno de los preferidos de Retiro",
+            "Metro Ibiza (L9) a menos de 5 minutos - buena conexión con centro",
+            "Colegios internacionales y centros educativos de élite cercanos",
+            "Servicios de calidad: clínicas privadas, boutiques y restaurantes selectos",
+            "Seguridad y tranquilidad - una de las zonas más seguras de Madrid"
         ],
         desventajas: [
-            "Precio elevado",
-            "Poco ambiente comercial",
-            "Zona muy tranquila (para algunos)",
-            "Edificios sin modernizar"
+            "Precios elevados - entre los más altos del distrito después de Jerónimos",
+            "Comercio muy limitado - pocas opciones de compras y ocio",
+            "Excesiva tranquilidad para algunos - falta de vida social activa",
+            "Edificios antiguos sin modernizar en algunas manzanas",
+            "Aparcamiento muy disputado - zona residencial de alta demanda",
+            "Falta de diversidad - perfil socioeconómico muy homogéneo",
+            "Alejado de centros de ocio y vida nocturna - ambiente estrictamente residencial"
         ]
     },
     {
@@ -449,16 +561,23 @@ const barriosMadrid = [
         fuente: "Bankinter",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Junto al Prado y Reina Sofía",
-            "Zona monumentales icónica",
-            "Puerta de Alcalá y Retiro",
-            "Máximo prestigio"
+            "Ubicación privilegiada junto a Museo del Prado y Reina Sofía",
+            "Zona monumental icónica - Puerta de Alcalá, Cibeles y Fuente de Neptuno",
+            "Acceso directo al Parque del Retiro por puertas principales",
+            "Máximo prestigio residencial - dirección de lujo en Madrid",
+            "Excelente comunicación: Banco de España (L2), Retiro (L2) y Atocha",
+            "Arquitectura palaciega y edificios históricos perfectamente conservados",
+            "Ambiente cultural excepcional - rodeado de museos e instituciones",
+            "Seguridad y exclusividad - una de las zonas más vigiladas de Madrid"
         ],
         desventajas: [
-            "Muy caro",
-            "Excesivamente turístico",
-            "Poco comercio cotidiano",
-            "Tráfico constante"
+            "Precios muy elevados - entre los 5 más caros de toda Madrid",
+            "Masificación turística permanente - difícil intimidad vecinal",
+            "Comercio cotidiano casi inexistente - todo orientado al turismo cultural",
+            "Tráfico constante en Paseo del Prado y calles aledañas",
+            "Imposible aparcamiento - zona de máxima restricción y rotación",
+            "Falta de servicios básicos - farmacias, supermercados escasos",
+            "Edificios con normas de comunidad muy restrictivas y conservadoras"
         ]
     },
     {
@@ -475,16 +594,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Hospital Niño Jesús referencia",
-            "Cerca del Retiro",
-            "Zona residencial consolidada",
-            "Buen balance precio-calidad"
+            "Hospital Infantil Niño Jesús - centro de referencia nacional pediátrica",
+            "A 8 minutos del Parque del Retiro - acceso por Puerta de Sainz de Baranda",
+            "Zona residencial consolidada con edificios bien conservados",
+            "Excelente relación calidad-precio dentro del distrito Retiro",
+            "Comunicación aceptable: Ibiza (L9) y O'Donnell (L6) a 10-12 minutos",
+            "Ambiente tranquilo y familiar - baja densidad de tráfico",
+            "Colegios públicos y privados de calidad en zona cercana",
+            "Comercio local en Calles Doctor Esquerdo y Menorca"
         ],
         desventajas: [
-            "Algo alejado del centro",
-            "Tráfico hospitalario",
-            "Menos comercio que otras zonas",
-            "Metro más distante"
+            "Alejado del centro histórico - 25-30 minutos andando a Sol",
+            "Tráfico hospitalario constante en Calles Menéndez Pelayo y Doctor Esquerdo",
+            "Comercio limitado comparado con otras zonas de Retiro",
+            "Metro más distante que en barrios céntricos del distrito",
+            "Falta de vida nocturna - ambiente estrictamente residencial",
+            "Edificios de los años 50-60 sin el glamour de otras zonas de Retiro",
+            "Servicios concentrados en ejes principales - dispersión en interiores"
         ]
     },
 
@@ -505,16 +631,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Junto a la Ciudad Universitaria",
-            "Ambiente joven y dinámico",
-            "Buena conexión con Moncloa",
-            "Precio razonable para Chamberí"
+            "Junto a Ciudad Universitaria - ambiente joven y dinámico",
+            "Precio más razonable de Chamberí - 15% menos que Almagro",
+            "Buena conexión con Moncloa y Argüelles - Metro Islas Filipinas (L7)",
+            "Comercio local auténtico en Calles Gaztambide y Fernández de los Ríos",
+            "Ambiente multicultural con estudiantes y jóvenes profesionales",
+            "Proceso de renovación con nuevos comercios y restaurantes trendy",
+            "Fácil acceso a zonas verdes: Parque de la Bombilla y Oeste",
+            "Arquitectura tradicional madrileña con patios interiores"
         ],
         desventajas: [
-            "Ruido universitario temporadas",
-            "Algo alejado del centro distrito",
-            "Tráfico de Cea Bermúdez",
-            "Parking complicado"
+            "Ruido universitario en periodos de exámenes y fiestas",
+            "Alejado del centro de Chamberí - 15-20 minutos andando a Plaza Olavide",
+            "Tráfico intenso en Cea Bermúdez y Avenida de la Reina Victoria",
+            "Aparcamiento muy complicado - alta densidad de residentes y estudiantes",
+            "Edificios antiguos con necesidades de reforma en algunas zonas",
+            "Falta de zonas verdes dentro del propio barrio",
+            "Comercio básico - pocas opciones de lujo o especializadas"
         ]
     },
     {
@@ -531,16 +664,23 @@ const barriosMadrid = [
         fuente: "Bankinter",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Céntrico y bien comunicado",
-            "Templo de Debod cercano",
-            "Comercio variado",
-            "Zona consolidada"
+            "Ubicación céntrica - a 15 minutos andando de Plaza de España",
+            "Templo de Debod y Parque del Oeste a 8 minutos andando",
+            "Excelente comunicación: Metro Argüelles (L3,L4,L6) y San Bernardo (L2,L4)",
+            "Comercio variado en Calles Alberto Aguilera y Princesa",
+            "Zona residencial consolidada con buena mezcla de residentes",
+            "Arquitectura tradicional bien conservada con carácter histórico",
+            "Ambiente tranquilo pero bien conectado - equilibrio perfecto",
+            "Proximidad a colegios y universidades: Complutense y centros privados"
         ],
         desventajas: [
-            "Edificios antiguos",
-            "Calles estrechas",
-            "Precio en fuerte alza (+20%)",
-            "Poco aparcamiento"
+            "Edificios antiguos con problemas de mantenimiento en patios interiores",
+            "Calles estrechas como Arapiles y Magallanes con difícil acceso",
+            "Precios en fuerte alza - +20% en últimos 2 años por gentrificación",
+            "Aparcamiento extremadamente complicado - zona de alta densidad",
+            "Falta de plazas de garaje en edificios históricos",
+            "Ruido de tráfico en ejes principales como Alberto Aguilera",
+            "Presión turística por proximidad a Templo de Debod"
         ]
     },
     {
@@ -557,16 +697,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Corazón de Chamberí",
-            "Calle Fuencarral comercial",
-            "Excelente transporte",
-            "Arquitectura cuidada"
+            "Corazón de Chamberí - Plaza de Olavide como centro neurálgico",
+            "Calle Fuencarral - eje comercial principal con tiendas y restaurantes",
+            "Excelente transporte: Bilbao (L1,L4), Iglesia (L1) y Quevedo (L2)",
+            "Arquitectura señorial perfectamente conservada del siglo XIX",
+            "Ambiente vibrante pero residencial - equilibrio perfecto",
+            "Comercio de calidad: boutiques, delicatessen y restaurantes gourmet",
+            "Plaza de Olavide - zona peatonal con terrazas y ambiente familiar",
+            "Servicios de proximidad excelentes: farmacias, bancos, colegios"
         ],
         desventajas: [
-            "Precio premium alto",
-            "Muy transitado",
-            "Ruido del comercio",
-            "Poco espacio verde"
+            "Precios premium - entre los más altos de Chamberí",
+            "Calles muy transitadas - difícil tranquilidad en ejes comerciales",
+            "Ruido constante de comercio y terrazas hasta altas horas",
+            "Espacios verdes limitados - solo pequeñas plazas ajardinadas",
+            "Aparcamiento caótico - una de las zonas más conflictivas de Madrid",
+            "Masificación en fines de semana - colapsado de compradores",
+            "Presión turística por conexión con Malasaña y Centro"
         ]
     },
     {
@@ -583,16 +730,23 @@ const barriosMadrid = [
         fuente: "Bankinter",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Uno de los más elegantes",
-            "Junto a Paseo de la Castellana",
-            "Embajadas y edificios señoriales",
-            "Máxima calidad de vida"
+            "Uno de los barrios más elegantes de Madrid - dirección de prestigio",
+            "Junto a Paseo de la Castellana - conexión directa con centro financiero",
+            "Embajadas y edificios señoriales perfectamente conservados",
+            "Máxima calidad de vida - tranquilidad y exclusividad",
+            "Excelente comunicación: Rubén Darío (L5), Alonso Martínez (L4,L5,L10)",
+            "Comercio exclusivo en Calles Génova y Zurbano - boutiques y anticuarios",
+            "Seguridad y privacidad - una de las zonas más seguras de Madrid",
+            "Arquitectura de lujo con amplias viviendas y zonas comunes"
         ],
         desventajas: [
-            "Muy caro",
-            "Zona muy formal",
-            "Poco comercio cotidiano",
-            "Aparcamiento imposible"
+            "Precios muy elevados - entre los 3 más caros de Chamberí",
+            "Ambiente excesivamente formal y conservador",
+            "Comercio cotidiano casi inexistente - todo orientado al lujo",
+            "Aparcamiento imposible - zona de máxima restricción y embajadas",
+            "Vida nocturna nula - ambiente estrictamente residencial y diplomático",
+            "Falta de diversidad social - perfil socioeconómico muy alto",
+            "Edificios con normas de comunidad extremadamente restrictivas"
         ]
     },
     {
@@ -609,16 +763,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Mercado Vallehermoso renovado",
-            "Ambiente de barrio auténtico",
-            "Polideportivo Canal Isabel II",
-            "Zona verde del Canal"
+            "Mercado de Vallehermoso renovado - gastronomía y productos gourmet",
+            "Ambiente de barrio auténtico - mezcla de tradición y modernidad",
+            "Polideportivo Canal Isabel II - instalaciones deportivas de calidad",
+            "Zona verde del Canal - espacios abiertos y áreas de paseo",
+            "Comercio local en Calles Vallehermoso y Santísima Trinidad",
+            "Arquitectura tradicional con carácter - patios y corralas",
+            "Proceso de revitalización con nuevos residentes jóvenes",
+            "Precio más asequible que otros barrios de Chamberí"
         ],
         desventajas: [
-            "Algo alejado del centro Chamberí",
-            "Cuestas pronunciadas",
-            "Metro algo lejos",
-            "Edificios antiguos"
+            "Alejado del centro de Chamberí - 20 minutos andando a Plaza Olavide",
+            "Cuestas pronunciadas en Calles Martínez Campos y Vallehermoso",
+            "Metro más distante: Canal (L2,L7) a 10-15 minutos para algunas calles",
+            "Edificios antiguos con necesidades de reforma y mantenimiento",
+            "Tráfico en Avenida de Filipinas y Guzmán el Bueno",
+            "Falta de zonas verdes propias - dependencia del Canal",
+            "Comercio básico - pocas opciones de ocio y restauración"
         ]
     },
     {
@@ -635,16 +796,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Cerca de Nuevos Ministerios",
-            "Buena conexión transporte",
-            "Zona tranquila residencial",
-            "Precio contenido para Chamberí"
+            "Cerca de Nuevos Ministerios - conexión con centro empresarial",
+            "Excelente transporte: Ríos Rosas (L1), Cuatro Caminos (L1,L2,L6)",
+            "Precio más contenido de Chamberí - opción económica del distrito",
+            "Zona tranquila y residencial con baja densidad comercial",
+            "Escuelas de ingeniería: Minas y Industriales - ambiente universitario",
+            "Fácil acceso a Castellana y centros de negocios",
+            "Arquitectura funcional pero bien conservada",
+            "Proximidad a Parque de Santander y zonas deportivas"
         ],
         desventajas: [
-            "Algo impersonal",
-            "Mucho tráfico oficinas",
-            "Poco comercio local",
-            "Ambiente corporativo"
+            "Ambiente algo impersonal - zona de transición entre distritos",
+            "Tráfico de oficinas en horas punta - Calles Raimundo Fernández Villaverde",
+            "Comercio local limitado - pocas opciones de calidad",
+            "Ambiente corporativo - vacío los fines de semana",
+            "Falta de identidad propia - entre Chamberí y Tetuán",
+            "Edificios de oficinas mezclados con residencial - menos cohesión vecinal",
+            "Pocos espacios verdes - dependencia de parques exteriores"
         ]
     },
 
@@ -665,16 +833,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Precio más bajo del distrito",
-            "Metro L1 Buenos Aires",
-            "Barrio obrero auténtico",
-            "En proceso de renovación"
+            "Precio más bajo del distrito - 60% más barato que media Madrid",
+            "Metro Buenos Aires (L1) - conexión directa con centro en 20 minutos",
+            "Barrio obrero auténtico - fuerte identidad comunitaria",
+            "En proceso de renovación - mejoras urbanísticas en curso",
+            "Comercio muy económico - precios asequibles en alimentación y servicios",
+            "Asociaciones vecinales muy activas - tejido social fuerte",
+            "Fácil aparcamiento - menor densidad vehicular que centro",
+            "Proximidad a M-40 - salidas rápidas a otras zonas"
         ],
         desventajas: [
-            "Imagen social negativa",
-            "Edificios muy antiguos",
-            "Lejos del centro Madrid",
-            "Pocas zonas verdes"
+            "Imagen social negativa - estigmatización histórica del barrio",
+            "Edificios muy antiguos de los años 50-60 con carencias",
+            "Muy alejado del centro de Madrid - 30-40 minutos en transporte",
+            "Pocas zonas verdes - carencia de parques y áreas recreativas",
+            "Servicios públicos limitados - centros de salud y educativos saturados",
+            "Desempleo superior a media madrileña - problemas económicos",
+            "Falta de inversión privada - comercio básico y poco diversificado"
         ]
     },
     {
@@ -691,16 +866,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Precio económico",
-            "Metro Portazgo y Congosto",
-            "Zona multicultural",
-            "Comercio de proximidad"
+            "Precio económico - 50% más barato que media Madrid",
+            "Buena conexión de metro: Portazgo (L1) y Congosto (L1)",
+            "Zona multicultural - diversidad de nacionalidades y culturas",
+            "Comercio de proximidad muy económico en Avenida de la Albufera",
+            "Mercado de San Diego - productos frescos a precios asequibles",
+            "Ambiente comercial vibrante - todo tipo de servicios básicos",
+            "Fácil aparcamiento comparado con zonas céntricas",
+            "Comunidad vecinal activa - eventos y fiestas populares"
         ],
         desventajas: [
-            "Densidad muy alta",
-            "Edificios años 60-70",
-            "Pocas opciones de ocio",
-            "Percepción barrio obrero"
+            "Alta densidad poblacional - edificios con muchas viviendas",
+            "Edificios de los años 60-70 con necesidades de reforma",
+            "Pocas opciones de ocio y cultura - limitado a comercio básico",
+            "Percepción de barrio obrero - estigma social persistente",
+            "Tráfico intenso en Avenida de la Albufera - principal eje",
+            "Falta de zonas verdes - espacios públicos limitados",
+            "Servicios educativos y sanitarios saturados por alta demanda"
         ]
     },
     {
@@ -717,16 +899,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Parque de Palomeras",
-            "Precio asequible",
-            "Zona familiar",
-            "Metro Buenos Aires y Vinateros"
+            "Parque de Palomeras - zona verde amplia con áreas deportivas",
+            "Precio asequible - opción económica para familias",
+            "Zona familiar - ambiente tranquilo y seguro",
+            "Buena conexión: Metro Buenos Aires (L1) y Vinateros (L1)",
+            "Comercio local en Calles Arroyo del Olivar y Sierra Toledana",
+            "Colegios públicos y centros de salud en radio cercano",
+            "Aparcamiento más fácil que en barrios céntricos",
+            "Proceso de mejora urbana con renovación de espacios"
         ],
         desventajas: [
-            "Muy alejado centro",
-            "Edificios monótonos",
-            "Poco atractivo urbanístico",
-            "Servicios básicos"
+            "Muy alejado del centro de Madrid - 35-40 minutos en transporte",
+            "Edificios monótonos de promoción pública años 70-80",
+            "Poco atractivo urbanístico - arquitectura repetitiva",
+            "Servicios básicos - falta de opciones culturales y de ocio",
+            "Dependencia del automóvil - transporte público limitado",
+            "Falta de diversidad comercial - todo orientado a necesidades básicas",
+            "Aislamiento relativo - percepción de barrio periférico"
         ]
     },
     {
@@ -743,16 +932,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Precio económico",
-            "Cerca Parque Forestal Entrevías",
-            "Zona residencial tranquila",
-            "Viviendas más amplias"
+            "Precio económico - opción más asequible de Vallecas",
+            "Cerca del Parque Forestal de Entrevías - amplia zona verde",
+            "Zona residencial tranquila - menor densidad que otros barrios",
+            "Viviendas más amplias - promociones de los 80 con mejores espacios",
+            "Comercio básico en Calles Sierra de Guadalupe y Sierra de Gredos",
+            "Ambiente familiar - preferido por familias con niños",
+            "Aparcamiento relativamente fácil - menor presión vehicular",
+            "Proceso de renovación con mejoras en infraestructuras"
         ],
         desventajas: [
-            "Muy periférico",
-            "Metro algo alejado",
-            "Pocas opciones culturales",
-            "Distancia al centro"
+            "Zona muy periférica - límite sureste de Madrid capital",
+            "Metro algo alejado - Entrevías (L1) a 15-20 minutos andando",
+            "Pocas opciones culturales y de ocio - todo muy básico",
+            "Gran distancia al centro - 45-50 minutos en transporte público",
+            "Dependencia total de comercio local - pocas alternativas",
+            "Falta de servicios especializados - todo concentrado en ejes principales",
+            "Aislamiento geográfico - percepción de barrio desconectado"
         ]
     },
     {
@@ -769,16 +965,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Metro Portazgo L1",
-            "Centro Comercial Alcampo",
-            "Precio razonable",
-            "Hospital Infanta Leonor"
+            "Metro Portazgo (L1) - conexión directa con centro en 18 minutos",
+            "Centro Comercial Alcampo - hipermercado y tiendas a precios económicos",
+            "Hospital Infanta Leonor - centro sanitario de referencia del sureste",
+            "Precio razonable para la zona - 35% más barato que media Madrid",
+            "Comercio local muy económico en Avenida de la Albufera",
+            "Fácil acceso a M-40 - salidas rápidas a otras zonas",
+            "Asociaciones vecinales activas - fuerte tejido comunitario",
+            "Aparcamiento relativamente fácil - menor presión que centro"
         ],
         desventajas: [
-            "Zona comercial saturada",
-            "Tráfico Avenida Albufera",
-            "Estética urbana mejorable",
-            "Lejos del centro"
+            "Zona comercial saturada - tráfico constante en ejes principales",
+            "Tráfico intenso en Avenida de la Albufera - principal arteria del distrito",
+            "Estética urbana mejorable - fachadas descuidadas y espacios públicos",
+            "Muy alejado del centro - 30-35 minutos en transporte público",
+            "Falta de zonas verdes - carencia de parques y áreas recreativas",
+            "Comercio básico - pocas opciones de calidad o especializadas",
+            "Imagen de barrio obrero - estigmatización social persistente"
         ]
     },
     {
@@ -795,16 +998,23 @@ const barriosMadrid = [
         fuente: "Bankinter",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Más caro del distrito (mejor zona)",
-            "Metro Nueva Numancia L1",
-            "Mejor conexión que otros barrios",
-            "Zona más valorada Vallecas"
+            "Zona más valorada de Vallecas - mejor reputación del distrito",
+            "Metro Nueva Numancia (L1) - conexión excelente con centro",
+            "Mejor conexión que otros barrios - acceso rápido a M-30",
+            "Comercio más diversificado en Avenida de la Albufera",
+            "Edificios mejor conservados - promociones más recientes",
+            "Ambiente más familiar - mezcla de residentes consolidada",
+            "Servicios públicos de mejor calidad - centros educativos y sanitarios",
+            "Proceso de mejora urbana más avanzado que en otros barrios"
         ],
         desventajas: [
-            "Aún lejos del centro",
-            "Precio 300€ más que Entrevías",
-            "Tráfico M-30 cercano",
-            "Menos servicios que centro"
+            "Aún lejos del centro de Madrid - 25-30 minutos en transporte",
+            "Precio 300€ más que Entrevías - diferencia significativa dentro del distrito",
+            "Tráfico de M-30 cercano - ruido y contaminación en calles limítrofes",
+            "Menos servicios que zonas céntricas - todo más básico",
+            "Presión de gentrificación - precios en alza constante",
+            "Falta de opciones de ocio y cultura - limitado a comercio básico",
+            "Estigma de Vallecas persistente - aunque menor que en otros barrios"
         ]
     },
 
@@ -825,16 +1035,23 @@ const barriosMadrid = [
         fuente: "Bankinter",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Barrio jardín exclusivo",
-            "Chalets y casas unifamiliares",
-            "Zona muy tranquila y verde",
-            "Prestigio social alto"
+            "Barrio jardín exclusivo - chalets y casas unifamiliares con jardines",
+            "Zona muy tranquila y verde - calles arboladas y baja densidad",
+            "Máximo prestigio social - una de las direcciones más exclusivas de Madrid",
+            "Arquitectura singular - estilo racionalista y vanguardista",
+            "Privacidad y seguridad - zona residencial cerrada en parte",
+            "Ambiente familiar de élite - residentes de alto nivel adquisitivo",
+            "Proximidad a colegios internacionales y embajadas",
+            "Tranquilidad absoluta - tráfico mínimo y contaminación acústica baja"
         ],
         desventajas: [
-            "Precio muy elevado",
-            "Metro algo alejado",
-            "Poco comercio de barrio",
-            "Dependiente del coche"
+            "Precio muy elevado - entre los más caros de Chamartín",
+            "Metro algo alejado - Colombia (L8,L9) a 10-15 minutos andando",
+            "Poco comercio de barrio - casi inexistente, todo orientado al automóvil",
+            "Dependencia total del coche - servicios básicos lejanos",
+            "Aislamiento relativo - vida social muy limitada dentro del barrio",
+            "Falta de diversidad social - perfil socioeconómico muy homogéneo",
+            "Servicios de proximidad nulos - necesidad de desplazamiento para compras"
         ]
     },
     {
@@ -851,16 +1068,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Metro Prosperidad L4",
-            "Zona comercial consolidada",
-            "Precio razonable Chamartín",
-            "Ambiente residencial familiar"
+            "Metro Prosperidad (L4) - conexión directa con centro en 15 minutos",
+            "Zona comercial consolidada - Calles López de Hoyos y Arturo Soria",
+            "Precio razonable para Chamartín - 15% más barato que El Viso",
+            "Ambiente residencial familiar - mezcla generacional equilibrada",
+            "Comercio variado - desde cadenas internacionales a tiendas locales",
+            "Servicios completos - colegios, centros de salud, bancos, farmacias",
+            "Buena comunicación - múltiples líneas de bus y acceso a M-30",
+            "Arquitectura funcional - edificios bien mantenidos de los 70-80"
         ],
         desventajas: [
-            "Edificios años 60-70",
-            "Menos prestigio que El Viso",
-            "Calles con mucho tráfico",
-            "Poco espacio verde"
+            "Edificios años 60-70 - necesidades de reforma en fachadas e instalaciones",
+            "Menos prestigio que El Viso - considerado zona media de Chamartín",
+            "Calles con mucho tráfico - López de Hoyos y Arturo Soria muy transitadas",
+            "Poco espacio verde - solo pequeñas plazas interiores",
+            "Densidad media-alta - mayor concentración que barrios exclusivos",
+            "Proceso de gentrificación - precios en alza constante",
+            "Falta de identidad propia - transición entre varios barrios"
         ]
     },
     {
@@ -877,16 +1101,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Zona residencial tranquila",
-            "Cercano a parques",
-            "Buen equilibrio precio-calidad",
-            "Ambiente familiar"
+            "Zona residencial tranquila - calles amplias y poco tráfico",
+            "Cercano a parques - Parque de Berlín y Paseo de la Castellana",
+            "Buen equilibrio precio-calidad - mejor relación en Chamartín",
+            "Ambiente familiar consolidado - residentes de larga trayectoria",
+            "Arquitectura de calidad - edificios bien conservados con zonas verdes",
+            "Seguridad y tranquilidad - baja criminalidad y ambiente sosegado",
+            "Proximidad a colegios de prestigio - opciones públicas y privadas",
+            "Comercio local suficiente - servicios básicos en radio cercano"
         ],
         desventajas: [
-            "Metro algo lejos",
-            "Poco comercio local",
-            "Lejos del centro Madrid",
-            "Dependiente del bus"
+            "Metro algo lejos - Pío XII (L9) a 10-15 minutos andando",
+            "Poco comercio local - limitado a necesidades básicas",
+            "Lejos del centro de Madrid - 20-25 minutos en transporte",
+            "Dependiente del bus - conexión principal por autobuses",
+            "Falta de vida nocturna - ambiente estrictamente residencial",
+            "Población envejecida - menor dinamismo juvenil",
+            "Servicios culturales limitados - todo concentrado en ejes principales"
         ]
     },
     {
@@ -903,16 +1134,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Plaza de Castilla cercana",
-            "Buena conexión transporte",
-            "Zona moderna y renovada",
-            "Torres empresariales cerca"
+            "Plaza de Castilla cercana - principal intercambiador de transportes norte",
+            "Buena conexión transporte: Metro Cuzco (L10), Santiago Bernabéu (L10)",
+            "Zona moderna y renovada - edificios nuevos y rehabilitados",
+            "Torres empresariales cerca - entorno corporativo de calidad",
+            "Comercio variado en Calles Mateo Inurria y Agustín de Foxá",
+            "Ambiente dinámico - mezcla de residencial y oficinas",
+            "Acceso rápido a Castellana - conexión directa con centro financiero",
+            "Servicios de calidad - clínicas privadas, restaurantes, gimnasios"
         ],
         desventajas: [
-            "Mucho tráfico comercial",
-            "Zona muy corporativa",
-            "Precio en alza",
-            "Poco ambiente residencial"
+            "Mucho tráfico comercial - calles muy transitadas en horas laborables",
+            "Zona muy corporativa - vacío los fines de semana y noches",
+            "Precio en alza constante - gentrificación en proceso avanzado",
+            "Poco ambiente residencial puro - convivencia con oficinas",
+            "Aparcamiento complicado - alta rotación por actividad comercial",
+            "Ruido de tráfico - proximidad a ejes principales muy transitados",
+            "Falta de cohesión vecinal - población más flotante que otros barrios"
         ]
     },
     {
@@ -929,16 +1167,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Junto a Bernabéu",
-            "Zona premium consolidada",
-            "Excelentes comunicaciones",
-            "Edificios modernos"
+            "Junto al Estadio Santiago Bernabéu - ambiente deportivo y vibrante",
+            "Zona premium consolidada - una de las más valoradas de Chamartín",
+            "Excelentes comunicaciones: Metro Cuzco (L10), Nuevos Ministerios (L6,L8,L10)",
+            "Edificios modernos y de alta calidad - arquitectura contemporánea",
+            "Comercio exclusivo en Calles Rafael Salgado y Juan Hurtado de Mendoza",
+            "Proximidad a centros de negocios - entorno corporativo de élite",
+            "Seguridad y vigilancia - zona bien cuidada y monitorizada",
+            "Restaurantes de alta gama y servicios premium en radio cercano"
         ],
         desventajas: [
-            "Precio alto",
-            "Tráfico días partido",
-            "Aparcamiento complicado",
-            "Zona muy transitada"
+            "Precio alto - entre los más caros del distrito Chamartín",
+            "Tráfico caótico días de partido - calles colapsadas regularmente",
+            "Aparcamiento complicado - zona de máxima restricción y rotación",
+            "Zona muy transitada - constante movimiento de vehículos y personas",
+            "Ruido de eventos deportivos - ambiente alterado frecuentemente",
+            "Población flotante - muchos residentes temporales por negocios",
+            "Falta de intimidad - zona muy expuesta y visible"
         ]
     },
     {
@@ -955,16 +1200,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Plaza Castilla intercambiador",
-            "Conexión excepcional transporte",
-            "Precio más bajo Chamartín",
-            "Torres Kio emblemáticas"
+            "Plaza de Castilla - principal intercambiador de transportes de Madrid norte",
+            "Conexión excepcional: Metro Plaza de Castilla (L1,L9,L10), Cercanías, buses",
+            "Precio más bajo de Chamartín - opción económica del distrito",
+            "Torres Kio emblemáticas - símbolo arquitectónico de Madrid",
+            "Acceso directo a N-1 y A-1 - conexión con norte de España",
+            "Centros comerciales cercanos - ABC Serrano y El Corte Inglés",
+            "Zona en proceso de renovación - nuevas promociones residenciales",
+            "Vistas panorámicas - altura privilegiada sobre Madrid"
         ],
         desventajas: [
-            "Muy corporativo",
-            "Poco residencial",
-            "Mucho tráfico",
-            "Ambiente oficinas"
+            "Ambiente muy corporativo - predominio de oficinas sobre residencial",
+            "Poco carácter residencial - zona de tránsito más que de estancia",
+            "Mucho tráfico constante - una de las rotondas más transitadas de Europa",
+            "Ambiente de oficinas - vacío los fines de semana y noches",
+            "Ruido y contaminación - tráfico intenso 24/7",
+            "Falta de cohesión vecinal - población muy fluctuante",
+            "Edificios de oficinas mezclados - menos calidad residencial pura"
         ]
     },
 
@@ -985,16 +1237,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Madrid Río cercano",
-            "Precio razonable",
-            "Metro Acacias L5",
-            "Zona en renovación"
+            "Madrid Río a 5 minutos - acceso directo al parque fluvial",
+            "Precio razonable para zona céntrica - 25% más barato que Centro",
+            "Metro Acacias (L5) - conexión con centro en 10 minutos",
+            "Zona en renovación - proceso de transformación urbana avanzado",
+            "Comercio tradicional en Calles Antonio López y Ronda de Toledo",
+            "Proximidad a Matadero Madrid - centro cultural de referencia",
+            "Ambiente multicultural - mezcla de residentes y nuevos pobladores",
+            "Fácil acceso a A-4 y M-30 - conexión rápida con sur y centro"
         ],
         desventajas: [
-            "Edificios antiguos",
-            "Algo alejado del centro",
-            "Pocas zonas comerciales",
-            "En proceso de transformación"
+            "Edificios antiguos de los años 40-50 - necesidades de reforma",
+            "Algo alejado del centro histórico - 15-20 minutos andando a Sol",
+            "Pocas zonas comerciales consolidadas - comercio disperso",
+            "En proceso de transformación - obras y cambios constantes",
+            "Tráfico en Ronda de Toledo - eje muy transitado",
+            "Falta de identidad definida - entre Centro y Arganzuela",
+            "Servicios públicos limitados - dependencia de distritos colindantes"
         ]
     },
     {
@@ -1011,16 +1270,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Metro Acacias L5",
-            "Cerca de Embajadores",
-            "Zona multicultural",
-            "Precio competitivo"
+            "Metro Acacias (L5) - conexión excelente con centro y sur",
+            "Cerca de Embajadores - ambiente multicultural y alternativo",
+            "Zona multicultural - diversidad de nacionalidades y culturas",
+            "Precio competitivo - opción económica cerca del centro",
+            "Comercio étnico variado - productos internacionales y tiendas especializadas",
+            "Proximidad a Madrid Río - acceso rápido a zonas verdes",
+            "Proceso de revitalización - nuevos residentes jóvenes y creativos",
+            "Arquitectura tradicional madrileña - corralas y patios castizos"
         ],
         desventajas: [
-            "Edificios envejecidos",
-            "Poco comercio moderno",
-            "Calles estrechas",
-            "Parking difícil"
+            "Edificios envejecidos - necesidades de mantenimiento y reforma",
+            "Poco comercio moderno - predominio de pequeño comercio tradicional",
+            "Calles estrechas - difícil acceso vehicular en algunas zonas",
+            "Parking muy difícil - alta densidad y calles angostas",
+            "Problemas de limpieza en algunas calles secundarias",
+            "Presión de gentrificación - precios en alza constante",
+            "Falta de servicios especializados - todo muy básico y local"
         ]
     },
     {
@@ -1037,16 +1303,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Parque Tierno Galván",
-            "Planetario cercano",
-            "Madrid Río accesible",
-            "Zona en transformación"
+            "Parque Enrique Tierno Galván - amplia zona verde con planetario",
+            "Planetario de Madrid - centro astronómico y actividades culturales",
+            "Madrid Río accesible - conexión directa con parque fluvial",
+            "Zona en transformación - nuevas promociones y rehabilitaciones",
+            "Proximidad a Matadero Madrid - epicentro cultural del sur",
+            "Arquitectura moderna - edificios nuevos y bien equipados",
+            "Ambiente emergente - nuevos proyectos culturales y gastronómicos",
+            "Fácil acceso a M-30 - conexión rápida con toda la ciudad"
         ],
         desventajas: [
-            "Metro algo alejado",
-            "Tráfico M-30",
-            "Obras en la zona",
-            "Poco consolidado aún"
+            "Metro algo alejado - Delicias (L3) a 10-15 minutos andando",
+            "Tráfico de M-30 cercano - ruido y contaminación en límites",
+            "Obras en la zona - transformación urbana en proceso",
+            "Poco consolidado aún - falta de servicios establecidos",
+            "Precios en alza rápida - gentrificación acelerada",
+            "Falta de comercio local - pocas opciones de proximidad",
+            "Aislamiento relativo - entre vías rápidas y zonas industriales"
         ]
     },
     {
@@ -1063,16 +1336,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Metro Legazpi intercambiador",
-            "Matadero Madrid cultura",
-            "Madrid Río espectacular",
-            "Zona muy bien comunicada"
+            "Metro Legazpi (L3,L6) - intercambiador importante del sur",
+            "Matadero Madrid - centro cultural de referencia nacional",
+            "Madrid Río espectacular - tramo mejor conservado del parque",
+            "Zona muy bien comunicada - conexión con toda la ciudad",
+            "Archivo Regional - instalaciones culturales y de investigación",
+            "Proceso de transformación - de industrial a cultural-residencial",
+            "Precio competitivo - opción con potencial de revalorización",
+            "Espacios amplios - naves reconvertidas y nuevos desarrollos"
         ],
         desventajas: [
-            "Zona industrial histórica",
-            "Edificios antiguos",
-            "Algo alejado centro",
-            "En gentrificación"
+            "Zona industrial histórica - herencia fabrica aún visible",
+            "Edificios antiguos industriales - necesidades de adaptación",
+            "Algo alejado del centro - 20-25 minutos en transporte",
+            "En proceso de gentrificación - cambios sociales en curso",
+            "Tráfico de mercancías residual - actividad logística persistente",
+            "Falta de cohesión vecinal - población muy mezclada y cambiante",
+            "Servicios básicos limitados - en desarrollo pero aún insuficientes"
         ]
     },
     {
@@ -1089,16 +1369,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Museo del Ferrocarril",
-            "Cerca de Atocha",
-            "Buena conexión transporte",
-            "Precio razonable"
+            "Museo del Ferrocarril - patrimonio industrial único en antigua estación",
+            "Cerca de Atocha - conexión con estación principal de trenes",
+            "Buena conexión transporte: Metro Delicias (L3) y múltiples líneas de bus",
+            "Precio razonable para zona céntrica - 20% más barato que Centro",
+            "Arquitectura industrial rehabilitada - naves convertidas en viviendas",
+            "Proximidad a Matadero Madrid - oferta cultural de calidad",
+            "Ambiente tranquilo - calles residenciales poco transitadas",
+            "Proceso de revitalización - nueva población joven y creativa"
         ],
         desventajas: [
-            "Edificios envejecidos",
-            "Zona algo ruidosa",
-            "Tráfico ferroviario",
-            "Pocas zonas verdes"
+            "Edificios envejecidos de los años 50-60 - necesidades de reforma",
+            "Zona algo ruidosa - tráfico de mercancías y actividad ferroviaria residual",
+            "Tráfico ferroviario cercano - vías de tren activas en límites del barrio",
+            "Pocas zonas verdes - dependencia de Madrid Río y parques exteriores",
+            "Comercio limitado - pocas opciones de calidad y especializadas",
+            "Falta de identidad definida - entre industrial y residencial",
+            "Servicios públicos básicos - dependencia de distritos colindantes"
         ]
     },
     {
@@ -1115,16 +1402,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Precio más bajo Arganzuela",
-            "Metro Palos Frontera L3",
-            "Zona residencial tranquila",
-            "Comercio de barrio"
+            "Precio más bajo de Arganzuela - opción más económica del distrito",
+            "Metro Palos de la Frontera (L3) - conexión directa con centro",
+            "Zona residencial tranquila - calles poco transitadas y ambiente sosegado",
+            "Comercio de barrio tradicional - precios asequibles y trato personal",
+            "Proximidad a Madrid Río - acceso a zonas verdes en 10 minutos",
+            "Ambiente auténtico - población residente de larga trayectoria",
+            "Fácil aparcamiento - menor densidad vehicular que zonas céntricas",
+            "Proceso de mejora lento pero constante - pequeñas rehabilitaciones"
         ],
         desventajas: [
-            "Lejos del centro",
-            "Edificios años 60",
-            "Poco atractivo urbano",
-            "Servicios básicos"
+            "Lejos del centro histórico - 25-30 minutos andando a puntos centrales",
+            "Edificios años 60-70 con necesidades de mantenimiento",
+            "Poco atractivo urbano - arquitectura repetitiva y espacios públicos básicos",
+            "Servicios básicos - falta de opciones culturales y de ocio",
+            "Comercio muy tradicional - pocas opciones modernas o especializadas",
+            "Falta de dinamismo - población envejecida y menor actividad juvenil",
+            "Imagen de barrio obrero - aunque en proceso de transformación"
         ]
     },
     {
@@ -1141,16 +1435,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Estación Atocha principal",
-            "Excelente conexión nacional",
-            "Cerca del Retiro y Reina Sofía",
-            "Zona céntrica"
+            "Estación de Atocha - principal intercambiador de transportes de España",
+            "Excelente conexión nacional e internacional - trenes AVE y larga distancia",
+            "Cerca del Retiro y Museo Reina Sofía - oferta cultural y verde excepcional",
+            "Zona céntrica privilegiada - a 15 minutos andando de Sol",
+            "Metro Atocha (L1) y Atocha Renfe (L1) - conexión metropolitana excelente",
+            "Jardín tropical de Atocha - espacio único dentro de la estación",
+            "Proximidad a instituciones: Ministerio de Agricultura y otras sedes",
+            "Proceso de renovación - nuevas promociones residenciales de calidad"
         ],
         desventajas: [
-            "Muy turístico",
-            "Tráfico constante",
-            "Ruido de trenes",
-            "Precio en alza"
+            "Muy turístico - constante flujo de visitantes y viajeros",
+            "Tráfico constante en Calles Atocha y Méndez Álvaro - congestión permanente",
+            "Ruido de trenes y actividades ferroviarias - actividad 24/7",
+            "Precio en alza constante - gentrificación en proceso acelerado",
+            "Falta de intimidad - zona muy transitada y expuesta",
+            "Comercio orientado al turismo - pocas opciones para residentes",
+            "Problemas de limpieza - alta rotación de personas y acumulación residuos"
         ]
     },
 
@@ -1171,16 +1472,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Metro Estrecho L1",
-            "Precio accesible",
-            "Zona comercial activa",
-            "Bien comunicado"
+            "Metro Estrecho (L1) - conexión directa con centro en 12 minutos",
+            "Precio accesible para zona norte - 25% más barato que Chamberí",
+            "Zona comercial activa en Calles Bravo Murillo y General Margallo",
+            "Bien comunicado: múltiples líneas de bus y acceso a M-30",
+            "Comercio variado y económico - opciones para todos los presupuestos",
+            "Ambiente multicultural - diversidad de nacionalidades y culturas",
+            "Arquitectura tradicional madrileña - edificios con carácter histórico",
+            "Proceso de revitalización - nueva población joven y familias"
         ],
         desventajas: [
-            "Densidad alta",
-            "Edificios antiguos",
-            "Calles con tráfico",
-            "Pocas zonas verdes"
+            "Densidad alta - edificios con muchas viviendas y espacios reducidos",
+            "Edificios antiguos de los años 40-50 - necesidades de reforma",
+            "Calles con tráfico constante - ejes principales muy transitados",
+            "Pocas zonas verdes - solo pequeñas plazas interiores",
+            "Ruido comercial - actividad constante en calles principales",
+            "Falta de espacios públicos de calidad - plazas pequeñas y funcionales",
+            "Presión de gentrificación - precios en alza aunque aún asequibles"
         ]
     },
     {
@@ -1197,16 +1505,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Intercambiador Cuatro Caminos",
-            "Conexión excepcional",
-            "Comercio variado",
-            "Zona consolidada"
+            "Intercambiador Cuatro Caminos (L1,L2,L6) - conexión excepcional norte",
+            "Conexión excepcional con toda la ciudad - nudo de transportes histórico",
+            "Comercio variado en Calles Bravo Murillo y Santa Engracia - todo tipo de opciones",
+            "Zona consolidada y con todos los servicios - madurez urbana completa",
+            "Arquitectura emblemática - edificios históricos bien conservados",
+            "Ambiente vibrante - mezcla de comercial, residencial y de oficinas",
+            "Proximidad a Chamberí y Centro - ubicación estratégica norte-centro",
+            "Servicios completos: colegios, centros de salud, bancos, farmacias"
         ],
         desventajas: [
-            "Muy transitado",
-            "Mucho tráfico",
-            "Ruido constante",
-            "Poco espacio verde"
+            "Muy transitado - una de las zonas con más movimiento de Madrid",
+            "Mucho tráfico constante - rotonda histórica muy congestionada",
+            "Ruido constante - actividad comercial y vehicular 24/7",
+            "Poco espacio verde - ausencia total de parques o plazas grandes",
+            "Aparcamiento imposible - zona de máxima rotación y restricción",
+            "Falta de tranquilidad - imposible silencio o intimidad urbana",
+            "Precios en alza constante - presión de ubicación céntrica"
         ]
     },
     {
@@ -1223,16 +1538,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Metro Alvarado L1",
-            "Precio razonable",
-            "Barrio familiar",
-            "Comercio de proximidad"
+            "Metro Alvarado (L1) - conexión directa con centro en 10 minutos",
+            "Precio razonable para zona bien comunicada - equilibrio calidad-precio",
+            "Barrio familiar consolidado - residentes de larga trayectoria",
+            "Comercio de proximidad en Calles General Perón y Marqués de Viana",
+            "Ambiente tranquilo en calles interiores - alejado de ejes principales",
+            "Arquitectura de los años 50-60 bien mantenida - edificios sólidos",
+            "Servicios básicos completos - todo necesario en radio cercano",
+            "Proceso de mejora continua - pequeñas rehabilitaciones constantes"
         ],
         desventajas: [
-            "Edificios envejecidos",
-            "Poco atractivo urbanístico",
-            "Calles estrechas",
-            "Parking complicado"
+            "Edificios envejecidos - necesidades de reforma en fachadas e instalaciones",
+            "Poco atractivo urbanístico - arquitectura funcional sin especial interés",
+            "Calles estrechas en zona interior - difícil acceso y aparcamiento",
+            "Parking complicado - alta densidad residencial y pocas plazas",
+            "Falta de espacios verdes - solo plazas duras pequeñas",
+            "Comercio básico - pocas opciones de calidad o especializadas",
+            "Población envejecida - menor dinamismo que otros barrios"
         ]
     },
     {
@@ -1249,16 +1571,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Precio más bajo Tetuán",
-            "Zona residencial tranquila",
-            "Parque de la Ventilla",
-            "Ambiente familiar"
+            "Precio más bajo de Tetuán - opción más económica del distrito",
+            "Zona residencial tranquila - calles poco transitadas y ambiente sosegado",
+            "Parque de la Ventilla - amplia zona verde con áreas deportivas y infantiles",
+            "Ambiente familiar - preferido por familias con niños",
+            "Comercio local económico - precios asequibles en alimentación y servicios",
+            "Fácil aparcamiento - menor presión vehicular que zonas céntricas",
+            "Proceso de mejora urbana - renovación de espacios públicos",
+            "Comunidad vecinal activa - asociaciones y actividades comunitarias"
         ],
         desventajas: [
-            "Metro algo alejado",
-            "Lejos del centro",
-            "Servicios básicos",
-            "Edificios años 70"
+            "Metro algo alejado - Tetuán (L1) a 10-15 minutos andando",
+            "Lejos del centro de Madrid - 25-30 minutos en transporte público",
+            "Servicios básicos - falta de opciones culturales y de ocio",
+            "Edificios años 70 - arquitectura repetitiva y poco atractiva",
+            "Falta de dinamismo comercial - comercio muy local y básico",
+            "Aislamiento relativo - percepción de barrio periférico aunque dentro capital",
+            "Menor prestigio que otros barrios de Tetuán - considerado zona humilde"
         ]
     },
     {
@@ -1275,16 +1604,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Más barato distrito",
-            "Metro Valdeacederas L1",
-            "Zona en renovación",
-            "Nuevos espacios verdes"
+            "Más barato del distrito - opción más económica de Tetuán",
+            "Metro Valdeacederas (L1) - conexión directa con centro",
+            "Zona en renovación - proceso de transformación urbana avanzado",
+            "Nuevos espacios verdes - mejora de plazas y áreas recreativas",
+            "Comercio muy económico - precios asequibles para todos los bolsillos",
+            "Ambiente auténtico - población residente de toda la vida",
+            "Fácil aparcamiento - menor densidad vehicular que centro",
+            "Proyectos de rehabilitación - mejora de edificios y espacios públicos"
         ],
         desventajas: [
-            "Históricamente degradado",
-            "Lejos del centro",
-            "En proceso transformación",
-            "Servicios mejorando"
+            "Históricamente degradado - estigma social persistente",
+            "Lejos del centro de Madrid - 30-35 minutos en transporte público",
+            "En proceso de transformación - obras y cambios constantes",
+            "Servicios mejorando pero aún limitados - en desarrollo",
+            "Edificios de los años 60-70 con carencias - necesidades de reforma",
+            "Falta de opciones de ocio y cultura - todo muy básico",
+            "Imagen de barrio obrero - aunque en claro proceso de mejora"
         ]
     },
     {
@@ -1301,16 +1637,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Metro Francos Rodríguez L7",
-            "Precio competitivo",
-            "Barrio auténtico",
-            "Comercio local activo"
+            "Metro Francos Rodríguez (L7) - conexión con norte y centro",
+            "Precio competitivo - buena relación calidad-precio en Tetuán",
+            "Barrio auténtico - esencia de Tetuán tradicional",
+            "Comercio local activo en Calles Sinesio Delgado y Francos Rodríguez",
+            "Ambiente residencial consolidado - población de larga trayectoria",
+            "Arquitectura funcional bien mantenida - edificios sólidos de los 70",
+            "Servicios básicos completos - todo necesario en radio cercano",
+            "Proceso de mejora continua - pequeñas rehabilitaciones constantes"
         ],
         desventajas: [
-            "Edificios antiguos",
-            "Pocas zonas verdes",
-            "Algo alejado",
-            "Densidad alta"
+            "Edificios antiguos - necesidades de reforma en instalaciones",
+            "Pocas zonas verdes - dependencia de parques exteriores",
+            "Algo alejado del centro - 25-30 minutos en transporte público",
+            "Densidad alta - edificios con muchas viviendas y espacios reducidos",
+            "Comercio básico - pocas opciones de calidad o especializadas",
+            "Falta de dinamismo - población estable pero poco juvenil",
+            "Tráfico en ejes principales - calles comerciales congestionadas"
         ]
     },
 
@@ -1331,16 +1674,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Plaza toros Las Ventas",
-            "Metro Ventas L2 y L5",
-            "Zona comercial activa",
-            "Buen precio calidad"
+            "Plaza de Toros de Las Ventas - monumento emblemático y eventos culturales",
+            "Metro Ventas (L2,L5) - conexión excelente con centro y este",
+            "Zona comercial activa en Calles Alcalá y Goya - todo tipo de tiendas",
+            "Buen precio-calidad - equilibrio entre ubicación y coste",
+            "Ambiente castizo - esencia madrileña tradicional",
+            "Comercio variado - desde grandes cadenas a tiendas locales",
+            "Proximidad a Salamanca - lujo cercano a precios más asequibles",
+            "Eventos culturales - programación constante en plaza de toros"
         ],
         desventajas: [
-            "Tráfico días toros",
-            "Edificios años 60",
-            "Lejos del centro",
-            "Poco espacio verde"
+            "Tráfico caótico días de toros - calles colapsadas en temporada taurina",
+            "Edificios años 60-70 - necesidades de reforma y modernización",
+            "Lejos del centro histórico - 20-25 minutos andando a puntos centrales",
+            "Poco espacio verde - solo pequeñas plazas interiores",
+            "Ruido de eventos - alteración del tráfico y tranquilidad vecinal",
+            "Comercio muy convencional - pocas opciones alternativas o modernas",
+            "Presión turística temporal - masificación en eventos específicos"
         ]
     },
     {
@@ -1357,16 +1707,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Metro Carmen L5",
-            "Precio asequible",
-            "Zona residencial familiar",
-            "Comercio de barrio"
+            "Metro El Carmen (L5) - conexión directa con centro en 15 minutos",
+            "Precio asequible - una de las opciones más económicas del este",
+            "Zona residencial familiar - ambiente tranquilo y seguro",
+            "Comercio de barrio tradicional - precios económicos y trato personal",
+            "Mercado de Pueblo Nuevo - productos frescos y comercio local",
+            "Ambiente auténtico - población residente de larga trayectoria",
+            "Fácil aparcamiento - menor presión vehicular que zonas céntricas",
+            "Proceso de mejora lento - pequeñas rehabilitaciones constantes"
         ],
         desventajas: [
-            "Lejos del centro Madrid",
-            "Edificios envejecidos",
-            "Pocas opciones ocio",
-            "Metro algo lejos"
+            "Lejos del centro de Madrid - 30-35 minutos en transporte público",
+            "Edificios envejecidos de los años 60-70 - necesidades de mantenimiento",
+            "Pocas opciones de ocio y cultura - limitado a comercio básico",
+            "Metro algo lejos para algunas calles - dependencia del autobús",
+            "Falta de atractivo urbanístico - arquitectura repetitiva y funcional",
+            "Comercio muy local - pocas opciones de calidad o especializadas",
+            "Población envejecida - menor dinamismo que otros barrios"
         ]
     },
     {
@@ -1383,16 +1740,23 @@ const barriosMadrid = [
         fuente: "Idealista",
         fechaActualizacion: "Febrero 2025",
         ventajas: [
-            "Precio económico",
-            "Metro Quintana L5",
-            "Zona tranquila",
-            "Familiar y residencial"
+            "Precio económico - opción más asequible de Ciudad Lineal",
+            "Metro Quintana (L5) - conexión directa con centro",
+            "Zona tranquila y residencial - calles poco transitadas",
+            "Ambiente familiar consolidado - preferido por familias con niños",
+            "Comercio local económico - precios asequibles en alimentación y servicios",
+            "Fácil aparcamiento - menor densidad vehicular que zonas céntricas",
+            "Servicios básicos completos - colegios, centros de salud, farmacias",
+            "Comunidad vecinal activa - asociaciones y actividades comunitarias"
         ],
         desventajas: [
-            "Muy alejado centro",
-            "Edificios años 70",
-            "Servicios básicos",
-            "Poco atractivo"
+           "Muy alejado del centro - 35-40 minutos en transporte público",
+            "Edificios años 70 - arquitectura repetitiva y poco atractiva",
+            "Servicios básicos - falta de opciones culturales y de ocio",
+            "Poco atractivo urbanístico - espacios públicos funcionales",
+            "Comercio muy local - pocas opciones de calidad o especializadas",
+            "Falta de dinamismo - población estable pero poco juvenil",
+            "Aislamiento relativo - percepción de barrio periférico"
         ]
     },
     {
@@ -1409,16 +1773,23 @@ const barriosMadrid = [
         fuente: "Fotocasa",
         fechaActualizacion: "Marzo 2025",
         ventajas: [
-            "Metro Ciudad Lineal L5",
-            "Bien comunicado",
-            "Precio razonable",
-            "Comercio variado"
+            "Metro Ciudad Lineal (L5) - conexión excelente con centro y este",
+            "Bien comunicado - múltiples líneas de bus y acceso a M-30",
+            "Precio razonable - equilibrio entre ubicación y coste",
+            "Comercio variado en Avenida de la Institución Libre de Enseñanza",
+            "Ambiente residencial consolidado - mezcla generacional equilibrada",
+            "Servicios completos: colegios, centros de salud, bancos, farmacias",
+            "Arquitectura funcional bien mantenida - edificios de los 70-80",
+            "Proceso de mejora continua - rehabilitaciones y mejoras urbanas"
         ],
         desventajas: [
-            "Edificios antiguos",
-            "Lejos del centro",
-            "Calles con tráfico",
-            "Pocas zonas verdes"
+            "Edificios antiguos - necesidades de reforma en fachadas e instalaciones",
+            "Lejos del centro histórico - 25-30 minutos en transporte público",
+            "Calles con tráfico constante - ejes principales muy transitados",
+            "Pocas zonas verdes - solo pequeñas plazas interiores",
+            "Comercio convencional - pocas opciones alternativas o modernas",
+            "Falta de identidad propia - transición entre varios barrios",
+            "Presión de gentrificación - precios en alza aunque aún asequibles"
         ]
     },
     {
@@ -4565,7 +4936,6 @@ const barriosMadrid = [
             "Poco ambiente nocturno"
         ]
     }
-
 // ============================================================================
 // FIN FASE 3B - MADRID 100% COMPLETO
 // ============================================================================
@@ -4573,12 +4943,6 @@ const barriosMadrid = [
 // - 131 barrios de Madrid Capital (21 distritos completos)
 // - 17 municipios del área metropolitana
 // ============================================================================
-
-// ========================================================================
-    // NOTA: Los 82 barrios y municipios de las Fases 1 y 2 van ANTES
-    // Este código añade los IDs 83-122 (40 nuevos barrios)
-    // Total después de integrar: 122 ubicaciones
-    // ========================================================================
 ];
 
 // Estadísticas generales
