@@ -43,7 +43,7 @@ Autor
 Mapa de Calor: Alquileres en Madrid es una aplicación web desarrollada para ayudar a usuarios, inversores y analistas a tomar decisiones informadas sobre el mercado de alquileres en Madrid y su área metropolitana.
 
 💎 Estado Actual: DATASET COMPLETADO
-✅ 148 ubicaciones completamente enriquecidas
+✅ 146 ubicaciones completamente enriquecidas
 
 ✅ 1,184+ ventajas documentadas (8 por ubicación)
 
@@ -211,7 +211,7 @@ Para Desarrolladores
 javascript
 // Añadir un nuevo barrio
 const nuevoBarrio = {
-    id: 149,
+    id: 147,
     nombre: "Nuevo Barrio",
     lat: 40.4168,
     lng: -3.7038,
@@ -271,13 +271,13 @@ Ayuntamiento de Madrid - Datos oficiales de urbanismo
 INE - Instituto Nacional de Estadística
 
 Cobertura Actual (Fase 5 - COMPLETADA)
-✅ 148 ubicaciones totales - 100% COMPLETO
+✅ 146 ubicaciones totales - 100% COMPLETO
 ✅ 131 barrios de Madrid Capital - 100% COMPLETO
 ✅ 21 distritos - TODOS LOS DISTRITOS DE MADRID
 ✅ 17 municipios área metropolitana - 100% COMPLETO
 
 Estado de Enriquecimiento (FASE 5 - COMPLETADA)
-✅ 148 barrios completados con información detallada
+✅ 146 barrios completados con información detallada
 ✅ 1,184+ ventajas documentadas (promedio 8 por ubicación)
 ✅ 740+ desventajas documentadas (promedio 5 por ubicación)
 ✅ 30+ horas de trabajo invertidas en investigación
@@ -487,8 +487,8 @@ Comunidad de desarrolladores - Por sus aportes y feedback
 
 📝 Notas
 Estado Actual del Proyecto
-✅ Cobertura 100% completada - 148 ubicaciones mapeadas
-✅ Enriquecimiento 100% completado - 148/148 barrios enriquecidos
+✅ Cobertura 100% completada - 146 ubicaciones mapeadas
+✅ Enriquecimiento 100% completado - 146/146 barrios enriquecidos
 ✅ Datos actualizados 2024-2025 - Precios verificados
 🎯 Próximo objetivo - Arquitectura técnica con Supabase
 

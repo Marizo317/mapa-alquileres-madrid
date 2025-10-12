@@ -7,15 +7,15 @@ y este proyecto adhiere a [Versionado Semántico](https://semver.org/lang/es/).
 
 ---
 
-## [5.0.0] - 2025-10-XX
+## [5.0.1] - 12-10-2025
 
 ### 🎉 ¡DATASET COMPLETADO Y ENRIQUECIDO AL 100%!
 
 ### Finalizado
-- ✅ **ENRIQUECIMIENTO COMPLETO** de las 148 ubicaciones
+- ✅ **ENRIQUECIMIENTO COMPLETO** de las 146 ubicaciones
 - ✅ **1,184+ ventajas documentadas** (promedio 8 por ubicación)
 - ✅ **740+ desventajas documentadas** (promedio 5 por ubicación)
-- ✅ **100% de los 131 barrios** de Madrid Capital enriquecidos
+- ✅ **100% de los 146 barrios** de Madrid Capital enriquecidos
 - ✅ **100% de los 17 municipios** metropolitanos enriquecidos
 - ✅ **21 distritos completados** al 100%
 

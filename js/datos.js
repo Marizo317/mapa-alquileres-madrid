@@ -4816,72 +4816,7 @@ const barriosMadrid = [
             "Percepción de abandono institucional que afecta a la autoestima colectiva"
         ]
     },
-
-    // ========================================================================
-    // COMPLETAR PUENTE DE VALLECAS (2 barrios adicionales)
-    // ========================================================================
-    {
-        id: 147,
-        nombre: "Numancia",
-        lat: 40.3978,
-        lng: -3.6589,
-        zona: "Capital",
-        distrito: "Puente de Vallecas",
-        precioMedio: 1280,
-        precioM2: 17.5,
-        metrosCuadrados: 73,
-        fuente: "Fotocasa",
-        fechaActualizacion: "Octubre 2025",
-        ventajas: [
-            "Precios de vivienda razonables para zona bien comunicada del sureste madrileño",
-            "Estación de metro Numancia (L1) con conexión directa al centro histórico en 20 minutos",
-            "Ambiente comercial muy activo en calles principales con amplia variedad de establecimientos",
-            "Comunicación excelente mediante combinación de metro, autobuses y cercanías",
-            "Comunidad vecinal diversa y dinámica con mezcla de población tradicional y nueva",
-            "Equipamientos públicos completos con centros de salud, bibliotecas y polideportivos",
-            "Proyectos de mejora de movilidad sostenible con ampliación de carriles bici 2024",
-            "Fácil acceso a M-30 y M-40 para desplazamientos en vehículo privado"
-        ],
-        desventajas: [
-            "Edificios de los años 60-70 con necesidades de actualización de instalaciones comunes",
-            "Tráfico denso en ejes principales como Avenida de la Albufera en horas punta",
-            "Oferta limitada de zonas verdes de calidad y espacios de esparcimiento bien equipados",
-            "Saturación de transporte público en horas punta por alta densidad de usuarios",
-            "Procesos de gentrificación incipientes que pueden afectar a la accesibilidad económica"
-        ]
-    },
-    {
-        id: 148,
-        nombre: "Portazgo",
-        lat: 40.3889,
-        lng: -3.6612,
-        zona: "Capital",
-        distrito: "Puente de Vallecas",
-        precioMedio: 1250,
-        precioM2: 17.0,
-        metrosCuadrados: 74,
-        fuente: "OCU",
-        fechaActualizacion: "Octubre 2025",
-        ventajas: [
-            "Precios competitivos para zona con excelentes comunicaciones de transporte",
-            "Estación de metro Portazgo (L1) como nodo de conexión multimodal estratégico",
-            "Transporte público excepcional con múltiples opciones de metro, autobús y cercanías",
-            "Barrio consolidado con todos los servicios básicos y equipamientos necesarios",
-            "Comercio tradicional muy arraigado en calles comerciales con amplia variedad",
-            "Comunidad vecinal con fuerte identidad y capacidad de organización colectiva",
-            "Proyectos de renovación urbana en desarrollo con financiación pública garantizada",
-            "Conexión directa con principales ejes viarios para desplazamientos rápidos"
-        ],
-        desventajas: [
-            "Edificaciones antiguas que requieren inversión en rehabilitación energética y accesibilidad",
-            "Tráfico intenso y constante por situación de nudo de comunicaciones del distrito",
-            "Oferta de ocio nocturno muy limitada fuera de establecimientos tradicionales",
-            "Espacios públicos con necesidades de modernización y mejora de mantenimiento",
-            "Presión urbanística por valor estratégico de su localización dentro del distrito"
-        ]
-    },
-    
-];
+    ];
 
 // Estadísticas generales
 console.log(`📊 Total de ubicaciones: ${barriosMadrid.length}`);
@@ -4934,7 +4869,7 @@ if (typeof module !== 'undefined' && module.exports) {
         obtenerColorPorPrecio
     };
 }
-
+module.exports = { barriosMadrid };
 console.log(`
 
 🏠 DATASET COMPLETADO - ENRIQUECIMIENTO FINALIZADO
